@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-title-en="1KOMMA5° – HTWerk" data-title-de="1KOMMA5° – HTWerk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1KOMMA5° – HTWerk</title>
+<script>
+/* Sprache waehlen, bevor die Seite gezeichnet wird: ?lang= in der Adresse, sonst gespeicherte Wahl, sonst Browsersprache */
+(function(){var l;try{l=localStorage.getItem('htwerk-lang')}catch(e){}var q=(location.search.match(/[?&]lang=(de|en)/)||[])[1];if(q)l=q;if(l!=='de'&&l!=='en')l=/^de/i.test(navigator.language||'')?'de':'en';document.documentElement.lang=l})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#000;--white:#fff;--grey:#6B6B6B;--line:#E2E2E2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--white);color:var(--black);font:400 1.125rem/1.7 "IBM Plex Sans","Helvetica Neue",Arial,sans-serif}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+h1,h2,.serif{font-family:"Marcellus","Optima",Georgia,serif;font-weight:400;letter-spacing:-.01em}
+.pad{padding-left:clamp(1.25rem,6vw,6.5rem);padding-right:clamp(1.25rem,6vw,6.5rem)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;background:var(--black);color:var(--white);padding-top:1.1rem;padding-bottom:1.1rem}
+.brand{font-size:1.6rem;text-decoration:none}
+.top nav{display:flex;gap:1.5rem}
+.top nav a{font-weight:600;font-size:.92rem;text-decoration:none}
+.top nav a:hover{text-decoration:underline}
+html[lang="en"] [lang="de"],html[lang="de"] [lang="en"]{display:none}
+.top nav{align-items:center}
+.langsw{display:flex;border-left:1px solid #555;padding-left:1rem;gap:.15rem}
+.langsw button{font:inherit;font-weight:600;font-size:.85rem;background:none;border:0;padding:.2rem .35rem;cursor:pointer;color:#A8A8A8}
+.langsw button[aria-pressed="true"]{color:var(--white);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
+main{display:flex;flex-direction:column}
+.title{order:1;background:var(--black);color:var(--white);padding-top:4rem;padding-bottom:3.5rem}
+.cover{order:2;width:100%;max-height:80vh;object-fit:cover}
+.post{order:3}
+.next{order:4}
+.title a{font-size:.95rem}
+.title h1{font-size:clamp(3rem,9vw,7.5rem);line-height:.95;margin:1.25rem 0 1rem}
+.title .meta{margin:0;font-size:1.05rem}
+.post{padding-top:4rem;padding-bottom:4rem}
+.post>div>*{max-width:40rem}
+.post h2{font-size:clamp(1.9rem,3.5vw,2.6rem);line-height:1.1;margin:3rem 0 1rem}
+.post p{margin:0 0 1.25rem}
+.post .lead{font-family:"Marcellus",Georgia,serif;font-size:clamp(1.4rem,2.4vw,1.8rem);line-height:1.35;margin-bottom:2rem}
+.post img{max-width:min(100%,60rem);margin:2.5rem 0 .5rem}
+.post figure{margin:2.5rem 0;max-width:min(100%,60rem)}
+.post figure img{margin:0}
+.post figcaption{font-size:.9rem;color:var(--grey);margin-top:.5rem}
+.post blockquote{margin:2.5rem 0;padding-left:1.25rem;border-left:3px solid var(--black);font-family:"Marcellus",Georgia,serif;font-size:1.5rem;line-height:1.35}
+.next{border-top:1px solid var(--line);padding-top:3rem;padding-bottom:4rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.next .serif{font-size:clamp(1.6rem,3vw,2.2rem)}
+.btn{display:inline-block;padding:.85rem 1.4rem;font-weight:600;text-decoration:none;background:var(--black);color:var(--white);font-size:1rem}
+.btn:hover{opacity:.75}
+footer{border-top:1px solid var(--line);padding-top:1.5rem;padding-bottom:2.5rem;font-size:.9rem;color:var(--grey);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+footer a{margin-right:1.25rem}
+</style>
+</head>
+<body>
+
+<header class="top pad">
+  <a class="brand serif" href="index.html">HTWerk</a>
+  <nav aria-label="Main">
+    <a href="index.html#visits"><span lang="en">Past visits</span><span lang="de">Bisherige Besuche</span></a>
+    <a href="index.html#signup"><span lang="en">Join a tour</span><span lang="de">Anmelden</span></a>
+    <span class="langsw" role="group" aria-label="Language / Sprache">
+      <button type="button" data-setlang="de">DE</button><button type="button" data-setlang="en">EN</button>
+    </span>
+  </nav>
+</header>
+
+<main>
+  <div class="title pad">
+    <a href="index.html#visits"><span lang="en">Back to past visits</span><span lang="de">Zurück zu den bisherigen Besuchen</span></a>
+    <h1>1KOMMA5°</h1>
+
+    <!-- ============ DATUM DER TOUR: hier eintragen (einmal englisch, einmal deutsch) ============ -->
+    <p class="meta">
+      <span lang="en">Add the date of the visit here</span>
+      <span lang="de">Hier das Datum des Besuchs eintragen</span>
+    </p>
+  </div>
+
+  <!-- Titelfoto -->
+  <img class="cover" alt="Group photo of students at 1KOMMA5°" data-alt-de="Gruppenfoto der Studierenden bei 1KOMMA5°" src="images/1komma5.jpg">
+
+  <article class="post pad">
+
+    <!-- =====================================================================
+         AB HIER SCHREIBST DU DEINEN BLOG-TEXT
+         Es gibt zwei Bloecke: einen englischen und einen deutschen.
+         Besucher sehen immer nur den Block ihrer gewaehlten Sprache.
+         Wenn du nur in einer Sprache schreibst, kopiere denselben Text in beide Bloecke.
+
+         Bausteine zum Kopieren:
+         Einleitung (groesser gesetzt):   <p class="lead">Text</p>
+         Absatz:                          <p>Text</p>
+         Zwischenueberschrift:            <h2>Ueberschrift</h2>
+         Zitat:                           <blockquote>Zitat</blockquote>
+         Link:                            <a href="https://...">Linktext</a>
+         Foto (Datei vorher ins selbe
+         Ordner images/ hochladen):      <figure>
+                                            <img src="images/dateiname.jpg" alt="Was auf dem Foto zu sehen ist">
+                                            <figcaption>Bildunterschrift</figcaption>
+                                          </figure>
+         ===================================================================== -->
+
+    <!-- ---------- ENGLISCHER TEXT ---------- -->
+    <div lang="en">
+      <p class="lead">Write one or two sentences here that sum up the visit: where you went and what stood out.</p>
+
+      <h2>What we saw</h2>
+      <p>Write your recap here. What did the tour cover, who showed you around, and what surprised the group?</p>
+
+      <h2>What we took away</h2>
+      <p>Add what students learned, for example about the technology, the working culture, or entry-level roles.</p>
+    </div>
+
+    <!-- ---------- DEUTSCHER TEXT ---------- -->
+    <div lang="de">
+      <p class="lead">Schreib hier ein oder zwei Sätze, die den Besuch zusammenfassen: wo ihr wart und was besonders war.</p>
+
+      <h2>Was wir gesehen haben</h2>
+      <p>Hier kommt dein Rückblick hin. Was wurde gezeigt, wer hat euch herumgeführt, und was hat die Gruppe überrascht?</p>
+
+      <h2>Was wir mitnehmen</h2>
+      <p>Ergänze, was die Studierenden gelernt haben, zum Beispiel über die Technik, die Arbeitskultur oder Einstiegsmöglichkeiten.</p>
+    </div>
+
+    <!-- =====================================================================
+         ENDE DEINES TEXTES. Alles darunter bitte nicht aendern.
+         ===================================================================== -->
+
+  </article>
+
+  <div class="next pad">
+    <a class="serif" href="siemens-energy.html"><span lang="en">Next visit: Siemens Energy</span><span lang="de">Nächster Besuch: Siemens Energy</span></a>
+    <a class="btn" href="index.html#signup"><span lang="en">Join the next tour</span><span lang="de">Zur nächsten Tour anmelden</span></a>
+  </div>
+
+</main>
+
+<footer class="pad">
+  <div><a href="impressum.html"><span lang="en">Legal notice</span><span lang="de">Impressum</span></a><a href="datenschutz.html"><span lang="en">Privacy policy</span><span lang="de">Datenschutz</span></a></div>
+  <div>© 2026 HTWerk</div>
+</footer>
+<script>
+/* Sprachumschalter DE/EN */
+(function(){
+  var d=document.documentElement;
+  function set(l){
+    d.lang=l;
+    try{localStorage.setItem('htwerk-lang',l)}catch(e){}
+    var t=d.getAttribute('data-title-'+l); if(t) document.title=t;
+    document.querySelectorAll('[data-setlang]').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-setlang')===l))});
+    document.querySelectorAll('img[data-alt-de]').forEach(function(i){
+      if(!i.hasAttribute('data-alt-en')) i.setAttribute('data-alt-en',i.alt);
+      i.alt=i.getAttribute('data-alt-'+l);
+    });
+    /* Sprache an die Unterseiten weitergeben */
+    document.querySelectorAll('a[href]').forEach(function(a){
+      var m=a.getAttribute('href').match(/^([\w-]+\.html)(\?lang=\w+)?(#.*)?$/);
+      if(m) a.setAttribute('href',m[1]+'?lang='+l+(m[3]||''));
+    });
+  }
+  document.querySelectorAll('[data-setlang]').forEach(function(b){b.addEventListener('click',function(){set(b.getAttribute('data-setlang'))})});
+  set(d.lang==='de'?'de':'en');
+})();
+</script>
+</body>
+</html>

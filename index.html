@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" data-title-en="HTWerk – Student club for factory &amp; office tours" data-title-de="HTWerk – Studentische Initiative für Werksbesichtigungen">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTWerk – Student club for factory &amp; office tours</title>
+<script>
+/* Sprache waehlen, bevor die Seite gezeichnet wird: ?lang= in der Adresse, sonst gespeicherte Wahl, sonst Browsersprache */
+(function(){var l;try{l=localStorage.getItem('htwerk-lang')}catch(e){}var q=(location.search.match(/[?&]lang=(de|en)/)||[])[1];if(q)l=q;if(l!=='de'&&l!=='en')l=/^de/i.test(navigator.language||'')?'de':'en';document.documentElement.lang=l})();
+</script>
+<meta name="description" content="HTWerk connects Berlin's university students with leading companies in engineering, energy and manufacturing through curated factory and office tours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#000;--white:#fff;--grey:#6B6B6B;--line:#E2E2E2}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--black);font:400 1.0625rem/1.6 "IBM Plex Sans","Helvetica Neue",Arial,sans-serif}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+h1,h2,h3,.serif{font-family:"Marcellus","Optima",Georgia,serif;font-weight:400;letter-spacing:-.01em}
+.inner{padding:0 clamp(1.25rem,6vw,6.5rem)}
+
+/* header */
+header{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:flex-end;padding:1.25rem clamp(1.25rem,3vw,2.5rem)}
+nav{display:flex;gap:1.5rem;background:var(--white);padding:.55rem 1.1rem}
+nav a{text-decoration:none;font-weight:600;font-size:.92rem}
+nav a:hover{text-decoration:underline}
+html[lang="en"] [lang="de"],html[lang="de"] [lang="en"]{display:none}
+nav{align-items:center}
+.langsw{display:flex;border-left:1px solid var(--line);padding-left:1rem;gap:.15rem}
+.langsw button{font:inherit;font-weight:600;font-size:.85rem;background:none;border:0;padding:.2rem .35rem;cursor:pointer;color:var(--grey)}
+.langsw button[aria-pressed="true"]{color:var(--black);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
+
+/* split layout used throughout, like the deck */
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
+.split>.text{display:flex;flex-direction:column;justify-content:center;padding:5rem clamp(1.25rem,6vw,6.5rem)}
+.split>.photo{position:relative;min-height:22rem}
+.split>.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dark{background:var(--black);color:var(--white)}
+
+/* hero */
+.hero{grid-template-columns:40% 1fr 4.5rem}
+.hero h1{font-size:clamp(3.5rem,6.6vw,7.5rem);line-height:.9;margin:0 0 1.75rem}
+.hero>.text{padding-left:clamp(1.25rem,4vw,4rem);padding-right:clamp(1.25rem,3vw,3rem)}
+.hero p{font-size:clamp(1.1rem,1.6vw,1.35rem);margin:0 0 2.25rem}
+.side{display:flex;align-items:center;justify-content:center;background:var(--white)}
+.side span{writing-mode:vertical-rl;font-size:.8rem;letter-spacing:.08em;white-space:nowrap}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.85rem 1.4rem;font-weight:600;text-decoration:none;border:1.5px solid currentColor}
+.btn.solid{background:var(--white);color:var(--black);border-color:var(--white)}
+.btn:hover{opacity:.75}
+.light .btn.solid{background:var(--black);color:var(--white);border-color:var(--black)}
+
+/* about */
+.about{grid-template-columns:1fr 1fr;min-height:auto}
+.about .text p{max-width:30rem;margin:0 0 1.1rem}
+h2{font-size:clamp(2.6rem,5.5vw,4.5rem);line-height:1;margin:0 0 2.5rem}
+.stack{display:grid;grid-template-rows:auto 1fr}
+.founder{display:grid;grid-template-columns:1fr 1fr}
+.founder img{width:100%;aspect-ratio:3/3.3;object-fit:cover;object-position:top}
+.founder .cap{background:var(--black);color:var(--white);display:flex;align-items:center;padding:1.5rem;font-size:.95rem;align-self:end;min-height:50%}
+.stack .wide{position:relative;min-height:22rem}
+.stack .wide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* process: a real sequence, so numbered */
+.process{padding:7rem 0}
+.process h2{font-size:clamp(3rem,8vw,6.5rem);max-width:14ch;margin-bottom:4.5rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;list-style:none;margin:0;padding:0}
+.steps .n{font-family:"Marcellus",Georgia,serif;font-size:2.4rem;line-height:1;color:var(--grey)}
+.steps h3{font-size:1.6rem;margin:.25rem 0 .4rem}
+.steps p{margin:0;color:var(--grey);font-family:"Marcellus",Georgia,serif;font-size:1.25rem;line-height:1.3}
+
+/* hosting */
+.host h3{font-family:"IBM Plex Sans",Arial,sans-serif;font-weight:700;font-size:1.25rem;margin:2rem 0 .75rem}
+.host h3:first-of-type{margin-top:0}
+.host ul{margin:0;padding-left:1.2rem;max-width:34rem}
+.host li{margin-bottom:.6rem}
+.host .text{padding-top:6rem;padding-bottom:6rem}
+.host .split{min-height:80vh}
+.host .split+.split{border-top:1px solid var(--line)}
+.host-photos{display:grid;grid-template-rows:1fr 1fr}
+.host-photos div{position:relative;min-height:16rem}
+.host-photos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* past visits */
+.visits-intro{grid-template-columns:40% 1fr;min-height:70vh}
+.arrow{display:block;width:min(19rem,80%);height:2px;background:currentColor;position:relative;margin-top:1.5rem}
+.arrow::after{content:"";position:absolute;right:-1px;top:-5px;border:6px solid transparent;border-left:10px solid currentColor;border-right:0}
+.visit{display:grid;grid-template-columns:1fr 23rem;min-height:85vh;border-top:1px solid var(--line)}
+.visit .photo{position:relative;min-height:22rem}
+.visit .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.visit .name{display:flex;align-items:center;justify-content:center;padding:2rem}
+.visit .name div{writing-mode:vertical-rl;transform:rotate(180deg)}
+.visit h3{font-family:"IBM Plex Sans",Arial,sans-serif;font-weight:700;font-size:clamp(2.2rem,4vw,3.4rem);line-height:1;margin:0;text-transform:uppercase}
+.visit p{margin:0 1rem 0 0;color:var(--grey);font-size:.95rem}
+
+a.visit{text-decoration:none;color:inherit}
+a.visit p{text-decoration:underline;text-underline-offset:3px}
+a.visit .photo img{transition:opacity .2s}
+a.visit:hover .photo img,a.visit:focus-visible .photo img{opacity:.82}
+a.visit:hover h3{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.signup{padding:7rem 0}
+.signup h2{font-size:clamp(3rem,8vw,6.5rem);margin-bottom:1.5rem}
+.signup p{max-width:32rem;margin:0 0 2rem;font-size:1.15rem}
+/* team */
+.team .text h2{margin-bottom:3rem}
+.member{margin-bottom:2rem}
+.member .serif{font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.1;display:block}
+.member>span{font-size:.95rem}
+
+/* join + contact */
+.contact{padding:7rem 0;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.contact h2{font-size:clamp(3.2rem,8vw,6.5rem);margin-bottom:2rem}
+.contact p{max-width:30rem;margin:0 0 1.5rem}
+.mail{font-size:clamp(1.1rem,2vw,1.5rem)}
+footer{border-top:1px solid var(--line);padding:1.5rem 0 2.5rem;font-size:.9rem;color:var(--grey)}
+footer .inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+footer a{margin-right:1.25rem}
+
+@media (max-width:52rem){
+  nav{gap:1rem;padding:.5rem .8rem}
+  nav a{font-size:.85rem}
+  .split,.hero,.about,.visits-intro{grid-template-columns:1fr;min-height:auto}
+  .hero .side{display:none}
+  .hero .text{padding-top:7rem;min-height:70vh}
+  .split>.photo{min-height:60vw}
+  .host .photo-col{order:2}
+  .visit{grid-template-columns:1fr;min-height:auto}
+  .visit .photo{min-height:70vw}
+  .visit .name{justify-content:flex-start;padding:1.5rem 1.25rem 2.5rem}
+  .visit .name div{writing-mode:horizontal-tb;transform:none}
+  .steps,.contact{grid-template-columns:1fr}
+  .process,.contact,.signup{padding:4.5rem 0}
+}
+@media (max-width:34rem){nav a:nth-child(2),nav a:nth-child(3){display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav aria-label="Main">
+    <a href="#about"><span lang="en">About</span><span lang="de">Über uns</span></a>
+    <a href="#host"><span lang="en">Host a tour</span><span lang="de">Tour ausrichten</span></a>
+    <a href="#visits"><span lang="en">Past visits</span><span lang="de">Bisherige Besuche</span></a>
+    <a href="#signup"><span lang="en">Join a tour</span><span lang="de">Anmelden</span></a>
+    <a href="#contact"><span lang="en">Contact</span><span lang="de">Kontakt</span></a>
+    <span class="langsw" role="group" aria-label="Language / Sprache">
+      <button type="button" data-setlang="de">DE</button><button type="button" data-setlang="en">EN</button>
+    </span>
+  </nav>
+</header>
+
+<main>
+  <section class="split hero">
+    <div class="text dark">
+      <h1>HTWerk</h1>
+      <p><span lang="en">Student club for factory &amp; office tours</span><span lang="de">Studentische Initiative für Werksbesichtigungen</span></p>
+      <div class="btns">
+                <a class="btn solid" href="#signup"><span lang="en">Join the next tour</span><span lang="de">Zur nächsten Tour anmelden</span></a>
+        <a class="btn" href="#host"><span lang="en">Host a tour</span><span lang="de">Tour ausrichten</span></a>
+      </div>
+    </div>
+    <div class="photo"><img src="images/hero-formlabs.jpg" data-alt-de="Studierende im Gespräch mit einem Formlabs-Mitarbeiter neben 3D-Druck-Geräten" alt="Students talking with a Formlabs employee next to 3D-printing equipment"></div>
+    <div class="side" aria-hidden="true"><span>HTWERK BERLIN</span></div>
+  </section>
+
+  <section class="split about" id="about">
+    <div class="text">
+      <h2><span lang="en">About us</span><span lang="de">Über uns</span></h2>
+      <p><span lang="en">It started with a simple frustration: engineering students spend years learning theory but rarely get to see inside the factories and companies they're studying to join.</span><span lang="de">Am Anfang stand ein einfacher Frust: Ingenieurstudierende lernen jahrelang Theorie, sehen aber selten die Fabriken und Unternehmen von innen, für die sie später arbeiten wollen.</span></p>
+      <p><span lang="en">HTWerk was founded to close that gap. What began as an idea at HTW Berlin has grown into a student initiative connecting Berlin's university students with leading companies across engineering, energy, and manufacturing, through curated factory tours that go beyond the standard campus recruiting pitch.</span><span lang="de">HTWerk wurde gegründet, um diese Lücke zu schließen. Aus einer Idee an der HTW Berlin ist eine studentische Initiative geworden, die Berliner Studierende mit führenden Unternehmen aus Technik, Energie und Fertigung zusammenbringt: mit kuratierten Werksbesichtigungen, die über den üblichen Recruiting-Vortrag auf dem Campus hinausgehen.</span></p>
+      <p><span lang="en">We've taken students behind the scenes at BMW Motorrad Berlin, onto the 3D-printing floor at Formlabs, and into Siemens Energy and 1KOMMA5°. Each tour is built to show not just what these companies make, but how they think, build, and recruit.</span><span lang="de">Wir haben Studierende hinter die Kulissen von BMW Motorrad Berlin gebracht, in die 3D-Druck-Fertigung von Formlabs und zu Siemens Energy und 1KOMMA5°. Jede Tour zeigt nicht nur, was diese Unternehmen herstellen, sondern auch, wie sie denken, bauen und einstellen.</span></p>
+      <p><span lang="en">Over 60 students have joined us so far, and we're just getting started.</span><span lang="de">Über 60 Studierende waren bisher dabei, und wir fangen gerade erst an.</span></p>
+      <p><strong><span lang="en">Founded by students, for students.</span><span lang="de">Von Studierenden gegründet, für Studierende.</span></strong></p>
+    </div>
+    <div class="stack">
+      <div class="founder">
+        <img src="images/founder.jpg" data-alt-de="Porträt von Linus Rüsseler" alt="Portrait of Linus Rüsseler">
+        <div class="cap"><span lang="en">Linus Rüsseler – Founder, Partnership management</span><span lang="de">Linus Rüsseler – Gründer, Partnermanagement</span></div>
+      </div>
+      <div class="wide"><img src="images/about-team.jpg" data-alt-de="Studierende um einen Laptop versammelt bei einem Unternehmensbesuch" alt="Students gathered around a laptop during a company visit"></div>
+    </div>
+  </section>
+
+  <section class="split team">
+    <div class="text dark">
+      <h2><span lang="en">The core team</span><span lang="de">Das Kernteam</span></h2>
+      <div class="member"><span class="serif">Linus Rüsseler</span><span><span lang="en">Founder, Partnership management</span><span lang="de">Gründer, Partnermanagement</span></span></div>
+      <div class="member"><span class="serif">Timo Bange</span><span><span lang="en">Event &amp; Outreach</span><span lang="de">Events &amp; Outreach</span></span></div>
+      <div class="member"><span class="serif">Stefanie Delarmente</span><span><span lang="en">Community Management</span><span lang="de">Community-Management</span></span></div>
+      <div class="member"><span class="serif">Ren Nakamura</span><span><span lang="en">Photography and Graphic Design</span><span lang="de">Fotografie und Grafikdesign</span></span></div>
+    </div>
+    <div class="photo"><img src="images/core-team.jpg" data-alt-de="Studierende und Gastgeber im Gespräch in einem Pausenraum" alt="Students and hosts talking in a dimly lit company break room"></div>
+  </section>
+  <section class="host" id="host">
+    <div class="split">
+      <div class="photo"><img src="images/bmw-briefing.jpg" data-alt-de="Guide weist Studierende in Besucherwesten bei BMW Motorrad Berlin ein" alt="Guide briefing students in visitor vests at BMW Motorrad Berlin"></div>
+      <div class="text"><h2><span lang="en">What hosting an HTWerk event involves</span><span lang="de">Was zu einer HTWerk-Tour gehört</span></h2><h3><span lang="en">Before the visit</span><span lang="de">Vor dem Besuch</span></h3><ul>
+        <li><span lang="en">Designate a point of contact to coordinate logistics with the HTWerk team</span><span lang="de">Benennen Sie eine Ansprechperson, die die Organisation mit dem HTWerk-Team abstimmt</span></li>
+        <li><span lang="en">Confirm a date and rough itinerary: duration, meeting point, any access restrictions or safety requirements</span><span lang="de">Bestätigen Sie Termin und groben Ablauf: Dauer, Treffpunkt, Zugangsbeschränkungen oder Sicherheitsvorgaben</span></li>
+        <li><span lang="en">Provide any necessary safety gear or briefings in advance if required (e.g. safety shoes, vests, glasses for factory floors)</span><span lang="de">Stellen Sie bei Bedarf Schutzausrüstung bereit oder geben Sie vorab eine Sicherheitsunterweisung (z. B. Sicherheitsschuhe, Westen, Schutzbrillen für die Fertigung)</span></li>
+      </ul></div>
+    </div>
+    <div class="split">
+      <div class="photo"><img src="images/during-visit.jpg" data-alt-de="Studierende und Gastgeber schauen bei einem Unternehmensbesuch auf einen Bildschirm" alt="Students and hosts looking at a screen during a company visit"></div>
+      <div class="text"><h3><span lang="en">During the visit</span><span lang="de">Während des Besuchs</span></h3><ul>
+        <li><span lang="en">Provide a host or guide, ideally someone who knows the space and can speak to the technical and cultural side of the company</span><span lang="de">Stellen Sie eine Person, die durch den Besuch führt, idealerweise jemanden, der die Räume kennt und über Technik und Kultur des Unternehmens sprechen kann</span></li>
+        <li><span lang="en">Give a short company or team introduction (10–15 minutes is often enough)</span><span lang="de">Stellen Sie Unternehmen oder Team kurz vor (10–15 Minuten reichen oft)</span></li>
+        <li><span lang="en">Lead the actual tour: factory floor, office space, or showroom</span><span lang="de">Führen Sie durch Fertigung, Büro oder Showroom</span></li>
+        <li><span lang="en">Optional but highly recommended: a Q&amp;A, informal networking, or coffee at the end. This is where a lot of the real value happens for students, whether it's a deeper look at your products, your culture, or the day-to-day in open roles.</span><span lang="de">Optional, aber sehr empfohlen: Fragerunde, lockeres Networking oder Kaffee zum Abschluss. Hier entsteht für Studierende oft der größte Mehrwert, ob durch einen tieferen Einblick in Ihre Produkte, Ihre Kultur oder den Arbeitsalltag in offenen Stellen.</span></li>
+      </ul></div>
+    </div>
+    <div class="split">
+      <div class="photo"><img src="images/networking.jpg" data-alt-de="Studierende im Gespräch mit Formlabs-Mitarbeitenden nach der Tour" alt="Students chatting with Formlabs staff after the tour"></div>
+      <div class="text"><h3><span lang="en">What we handle</span><span lang="de">Das übernehmen wir</span></h3><ul>
+        <li><span lang="en">Recruiting and coordinating the student group, tailored to your recruiting goals</span><span lang="de">Auswahl und Koordination der Studierendengruppe, abgestimmt auf Ihre Recruiting-Ziele</span></li>
+        <li><span lang="en">Communication, registration, and confirmations with attendees</span><span lang="de">Kommunikation, Anmeldung und Bestätigungen mit den Teilnehmenden</span></li>
+        <li><span lang="en">On-site coordination with your team</span><span lang="de">Abstimmung mit Ihrem Team vor Ort</span></li>
+        <li><span lang="en">Post-event content (LinkedIn recap, photos if permitted) to show your company to a wider student audience</span><span lang="de">Inhalte nach der Tour (LinkedIn-Rückblick, Fotos nach Freigabe), die Ihr Unternehmen einem größeren Kreis von Studierenden zeigen</span></li>
+        <li><span lang="en">Student contact information after the visit</span><span lang="de">Kontaktdaten der Studierenden nach dem Besuch</span></li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section id="visits">
+    <div class="split visits-intro">
+      <div class="text">
+        <h2 style="margin:0"><span lang="en">Past visits</span><span lang="de">Bisherige Besuche</span></h2>
+        <span class="arrow" aria-hidden="true"></span>
+      </div>
+      <div class="photo"><img src="images/bmw-make-life-a-ride.jpg" data-alt-de="Studierende in Besucherwesten hören einem Guide vor BMW Motorrad Berlin zu" alt="Students in visitor vests listening to a guide outside BMW Motorrad Berlin"></div>
+    </div>
+
+    <a class="visit" href="1komma5.html">
+      <div class="photo"><img src="images/1komma5.jpg" data-alt-de="Gruppenfoto der Studierenden bei 1KOMMA5°" alt="Group photo of students at 1KOMMA5°"></div>
+      <div class="name"><div><h3>1KOMMA5°</h3><p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p></div></div>
+    </a>
+    <a class="visit" href="siemens-energy.html">
+      <div class="photo"><img src="images/siemens-energy.jpg" data-alt-de="Studierende mit Schutzhelmen vor einem Elektrolyseur bei Siemens Energy" alt="Students in hard hats in front of an electrolyzer at Siemens Energy"></div>
+      <div class="name"><div><h3>Siemens Energy</h3><p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p></div></div>
+    </a>
+    <a class="visit" href="formlabs.html">
+      <div class="photo"><img src="images/formlabs.jpg" data-alt-de="Gruppenfoto der Studierenden mit dem Formlabs-Team" alt="Group photo of students with the Formlabs team"></div>
+      <div class="name"><div><h3>Formlabs</h3><p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p></div></div>
+    </a>
+    <a class="visit" href="bmw-motorrad.html">
+      <div class="photo"><img src="images/bmw-tour.jpg" data-alt-de="Guide spricht zu Studierenden im BMW Motorrad Werk Berlin" alt="Guide addressing students inside BMW Motorrad Berlin"></div>
+      <div class="name"><div><h3>BMW Motorrad</h3><p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p></div></div>
+    </a>
+  </section>
+
+  <section class="process">
+    <div class="inner">
+      <h2><span lang="en">How a visit comes together</span><span lang="de">So entsteht ein Besuch</span></h2>
+      <ol class="steps">
+        <li><div class="n">01</div><h3><span lang="en">Reach out</span><span lang="de">Kontakt aufnehmen</span></h3><p><span lang="en">Get in touch and tell us your recruiting goals. We confirm a date and rough itinerary together.</span><span lang="de">Melden Sie sich und nennen Sie uns Ihre Recruiting-Ziele. Termin und groben Ablauf legen wir gemeinsam fest.</span></p></li>
+        <li><div class="n">02</div><h3><span lang="en">We fill the room</span><span lang="de">Wir füllen den Raum</span></h3><p><span lang="en">HTWerk recruits and coordinates the student group, tailored to match who you want to reach.</span><span lang="de">HTWerk gewinnt und koordiniert die Studierendengruppe, passend zu der Zielgruppe, die Sie erreichen möchten.</span></p></li>
+        <li><div class="n">03</div><h3><span lang="en">Host the tour</span><span lang="de">Tour durchführen</span></h3><p><span lang="en">You lead the visit, we handle logistics and follow up with a LinkedIn recap and student contacts.</span><span lang="de">Sie führen durch den Besuch, wir kümmern uns um die Organisation und liefern danach einen LinkedIn-Rückblick und die Kontakte der Studierenden.</span></p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="signup dark" id="signup">
+    <div class="inner">
+      <h2><span lang="en">Join the next tour</span><span lang="de">Bei der nächsten Tour dabei sein</span></h2>
+      <p><span lang="en">Fill in the form to register for our next visit. HTWerk tours are open to students from all Berlin universities.</span><span lang="de">Melde dich über das Formular für unseren nächsten Besuch an. HTWerk-Touren stehen Studierenden aller Berliner Hochschulen offen.</span></p>
+      <div class="btns">
+        <!-- TODO: HIER den Link zum Anmeldeformular einsetzen (z. B. Notion-Formular). Das ist die einzige Stelle: alle anderen "Join the next tour"-Buttons fuehren hierher. -->
+        <a class="btn solid" href="#signup"><span lang="en">Register for the next tour</span><span lang="de">Für die nächste Tour anmelden</span></a>
+        <a class="btn" href="https://www.linkedin.com/company/htwerk/"><span lang="en">Follow HTWerk on LinkedIn</span><span lang="de">HTWerk auf LinkedIn folgen</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact light" id="contact">
+    <div class="inner" style="grid-column:1/-1;display:grid;grid-template-columns:inherit;gap:3rem">
+      <div>
+        <h2><span lang="en">Contact</span><span lang="de">Kontakt</span></h2>
+        <a class="mail" href="mailto:Linus.Ruesseler@Student.HTW-Berlin.de">Linus.Ruesseler@Student.HTW-Berlin.de</a>
+      </div>
+      <div>
+        <p><span lang="en"><strong>Companies:</strong> tell us what you'd like to show and who you want to reach. We'll take it from there.</span><span lang="de"><strong>Unternehmen:</strong> Sagen Sie uns, was Sie zeigen und wen Sie erreichen möchten. Um den Rest kümmern wir uns.</span></p>
+        <p><span lang="en"><strong>Students:</strong> questions about a tour? Write to us, or <a href="#signup">register for the next tour</a>.</span><span lang="de"><strong>Studierende:</strong> Fragen zu einer Tour? Schreib uns oder <a href="#signup">melde dich für die nächste Tour an</a>.</span></p>
+        <div class="btns">
+          <a class="btn solid" href="mailto:Linus.Ruesseler@Student.HTW-Berlin.de"><span lang="en">Email us</span><span lang="de">E-Mail schreiben</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="inner">
+    <div><!-- TODO: impressum.html und datenschutz.html anlegen --><a href="impressum.html"><span lang="en">Legal notice</span><span lang="de">Impressum</span></a><a href="datenschutz.html"><span lang="en">Privacy policy</span><span lang="de">Datenschutz</span></a></div>
+    <div>© 2026 HTWerk</div>
+  </div>
+</footer>
+<script>
+/* Sprachumschalter DE/EN */
+(function(){
+  var d=document.documentElement;
+  function set(l){
+    d.lang=l;
+    try{localStorage.setItem('htwerk-lang',l)}catch(e){}
+    var t=d.getAttribute('data-title-'+l); if(t) document.title=t;
+    document.querySelectorAll('[data-setlang]').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-setlang')===l))});
+    document.querySelectorAll('img[data-alt-de]').forEach(function(i){
+      if(!i.hasAttribute('data-alt-en')) i.setAttribute('data-alt-en',i.alt);
+      i.alt=i.getAttribute('data-alt-'+l);
+    });
+    /* Sprache an die Unterseiten weitergeben */
+    document.querySelectorAll('a[href]').forEach(function(a){
+      var m=a.getAttribute('href').match(/^([\w-]+\.html)(\?lang=\w+)?(#.*)?$/);
+      if(m) a.setAttribute('href',m[1]+'?lang='+l+(m[3]||''));
+    });
+  }
+  document.querySelectorAll('[data-setlang]').forEach(function(b){b.addEventListener('click',function(){set(b.getAttribute('data-setlang'))})});
+  set(d.lang==='de'?'de':'en');
+})();
+</script>
+</body>
+</html>
