@@ -9,9 +9,22 @@
 (function(){var l;try{l=localStorage.getItem('htwerk-lang')}catch(e){}var q=(location.search.match(/[?&]lang=(de|en)/)||[])[1];if(q)l=q;if(l!=='de'&&l!=='en')l=/^de/i.test(navigator.language||'')?'de':'en';document.documentElement.lang=l})();
 </script>
 <meta name="description" content="HTWerk connects Berlin's university students with leading companies in engineering, energy and manufacturing through curated factory and office tours.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://htwerk.de/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HTWerk">
+<meta property="og:title" content="HTWerk – Student club for factory &amp; office tours">
+<meta property="og:description" content="HTWerk connects Berlin's university students with leading companies in engineering, energy and manufacturing through curated factory and office tours.">
+<meta property="og:url" content="https://htwerk.de/">
+<meta property="og:image" content="https://htwerk.de/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="HTWerk, student club for factory and office tours. Students talking with a Formlabs employee next to 3D-printing equipment.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>
 :root{--black:#000;--white:#fff;--grey:#6B6B6B;--line:#E2E2E2}
 *{box-sizing:border-box}
@@ -79,6 +92,7 @@ h2{font-size:clamp(2.6rem,5.5vw,4.5rem);line-height:1;margin:0 0 2.5rem}
 .host ul{margin:0;padding-left:1.2rem;max-width:34rem}
 .host li{margin-bottom:.6rem}
 .host .text{padding-top:6rem;padding-bottom:6rem}
+.host .sofar{font-family:"Marcellus",Georgia,serif;font-size:1.4rem;line-height:1.3;color:var(--grey);margin:-1.25rem 0 2.25rem}
 .host .split{min-height:80vh}
 .host .split+.split{border-top:1px solid var(--line)}
 .host-photos{display:grid;grid-template-rows:1fr 1fr}
@@ -164,7 +178,7 @@ footer a{margin-right:1.25rem}
         <a class="btn" href="#host"><span lang="en">Host a tour</span><span lang="de">Tour ausrichten</span></a>
       </div>
     </div>
-    <div class="photo"><img src="images/hero-formlabs.jpg" data-alt-de="Studierende im Gespräch mit einem Formlabs-Mitarbeiter neben 3D-Druck-Geräten" alt="Students talking with a Formlabs employee next to 3D-printing equipment"></div>
+    <div class="photo"><img fetchpriority="high" src="images/hero-formlabs.jpg" data-alt-de="Studierende im Gespräch mit einem Formlabs-Mitarbeiter neben 3D-Druck-Geräten" alt="Students talking with a Formlabs employee next to 3D-printing equipment"></div>
     <div class="side" aria-hidden="true"><span>HTWERK BERLIN</span></div>
   </section>
 
@@ -179,10 +193,10 @@ footer a{margin-right:1.25rem}
     </div>
     <div class="stack">
       <div class="founder">
-        <img src="images/founder.jpg" data-alt-de="Porträt von Linus Rüsseler" alt="Portrait of Linus Rüsseler">
+        <img loading="lazy" decoding="async" src="images/founder.jpg" data-alt-de="Porträt von Linus Rüsseler" alt="Portrait of Linus Rüsseler">
         <div class="cap"><span lang="en">Linus Rüsseler – Founder, Partnership management</span><span lang="de">Linus Rüsseler – Gründer, Partnermanagement</span></div>
       </div>
-      <div class="wide"><img src="images/about-team.jpg" data-alt-de="Studierende um einen Laptop versammelt bei einem Unternehmensbesuch" alt="Students gathered around a laptop during a company visit"></div>
+      <div class="wide"><img loading="lazy" decoding="async" src="images/about-team.jpg" data-alt-de="Studierende um einen Laptop versammelt bei einem Unternehmensbesuch" alt="Students gathered around a laptop during a company visit"></div>
     </div>
   </section>
 
@@ -194,19 +208,19 @@ footer a{margin-right:1.25rem}
       <div class="member"><span class="serif">Stefanie Delarmente</span><span><span lang="en">Community Management</span><span lang="de">Community-Management</span></span></div>
       <div class="member"><span class="serif">Ren Nakamura</span><span><span lang="en">Photography and Graphic Design</span><span lang="de">Fotografie und Grafikdesign</span></span></div>
     </div>
-    <div class="photo"><img src="images/core-team.jpg" data-alt-de="Studierende und Gastgeber im Gespräch in einem Pausenraum" alt="Students and hosts talking in a dimly lit company break room"></div>
+    <div class="photo"><img loading="lazy" decoding="async" src="images/core-team.jpg" data-alt-de="Studierende und Gastgeber im Gespräch in einem Pausenraum" alt="Students and hosts talking in a dimly lit company break room"></div>
   </section>
   <section class="host" id="host">
     <div class="split">
-      <div class="photo"><img src="images/bmw-briefing.jpg" data-alt-de="Guide weist Studierende in Besucherwesten bei BMW Motorrad Berlin ein" alt="Guide briefing students in visitor vests at BMW Motorrad Berlin"></div>
-      <div class="text"><h2><span lang="en">What hosting an HTWerk event involves</span><span lang="de">Was zu einer HTWerk-Tour gehört</span></h2><h3><span lang="en">Before the visit</span><span lang="de">Vor dem Besuch</span></h3><ul>
+      <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-briefing.jpg" data-alt-de="Guide weist Studierende in Besucherwesten bei BMW Motorrad Berlin ein" alt="Guide briefing students in visitor vests at BMW Motorrad Berlin"></div>
+      <div class="text"><h2><span lang="en">What hosting an HTWerk event involves</span><span lang="de">Was zu einer HTWerk-Tour gehört</span></h2><p class="sofar"><span lang="en">So far: 4 tours with more than 60 students.</span><span lang="de">Bisher: 4 Touren mit über 60 Studierenden.</span></p><h3><span lang="en">Before the visit</span><span lang="de">Vor dem Besuch</span></h3><ul>
         <li><span lang="en">Designate a point of contact to coordinate logistics with the HTWerk team</span><span lang="de">Benennen Sie eine Ansprechperson, die die Organisation mit dem HTWerk-Team abstimmt</span></li>
         <li><span lang="en">Confirm a date and rough itinerary: duration, meeting point, any access restrictions or safety requirements</span><span lang="de">Bestätigen Sie Termin und groben Ablauf: Dauer, Treffpunkt, Zugangsbeschränkungen oder Sicherheitsvorgaben</span></li>
         <li><span lang="en">Provide any necessary safety gear or briefings in advance if required (e.g. safety shoes, vests, glasses for factory floors)</span><span lang="de">Stellen Sie bei Bedarf Schutzausrüstung bereit oder geben Sie vorab eine Sicherheitsunterweisung (z. B. Sicherheitsschuhe, Westen, Schutzbrillen für die Fertigung)</span></li>
       </ul></div>
     </div>
     <div class="split">
-      <div class="photo"><img src="images/during-visit.jpg" data-alt-de="Studierende und Gastgeber schauen bei einem Unternehmensbesuch auf einen Bildschirm" alt="Students and hosts looking at a screen during a company visit"></div>
+      <div class="photo"><img loading="lazy" decoding="async" src="images/during-visit.jpg" data-alt-de="Studierende und Gastgeber schauen bei einem Unternehmensbesuch auf einen Bildschirm" alt="Students and hosts looking at a screen during a company visit"></div>
       <div class="text"><h3><span lang="en">During the visit</span><span lang="de">Während des Besuchs</span></h3><ul>
         <li><span lang="en">Provide a host or guide, ideally someone who knows the space and can speak to the technical and cultural side of the company</span><span lang="de">Stellen Sie eine Person, die durch den Besuch führt, idealerweise jemanden, der die Räume kennt und über Technik und Kultur des Unternehmens sprechen kann</span></li>
         <li><span lang="en">Give a short company or team introduction (10–15 minutes is often enough)</span><span lang="de">Stellen Sie Unternehmen oder Team kurz vor (10–15 Minuten reichen oft)</span></li>
@@ -215,7 +229,7 @@ footer a{margin-right:1.25rem}
       </ul></div>
     </div>
     <div class="split">
-      <div class="photo"><img src="images/networking.jpg" data-alt-de="Studierende im Gespräch mit Formlabs-Mitarbeitenden nach der Tour" alt="Students chatting with Formlabs staff after the tour"></div>
+      <div class="photo"><img loading="lazy" decoding="async" src="images/networking.jpg" data-alt-de="Studierende im Gespräch mit Formlabs-Mitarbeitenden nach der Tour" alt="Students chatting with Formlabs staff after the tour"></div>
       <div class="text"><h3><span lang="en">What we handle</span><span lang="de">Das übernehmen wir</span></h3><ul>
         <li><span lang="en">Recruiting and coordinating the student group, tailored to your recruiting goals</span><span lang="de">Auswahl und Koordination der Studierendengruppe, abgestimmt auf Ihre Recruiting-Ziele</span></li>
         <li><span lang="en">Communication, registration, and confirmations with attendees</span><span lang="de">Kommunikation, Anmeldung und Bestätigungen mit den Teilnehmenden</span></li>
@@ -232,25 +246,28 @@ footer a{margin-right:1.25rem}
         <h2 style="margin:0"><span lang="en">Past visits</span><span lang="de">Bisherige Besuche</span></h2>
         <span class="arrow" aria-hidden="true"></span>
       </div>
-      <div class="photo"><img src="images/bmw-make-life-a-ride.jpg" data-alt-de="Studierende in Besucherwesten hören einem Guide vor BMW Motorrad Berlin zu" alt="Students in visitor vests listening to a guide outside BMW Motorrad Berlin"></div>
+      <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-make-life-a-ride.jpg" data-alt-de="Studierende in Besucherwesten hören einem Guide vor BMW Motorrad Berlin zu" alt="Students in visitor vests listening to a guide outside BMW Motorrad Berlin"></div>
     </div>
 
-    <a class="visit" href="1komma5.html">
-      <div class="photo"><img src="images/1komma5.jpg" data-alt-de="Gruppenfoto der Studierenden bei 1KOMMA5°" alt="Group photo of students at 1KOMMA5°"></div>
-      <div class="name"><div><h3>1KOMMA5°</h3><p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p></div></div>
-    </a>
-    <a class="visit" href="siemens-energy.html">
-      <div class="photo"><img src="images/siemens-energy.jpg" data-alt-de="Studierende mit Schutzhelmen vor einem Elektrolyseur bei Siemens Energy" alt="Students in hard hats in front of an electrolyzer at Siemens Energy"></div>
-      <div class="name"><div><h3>Siemens Energy</h3><p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p></div></div>
-    </a>
-    <a class="visit" href="formlabs.html">
-      <div class="photo"><img src="images/formlabs.jpg" data-alt-de="Gruppenfoto der Studierenden mit dem Formlabs-Team" alt="Group photo of students with the Formlabs team"></div>
-      <div class="name"><div><h3>Formlabs</h3><p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p></div></div>
-    </a>
-    <a class="visit" href="bmw-motorrad.html">
-      <div class="photo"><img src="images/bmw-tour.jpg" data-alt-de="Guide spricht zu Studierenden im BMW Motorrad Werk Berlin" alt="Guide addressing students inside BMW Motorrad Berlin"></div>
-      <div class="name"><div><h3>BMW Motorrad</h3><p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p></div></div>
-    </a>
+    <!-- Die Tour-Seiten (data-recap) sind noch nicht verlinkt, weil dort nur Platzhalter stehen.
+         Sobald ein Rueckblick geschrieben ist, die Zeile so umstellen (und am Ende </div> durch </a> ersetzen):
+           <a class="visit" href="formlabs.html"> ... <h3>Formlabs</h3><p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p> ... </a> -->
+    <div class="visit" data-recap="1komma5.html">
+      <div class="photo"><img loading="lazy" decoding="async" src="images/1komma5.jpg" data-alt-de="Gruppenfoto der Studierenden bei 1KOMMA5°" alt="Group photo of students at 1KOMMA5°"></div>
+      <div class="name"><div><h3>1KOMMA5°</h3></div></div>
+    </div>
+    <div class="visit" data-recap="siemens-energy.html">
+      <div class="photo"><img loading="lazy" decoding="async" src="images/siemens-energy.jpg" data-alt-de="Studierende mit Schutzhelmen vor einem Elektrolyseur bei Siemens Energy" alt="Students in hard hats in front of an electrolyzer at Siemens Energy"></div>
+      <div class="name"><div><h3>Siemens Energy</h3></div></div>
+    </div>
+    <div class="visit" data-recap="formlabs.html">
+      <div class="photo"><img loading="lazy" decoding="async" src="images/formlabs.jpg" data-alt-de="Gruppenfoto der Studierenden mit dem Formlabs-Team" alt="Group photo of students with the Formlabs team"></div>
+      <div class="name"><div><h3>Formlabs</h3></div></div>
+    </div>
+    <div class="visit" data-recap="bmw-motorrad.html">
+      <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-tour.jpg" data-alt-de="Guide spricht zu Studierenden im BMW Motorrad Werk Berlin" alt="Guide addressing students inside BMW Motorrad Berlin"></div>
+      <div class="name"><div><h3>BMW Motorrad</h3></div></div>
+    </div>
   </section>
 
   <section class="process">
@@ -267,10 +284,10 @@ footer a{margin-right:1.25rem}
   <section class="signup dark" id="signup">
     <div class="inner">
       <h2><span lang="en">Join the next tour</span><span lang="de">Bei der nächsten Tour dabei sein</span></h2>
-      <p><span lang="en">Fill in the form to register for our next visit. HTWerk tours are open to students from all Berlin universities.</span><span lang="de">Melde dich über das Formular für unseren nächsten Besuch an. HTWerk-Touren stehen Studierenden aller Berliner Hochschulen offen.</span></p>
+      <p><span lang="en">Our upcoming tours are listed on Luma. Register there for the next visit. HTWerk tours are open to students from all Berlin universities.</span><span lang="de">Unsere nächsten Touren stehen auf Luma. Melde dich dort für den nächsten Besuch an. HTWerk-Touren stehen Studierenden aller Berliner Hochschulen offen.</span></p>
       <div class="btns">
-        <!-- TODO: HIER den Link zum Anmeldeformular einsetzen (z. B. Notion-Formular). Das ist die einzige Stelle: alle anderen "Join the next tour"-Buttons fuehren hierher. -->
-        <a class="btn solid" href="#signup"><span lang="en">Register for the next tour</span><span lang="de">Für die nächste Tour anmelden</span></a>
+        <!-- Link zur Anmeldung (Luma). Das ist die einzige Stelle: alle anderen "Join the next tour"-Buttons fuehren hierher. -->
+        <a class="btn solid" href="https://luma.com/user/LinusRuesseler"><span lang="en">Register on Luma</span><span lang="de">Auf Luma anmelden</span></a>
         <a class="btn" href="https://www.linkedin.com/company/htwerk/"><span lang="en">Follow HTWerk on LinkedIn</span><span lang="de">HTWerk auf LinkedIn folgen</span></a>
       </div>
     </div>

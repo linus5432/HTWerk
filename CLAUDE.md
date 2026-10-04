@@ -9,16 +9,25 @@ Werksbesichtigungen und Büro-Touren bei Unternehmen organisiert. Zielgruppen:
 Studierende (Anmeldung zu Touren) und Unternehmen (Tour ausrichten).
 
 Reines HTML und CSS mit wenig JavaScript, kein Build-Schritt, kein Framework.
-Gehostet werden soll über GitHub Pages aus dem Branch `main`, Ordner `/` (root).
+
+## Hosting
+
+- Live unter https://htwerk.de über GitHub Pages, Branch `main`, Ordner `/` (root).
+  Jeder Push auf `main` geht nach ein bis zwei Minuten online.
+- Die Datei `CNAME` legt die Domain fest. Nicht löschen.
+- Domain registriert bei INWX, DNS bei Cloudflare (vier A-Einträge auf GitHub Pages,
+  CNAME `www` auf `linus5432.github.io`, alle „DNS only“).
 
 ## Dateien
 
 | Datei | Inhalt |
 | --- | --- |
 | `index.html` | Startseite: Titel, About us, Core Team, Hosting, Past visits, Ablauf, Anmeldung, Kontakt |
-| `1komma5.html`, `siemens-energy.html`, `formlabs.html`, `bmw-motorrad.html` | Je eine Unterseite pro Tour, gedacht als Blog-Rückblick. Aktuell nur Platzhaltertext |
-| `images/` | 12 Fotos aus der Partner-Präsentation (JPG, max. 1400 px) |
-| `htwerk.html` | Älteres Konzeptpapier für die Student EXPO Berlin 2027. Gehört nicht zur Website, ist nirgends verlinkt |
+| `1komma5.html`, `siemens-energy.html`, `formlabs.html`, `bmw-motorrad.html` | Je eine Unterseite pro Tour, gedacht als Blog-Rückblick. Aktuell nur Platzhaltertext, deshalb nicht verlinkt und auf `noindex` |
+| `images/` | 12 Fotos aus der Partner-Präsentation (JPG, max. 1400 px) und `og-image.jpg` (Vorschaubild 1200 x 630 für geteilte Links) |
+| `fonts/` | Schriftdateien (woff2), `fonts.css` mit den `@font-face`-Regeln, Lizenztexte (SIL OFL) |
+| `favicon.svg`, `favicon.png`, `apple-touch-icon.png` | Icon: weißes „H“ aus Marcellus auf Schwarz |
+| `CNAME` | Domain für GitHub Pages |
 
 ## Design
 
@@ -26,10 +35,13 @@ Vorlage ist die Partner-Präsentation „HTWerk Partner Proposal 2026“:
 
 - Schwarz-weiß, keine Akzentfarbe. Tokens in `:root`: `--black`, `--white`, `--grey`, `--line`
 - Geteilte Flächen aus Text und Foto (`.split`), Fotos randlos
-- Überschriften in Marcellus (Serif), Fließtext in IBM Plex Sans, beide über Google Fonts
+- Überschriften in Marcellus (Serif), Fließtext in IBM Plex Sans (400, 600, 700).
+  Beide liegen lokal in `fonts/` und werden über `fonts/fonts.css` eingebunden.
+  Keine Schriften oder Skripte von fremden Servern laden (Datenschutz).
 - Firmennamen unter „Past visits“ stehen hochkant neben dem Foto, in Großbuchstaben
 - Reihenfolge der Abschnitte und der Fotos folgt der Präsentation. Nicht umsortieren, ohne zu fragen
-- Unter „Past visits“ stehen nur die Firmennamen plus „Read the recap“, keine weiteren Angaben
+- Unter „Past visits“ stehen nur die Firmennamen, keine weiteren Angaben
+- Alle Fotos außer dem ersten haben `loading="lazy"`
 
 ## Zweisprachigkeit (DE/EN)
 
@@ -46,31 +58,40 @@ Vorlage ist die Partner-Präsentation „HTWerk Partner Proposal 2026“:
 
 ## Anmeldung
 
-Der Link zum Anmeldeformular steht an genau einer Stelle: in `index.html` im Abschnitt
-`#signup` beim Kommentar `TODO: HIER den Link zum Anmeldeformular einsetzen`.
+Der Link zur Anmeldung steht an genau einer Stelle: in `index.html` im Abschnitt `#signup`
+(Button „Register on Luma“). Er zeigt auf `https://luma.com/user/LinusRuesseler`.
 Alle anderen „Join the next tour“-Buttons, auch auf den Tour-Seiten, führen zu `index.html#signup`.
-Geplant ist ein Notion-Formular.
 
 ## Tour-Unterseiten
 
+- Die vier Seiten sind von der Startseite aus noch nicht verlinkt, weil dort nur Platzhalter stehen.
+  In `index.html` unter `#visits` ist jede Tour deshalb ein `<div class="visit" data-recap="…">`.
+- Sobald ein Rückblick geschrieben ist:
+  1. in `index.html` das `<div class="visit" …>` der Tour zu `<a class="visit" href="….html">` machen
+     (schließendes Tag anpassen) und unter dem `<h3>` wieder
+     `<p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p>` einfügen,
+  2. auf der Tour-Seite die Zeile `<meta name="robots" content="noindex">` löschen.
 - Der editierbare Bereich liegt zwischen den Kommentaren `AB HIER SCHREIBST DU DEINEN BLOG-TEXT`
   und `ENDE DEINES TEXTES`. Dort stehen auch Bausteine zum Kopieren.
 - Die vier Seiten sind bis auf Name, Titelfoto und „Next visit“-Link identisch.
   Änderungen am Gerüst in allen vier Dateien nachziehen.
 - Neue Tour: eine bestehende Tour-Seite kopieren, Name, Foto und Alt-Texte anpassen,
-  in `index.html` unter `#visits` einen weiteren `<a class="visit">`-Block ergänzen
+  in `index.html` unter `#visits` einen weiteren Block ergänzen
   und die „Next visit“-Kette anpassen (aktuell 1KOMMA5° → Siemens Energy → Formlabs → BMW Motorrad → 1KOMMA5°).
+  Die Zahl in „So far: 4 tours …“ im Abschnitt `#host` mit anpassen.
 
 ## Offene Punkte
 
-1. Link zum Anmeldeformular fehlt (Button zeigt noch auf `#signup`).
-2. `impressum.html` und `datenschutz.html` existieren nicht, sind aber im Footer verlinkt.
-   Ein Impressum ist Pflicht, sobald die Seite öffentlich beworben wird.
-3. Blog-Texte und Tour-Daten auf den vier Tour-Seiten sind Platzhalter.
-4. Einwilligung der abgebildeten Personen und Freigabe der Unternehmen für die Fotos klären.
-5. Im Kontakt steht eine persönliche Hochschul-Adresse. Eine eigene HTWerk-Adresse wäre besser.
-6. Die deutschen Texte der Startseite sind eine Übersetzung und noch nicht gegengelesen.
-7. GitHub Pages ist noch nicht eingeschaltet (Settings > Pages > Branch `main`, Ordner `/`).
+1. `impressum.html` und `datenschutz.html` existieren nicht, sind aber im Footer verlinkt.
+   Ein Impressum ist Pflicht. Dafür fehlt die Anschrift des Verantwortlichen.
+2. Blog-Texte und Tour-Daten auf den vier Tour-Seiten sind Platzhalter.
+3. Einwilligung der abgebildeten Personen und Freigabe der Unternehmen für die Fotos klären.
+4. Im Kontakt steht eine persönliche Hochschul-Adresse. Eine eigene HTWerk-Adresse wäre besser.
+5. Die deutschen Texte der Startseite sind eine Übersetzung und noch nicht gegengelesen.
+6. Der Anmeldelink führt auf ein persönliches Luma-Profil. Ein eigener HTWerk-Kalender auf Luma
+   oder der Link zur jeweils nächsten Veranstaltung wäre direkter.
+7. Die nächste Tour (Firma, Datum, Plätze) wird auf der Seite noch nicht konkret genannt.
+8. Im Team fehlt ein Mitglied, das nicht in der Präsentation stand. Teamfotos fehlen.
 
 ## Prüfen
 

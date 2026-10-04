@@ -8,9 +8,13 @@
 /* Sprache waehlen, bevor die Seite gezeichnet wird: ?lang= in der Adresse, sonst gespeicherte Wahl, sonst Browsersprache */
 (function(){var l;try{l=localStorage.getItem('htwerk-lang')}catch(e){}var q=(location.search.match(/[?&]lang=(de|en)/)||[])[1];if(q)l=q;if(l!=='de'&&l!=='en')l=/^de/i.test(navigator.language||'')?'de':'en';document.documentElement.lang=l})();
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- noindex: Suchmaschinen sollen die Seite erst aufnehmen, wenn der Rueckblick geschrieben ist. Dann diese Zeile loeschen. -->
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#000000">
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>
 :root{--black:#000;--white:#fff;--grey:#6B6B6B;--line:#E2E2E2}
 *{box-sizing:border-box}
