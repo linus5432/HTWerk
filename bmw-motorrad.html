@@ -8,8 +8,7 @@
 /* Sprache waehlen, bevor die Seite gezeichnet wird: ?lang= in der Adresse, sonst gespeicherte Wahl, sonst Browsersprache */
 (function(){var l;try{l=localStorage.getItem('htwerk-lang')}catch(e){}var q=(location.search.match(/[?&]lang=(de|en)/)||[])[1];if(q)l=q;if(l!=='de'&&l!=='en')l=/^de/i.test(navigator.language||'')?'de':'en';document.documentElement.lang=l})();
 </script>
-<!-- noindex: Suchmaschinen sollen die Seite erst aufnehmen, wenn der Rueckblick geschrieben ist. Dann diese Zeile loeschen. -->
-<meta name="robots" content="noindex">
+<meta name="description" content="Our first tour took us to the BMW Motorrad plant in Berlin, with 14 students.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.png" sizes="48x48" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -52,6 +51,10 @@ main{display:flex;flex-direction:column}
 .post figure{margin:2.5rem 0;max-width:min(100%,60rem)}
 .post figure img{margin:0}
 .post figcaption{font-size:.9rem;color:var(--grey);margin-top:.5rem}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;max-width:60rem;margin-top:3rem}
+.shots figure{margin:0;max-width:none}
+.shots img{width:100%;max-width:none;aspect-ratio:4/3;object-fit:cover}
+@media (max-width:40rem){.shots{grid-template-columns:1fr}}
 .post blockquote{margin:2.5rem 0;padding-left:1.25rem;border-left:3px solid var(--black);font-family:"Marcellus",Georgia,serif;font-size:1.5rem;line-height:1.35}
 .next{border-top:1px solid var(--line);padding-top:3rem;padding-bottom:4rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
 .next .serif{font-size:clamp(1.6rem,3vw,2.2rem)}
@@ -81,10 +84,10 @@ footer a{margin-right:1.25rem}
     <a href="index.html#visits"><span lang="en">Back to past visits</span><span lang="de">Zurück zu den bisherigen Besuchen</span></a>
     <h1>BMW Motorrad</h1>
 
-    <!-- ============ DATUM DER TOUR: hier eintragen (einmal englisch, einmal deutsch) ============ -->
+    <!-- Zeile unter dem Namen. Das Datum des Besuchs fehlt noch: einfach davor ergänzen, z. B. „12. Mai 2026 · …“ (einmal englisch, einmal deutsch). -->
     <p class="meta">
-      <span lang="en">Add the date of the visit here</span>
-      <span lang="de">Hier das Datum des Besuchs eintragen</span>
+      <span lang="en">Factory tour · 14 students</span>
+      <span lang="de">Werksbesichtigung · 14 Studierende</span>
     </p>
   </div>
 
@@ -110,28 +113,35 @@ footer a{margin-right:1.25rem}
                                             <img src="images/dateiname.jpg" alt="Was auf dem Foto zu sehen ist">
                                             <figcaption>Bildunterschrift</figcaption>
                                           </figure>
+
+         Zwei Fotos nebeneinander, fuer beide Sprachen gemeinsam (steht unter dem deutschen Text):
+                                          <div class="shots"> <figure>...</figure> <figure>...</figure> </div>
          ===================================================================== -->
 
     <!-- ---------- ENGLISCHER TEXT ---------- -->
     <div lang="en">
-      <p class="lead">Write one or two sentences here that sum up the visit: where you went and what stood out.</p>
-
-      <h2>What we saw</h2>
-      <p>Write your recap here. What did the tour cover, who showed you around, and what surprised the group?</p>
-
-      <h2>What we took away</h2>
-      <p>Add what students learned, for example about the technology, the working culture, or entry-level roles.</p>
+      <p class="lead">Our first tour took us to the BMW Motorrad plant in Berlin, with 14 students.</p>
+      <p>After a briefing, we walked through the plant in visitor vests with one of its guides.</p>
+      <p>This is where HTWerk started. The tour showed that the format works: a small group and a plant you don't otherwise get to see from the inside while you study.</p>
     </div>
 
     <!-- ---------- DEUTSCHER TEXT ---------- -->
     <div lang="de">
-      <p class="lead">Fasse den Besuch hier in ein oder zwei Sätzen zusammen: wo ihr wart und was hängen geblieben ist.</p>
+      <p class="lead">Unsere erste Tour führte ins BMW Motorrad Werk Berlin. 14 Studierende waren dabei.</p>
+      <p>Nach einer Einweisung ging es in Besucherwesten und mit einem Guide durch das Werk.</p>
+      <p>Mit dieser Tour hat HTWerk angefangen. Sie hat gezeigt, dass das Format funktioniert: eine kleine Gruppe und ein Werk, das man im Studium sonst nicht von innen sieht.</p>
+    </div>
 
-      <h2>Was wir gesehen haben</h2>
-      <p>Hier steht dein Rückblick. Was habt ihr gesehen, wer hat euch geführt und was hat die Gruppe überrascht?</p>
-
-      <h2>Was wir mitnehmen</h2>
-      <p>Ergänze, was die Studierenden mitgenommen haben, zum Beispiel über die Technik, die Unternehmenskultur oder den Berufseinstieg.</p>
+    <!-- ---------- FOTOS (für beide Sprachen gemeinsam) ---------- -->
+    <div class="shots">
+      <figure>
+        <img loading="lazy" decoding="async" src="images/bmw-briefing.jpg" data-alt-de="Ein Guide weist Studierende in Besucherwesten bei BMW Motorrad in Berlin ein" alt="Guide briefing students in visitor vests at BMW Motorrad Berlin">
+        <figcaption><span lang="en">Briefing before the tour</span><span lang="de">Einweisung vor der Tour</span></figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" decoding="async" src="images/bmw-make-life-a-ride.jpg" data-alt-de="Studierende in Besucherwesten hören vor dem BMW Motorrad Werk Berlin einem Guide zu" alt="Students in visitor vests listening to a guide outside BMW Motorrad Berlin">
+        <figcaption><span lang="en">Outside the plant</span><span lang="de">Vor dem Werk</span></figcaption>
+      </figure>
     </div>
 
     <!-- =====================================================================

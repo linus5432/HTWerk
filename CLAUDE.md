@@ -23,7 +23,7 @@ Reines HTML und CSS mit wenig JavaScript, kein Build-Schritt, kein Framework.
 | Datei | Inhalt |
 | --- | --- |
 | `index.html` | Startseite: Titel, About us, Core Team, Hosting, Past visits, Ablauf, Anmeldung, Kontakt |
-| `1komma5.html`, `siemens-energy.html`, `formlabs.html`, `bmw-motorrad.html` | Je eine Unterseite pro Tour, gedacht als Blog-Rückblick. Aktuell nur Platzhaltertext, deshalb nicht verlinkt und auf `noindex` |
+| `1komma5.html`, `siemens-energy.html`, `formlabs.html`, `bmw-motorrad.html` | Je eine Unterseite pro Tour mit einem kurzen Rückblick. Von der Startseite unter `#visits` verlinkt |
 | `images/` | 12 Fotos aus der Partner-Präsentation (JPG, max. 1400 px), `og-image.jpg` (Vorschaubild 1200 x 630 für geteilte Links, mit Logo) und das Logo als Datei: `logo-htwerk.svg` (Wortmarke) und `logo-htwerk-monogramm.svg` (H mit Helm), beide schwarz |
 | `fonts/` | Schriftdateien (woff2), `fonts.css` mit den `@font-face`-Regeln, Lizenztexte (SIL OFL) |
 | `favicon.svg`, `favicon.png`, `apple-touch-icon.png` | Icon: weißes Monogramm (H mit Helm) auf Schwarz |
@@ -82,18 +82,20 @@ Alle anderen „Join the next tour“-Buttons, auch auf den Tour-Seiten, führen
 
 ## Tour-Unterseiten
 
-- Die vier Seiten sind von der Startseite aus noch nicht verlinkt, weil dort nur Platzhalter stehen.
-  In `index.html` unter `#visits` ist jede Tour deshalb ein `<div class="visit" data-recap="…">`.
-- Sobald ein Rückblick geschrieben ist:
-  1. in `index.html` das `<div class="visit" …>` der Tour zu `<a class="visit" href="….html">` machen
-     (schließendes Tag anpassen) und unter dem `<h3>` wieder
-     `<p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p>` einfügen,
-  2. auf der Tour-Seite die Zeile `<meta name="robots" content="noindex">` löschen.
+- Jede Tour ist in `index.html` unter `#visits` ein `<a class="visit" href="….html">` mit der Zeile
+  „Read the recap / Zum Rückblick“ unter dem `<h3>`.
+- Auf den Tour-Seiten stehen kurze Rückblicke (Einleitung und zwei Absätze je Sprache). Sie enthalten nur,
+  was belegt ist: Reihenfolge der Touren, Teilnehmerzahlen (BMW Motorrad 14, Formlabs 20, Siemens Energy 20),
+  beteiligte Hochschulen und was auf den Fotos zu sehen ist. Nichts dazuerfinden; neue Details kommen von Linus.
+- Unter dem Namen steht eine Zeile `.meta` (Art des Besuchs, Teilnehmerzahl). Das Datum fehlt bei allen vier Touren.
 - Der editierbare Bereich liegt zwischen den Kommentaren `AB HIER SCHREIBST DU DEINEN BLOG-TEXT`
   und `ENDE DEINES TEXTES`. Dort stehen auch Bausteine zum Kopieren.
-- Die vier Seiten sind bis auf Name, Titelfoto und „Next visit“-Link identisch.
+- Fotos im Text: `<div class="shots">` mit zwei `<figure>` nebeneinander, für beide Sprachen gemeinsam
+  (Bildunterschrift zweisprachig, Alt-Text über `data-alt-de`). BMW Motorrad und Formlabs haben je zwei Fotos,
+  für Siemens Energy und 1KOMMA5° gibt es außer dem Titelfoto keine.
+- Die vier Seiten sind bis auf Name, Texte, Fotos und „Next visit“-Link identisch.
   Änderungen am Gerüst in allen vier Dateien nachziehen.
-- Neue Tour: eine bestehende Tour-Seite kopieren, Name, Foto und Alt-Texte anpassen,
+- Neue Tour: eine bestehende Tour-Seite kopieren, Name, Texte, Fotos und Alt-Texte anpassen,
   in `index.html` unter `#visits` einen weiteren Block ergänzen
   und die „Next visit“-Kette anpassen (aktuell 1KOMMA5° → Siemens Energy → Formlabs → BMW Motorrad → 1KOMMA5°).
   Die Zahl in „So far: 4 tours …“ im Abschnitt `#host` mit anpassen.
@@ -102,7 +104,9 @@ Alle anderen „Join the next tour“-Buttons, auch auf den Tour-Seiten, führen
 
 1. `impressum.html` und `datenschutz.html` existieren nicht, sind aber im Footer verlinkt.
    Ein Impressum ist Pflicht. Dafür fehlt die Anschrift des Verantwortlichen.
-2. Blog-Texte und Tour-Daten auf den vier Tour-Seiten sind Platzhalter.
+2. Die Rückblicke auf den vier Tour-Seiten sind kurz und von Claude aus wenigen Fakten geschrieben.
+   Es fehlen das Datum jeder Tour, die Teilnehmerzahl bei 1KOMMA5° und alles, was nur die Teilnehmenden wissen
+   (wer geführt hat, was gezeigt wurde). Linus sollte sie prüfen und ergänzen.
 3. Einwilligung der abgebildeten Personen und Freigabe der Unternehmen für die Fotos klären.
 4. Im Kontakt steht eine persönliche Hochschul-Adresse. Eine eigene HTWerk-Adresse wäre besser.
 5. Die deutschen Texte wurden im Oktober 2026 überarbeitet. Linus sollte sie einmal gegenlesen,
