@@ -24,9 +24,9 @@ Reines HTML und CSS mit wenig JavaScript, kein Build-Schritt, kein Framework.
 | --- | --- |
 | `index.html` | Startseite: Titel, About us, Core Team, Hosting, Past visits, Ablauf, Anmeldung, Kontakt |
 | `1komma5.html`, `siemens-energy.html`, `formlabs.html`, `bmw-motorrad.html` | Je eine Unterseite pro Tour, gedacht als Blog-Rückblick. Aktuell nur Platzhaltertext, deshalb nicht verlinkt und auf `noindex` |
-| `images/` | 12 Fotos aus der Partner-Präsentation (JPG, max. 1400 px) und `og-image.jpg` (Vorschaubild 1200 x 630 für geteilte Links) |
+| `images/` | 12 Fotos aus der Partner-Präsentation (JPG, max. 1400 px), `og-image.jpg` (Vorschaubild 1200 x 630 für geteilte Links, mit Logo) und das Logo als Datei: `logo-htwerk.svg` (Wortmarke) und `logo-htwerk-monogramm.svg` (H mit Helm), beide schwarz |
 | `fonts/` | Schriftdateien (woff2), `fonts.css` mit den `@font-face`-Regeln, Lizenztexte (SIL OFL) |
-| `favicon.svg`, `favicon.png`, `apple-touch-icon.png` | Icon: weißes „H“ aus Marcellus auf Schwarz |
+| `favicon.svg`, `favicon.png`, `apple-touch-icon.png` | Icon: weißes Monogramm (H mit Helm) auf Schwarz |
 | `CNAME` | Domain für GitHub Pages |
 
 ## Design
@@ -43,6 +43,20 @@ Vorlage ist die Partner-Präsentation „HTWerk Partner Proposal 2026“:
 - Unter „Past visits“ stehen nur die Firmennamen, keine weiteren Angaben
 - Alle Fotos außer dem ersten haben `loading="lazy"`
 
+## Logo
+
+Entwurf „Helm“ aus der Canva-Datei „HTWerk – Logo-Entwürfe“: Das H der Wortmarke trägt einen Schutzhelm.
+Es gibt zwei Fassungen, beide als ein einziger Vektorpfad aus den Marcellus-Umrissen:
+
+- **Wortmarke** „HTWerk“ mit Helm: steht als Inline-SVG im `<h1>` der Startseite und in `.brand`
+  in der Kopfzeile der vier Tour-Seiten. Farbe über `fill:currentColor`, also weiß auf Schwarz.
+  Im `<h1>` steht zusätzlich unsichtbar der Text „HTWerk“ (`.vh`) für Screenreader und Suchmaschinen.
+- **Monogramm** (H mit Helm): Favicon, Touch-Icon und klein in der Fußzeile aller Seiten (`.mark`).
+
+Der Pfad steht in allen fünf HTML-Dateien identisch. Bei einer Änderung am Logo überall ersetzen,
+dazu `favicon.svg`, die beiden PNG-Icons, `images/og-image.jpg` und die zwei SVG-Dateien in `images/`.
+Die Größe der Wortmarke im Titel regelt `.hero h1 svg` (Breite), in der Kopfzeile `.brand svg` (Höhe).
+
 ## Zweisprachigkeit (DE/EN)
 
 - Jeder sichtbare Text steht doppelt: `<span lang="en">…</span><span lang="de">…</span>`
@@ -55,6 +69,10 @@ Vorlage ist die Partner-Präsentation „HTWerk Partner Proposal 2026“:
   Es setzt auch `document.title` (aus `data-title-de/en` am `<html>`), die Alt-Texte
   (`data-alt-de`) und hängt `?lang=` an interne Links.
 - Neue Texte immer in beiden Sprachen anlegen. Unternehmen werden gesiezt, Studierende geduzt.
+- Deutsche Begriffe einheitlich halten: „Tour“ für das Format, „Besuch“ für den einzelnen Termin,
+  „Rückblick“ für den Blog-Text. Der deutsche Claim lautet
+  „Studentische Initiative für Werks- und Unternehmensbesuche“.
+- Aufzählungen für Unternehmen unter `#host` stehen im Infinitiv („Eine Ansprechperson benennen …“), nicht im Imperativ.
 
 ## Anmeldung
 
@@ -87,7 +105,8 @@ Alle anderen „Join the next tour“-Buttons, auch auf den Tour-Seiten, führen
 2. Blog-Texte und Tour-Daten auf den vier Tour-Seiten sind Platzhalter.
 3. Einwilligung der abgebildeten Personen und Freigabe der Unternehmen für die Fotos klären.
 4. Im Kontakt steht eine persönliche Hochschul-Adresse. Eine eigene HTWerk-Adresse wäre besser.
-5. Die deutschen Texte der Startseite sind eine Übersetzung und noch nicht gegengelesen.
+5. Die deutschen Texte wurden im Oktober 2026 überarbeitet. Linus sollte sie einmal gegenlesen,
+   vor allem den neuen Claim und die Rollenbezeichnungen im Team.
 6. Der Anmeldelink führt auf ein persönliches Luma-Profil. Ein eigener HTWerk-Kalender auf Luma
    oder der Link zur jeweils nächsten Veranstaltung wäre direkter.
 7. Die nächste Tour (Firma, Datum, Plätze) wird auf der Seite noch nicht konkret genannt.

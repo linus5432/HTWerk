@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-title-en="HTWerk – Student club for factory &amp; office tours" data-title-de="HTWerk – Studentische Initiative für Werksbesichtigungen">
+<html lang="en" data-title-en="HTWerk – Student club for factory &amp; office tours" data-title-de="HTWerk – Studentische Initiative für Werks- und Unternehmensbesuche">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,7 +56,10 @@ nav{align-items:center}
 
 /* hero */
 .hero{grid-template-columns:40% 1fr 4.5rem}
-.hero h1{font-size:clamp(3.5rem,6.6vw,7.5rem);line-height:.9;margin:0 0 1.75rem}
+/* Logo (Entwurf „Helm“): Wortmarke als SVG, der Text „HTWerk“ bleibt für Screenreader und Suchmaschinen */
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.hero h1{margin:0 0 1.9rem;line-height:0}
+.hero h1 svg{display:block;width:clamp(13rem,25vw,28rem);height:auto;fill:currentColor}
 .hero>.text{padding-left:clamp(1.25rem,4vw,4rem);padding-right:clamp(1.25rem,3vw,3rem)}
 .hero p{font-size:clamp(1.1rem,1.6vw,1.35rem);margin:0 0 2.25rem}
 .side{display:flex;align-items:center;justify-content:center;background:var(--white)}
@@ -133,6 +136,8 @@ a.visit:hover h3{text-decoration:underline;text-decoration-thickness:2px;text-un
 footer{border-top:1px solid var(--line);padding:1.5rem 0 2.5rem;font-size:.9rem;color:var(--grey)}
 footer .inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 footer a{margin-right:1.25rem}
+.mark{display:flex;align-items:center;gap:.7rem}
+.mark svg{height:2.3rem;width:auto;fill:var(--black)}
 
 @media (max-width:52rem){
   nav{gap:1rem;padding:.5rem .8rem}
@@ -171,32 +176,32 @@ footer a{margin-right:1.25rem}
 <main>
   <section class="split hero">
     <div class="text dark">
-      <h1>HTWerk</h1>
-      <p><span lang="en">Student club for factory &amp; office tours</span><span lang="de">Studentische Initiative für Werksbesichtigungen</span></p>
+      <h1><span class="vh">HTWerk</span><svg viewBox="0 0 4799 1487" aria-hidden="true" focusable="false"><path d="M678 1027 c-17 -1 -38 -1 -64 -1 c-25 -1 -53 -1 -83 -1 c-31 -1 -62 -1 -95 -1 c-32 -1 -64 -1 -96 -1 c-31 0 -61 0 -89 0 c-28 1 -53 1 -74 2 v191 c0 36 1 68 2 95 c1 27 2 51 4 70 c1 20 3 36 6 50 c2 13 4 24 7 33 v3 h-154 v-3 c3 -9 5 -20 7 -33 c3 -14 5 -30 7 -50 c1 -19 3 -43 3 -70 c1 -27 2 -59 2 -95 v-418 c0 -36 -1 -68 -2 -95 c0 -27 -2 -51 -3 -71 c-2 -20 -4 -36 -7 -49 c-2 -14 -4 -25 -7 -34 v-2 h154 v2 c-3 9 -5 20 -7 34 c-3 13 -5 29 -6 49 c-2 20 -3 44 -4 71 c-1 27 -2 59 -2 95 v164 c23 1 48 2 76 2 c28 0 58 0 89 0 c30 0 62 -1 94 -1 c32 0 62 -1 92 -2 c30 0 58 -1 83 -2 c26 -1 49 -2 67 -2 v-159 c0 -36 0 -68 -1 -95 c-1 -27 -2 -51 -4 -71 c-1 -20 -3 -36 -6 -49 c-2 -14 -5 -25 -7 -34 v-2 h154 v2 c-3 9 -5 20 -8 34 c-2 13 -4 29 -6 49 c-1 20 -3 44 -3 71 c-1 27 -2 59 -2 95 v418 c0 36 1 68 2 95 c0 27 2 51 3 70 c2 20 4 36 6 50 c3 13 5 24 8 33 v3 h-154 v-3 c2 -9 5 -20 7 -33 c3 -14 5 -30 6 -50 c2 -19 3 -43 4 -70 c1 -27 1 -59 1 -95 Z M1226 603 c-50 0 -96 2 -137 7 c-40 4 -75 9 -105 14 c-34 7 -65 14 -92 21 l19 -103 c5 0 13 0 23 1 c10 0 22 1 34 1 c13 1 26 1 40 1 c14 0 27 0 40 1 c12 0 23 0 33 0 c9 1 16 1 21 1 h366 c4 0 11 0 21 -1 c9 0 20 0 33 0 c12 -1 25 -1 39 -1 c14 0 27 0 40 -1 c13 0 24 -1 34 -1 c11 -1 18 -1 23 -1 l19 103 c-27 -7 -58 -14 -92 -21 c-30 -5 -65 -10 -106 -14 c-40 -5 -86 -7 -136 -7 v613 c0 36 0 68 1 95 c2 27 3 51 4 70 c2 20 4 36 6 50 c2 13 5 24 7 33 v3 h-153 v-3 c3 -9 5 -20 7 -33 c2 -14 4 -30 6 -50 c2 -19 3 -43 4 -70 c1 -27 1 -59 1 -95 Z M2356 668 l257 623 l249 -612 c10 -25 17 -46 22 -64 c5 -17 7 -32 7 -45 c0 -3 0 -7 0 -11 c-1 -5 -1 -8 -2 -10 v-2 h127 v2 c-9 10 -18 25 -28 45 c-10 21 -22 46 -35 76 l-343 817 h-49 l-249 -606 l-228 606 h-48 l-314 -785 c-8 -18 -16 -36 -24 -53 c-8 -17 -15 -33 -22 -47 c-7 -13 -14 -25 -19 -34 c-6 -10 -10 -16 -13 -19 v-2 h178 v2 c-1 5 -2 9 -2 11 c0 3 0 6 0 9 c0 15 2 30 5 46 c4 17 10 36 19 59 l241 610 l231 -614 Z M3317 1478 c-48 0 -92 -7 -134 -22 c-41 -15 -77 -37 -108 -66 c-31 -29 -55 -65 -73 -107 c-17 -43 -26 -91 -26 -146 c0 -48 8 -93 24 -135 c16 -41 39 -77 67 -107 c29 -30 63 -54 101 -71 c38 -17 79 -26 124 -26 c44 0 85 8 122 23 c38 15 71 37 98 66 c28 29 50 65 66 107 c16 43 24 91 26 145 c-49 0 -97 -1 -145 -1 c-49 -1 -99 -1 -151 -1 c-37 0 -73 0 -109 1 c-35 0 -67 1 -95 1 c3 45 9 85 21 121 c11 36 27 67 47 92 c20 26 44 45 72 59 c29 14 61 20 97 20 c24 0 48 -3 70 -8 c22 -6 42 -14 60 -24 c18 -11 34 -23 48 -37 c14 -14 26 -29 36 -45 l8 4 l-48 114 c-23 12 -50 22 -83 31 c-32 8 -70 12 -115 12 Z M3232 1087 c42 0 85 0 128 0 c43 -1 82 -1 117 -3 c-4 -37 -11 -70 -21 -100 c-11 -29 -25 -54 -42 -75 c-16 -20 -36 -36 -59 -47 c-22 -11 -47 -17 -75 -17 c-24 0 -47 5 -68 16 c-21 11 -39 27 -54 47 c-16 21 -28 46 -37 76 c-10 30 -15 63 -17 102 c19 0 40 1 61 1 c21 0 44 0 67 0 Z M3729 1061 c0 -37 -1 -69 -2 -96 c-1 -27 -2 -50 -4 -70 c-1 -20 -3 -36 -6 -49 c-2 -14 -5 -25 -7 -34 v-2 h148 v2 c-3 10 -6 22 -9 36 c-2 14 -4 32 -5 55 c16 -14 32 -27 49 -39 c18 -13 35 -25 53 -34 c18 -10 36 -18 55 -24 c18 -6 37 -9 56 -9 c12 0 22 0 30 1 c9 2 16 3 23 5 c7 2 13 4 19 6 c5 3 11 5 16 7 l-32 123 l-10 -3 c-6 -19 -15 -34 -29 -45 c-14 -11 -34 -17 -58 -17 c-13 0 -27 2 -42 7 c-14 5 -29 11 -44 19 c-15 9 -30 18 -45 29 c-15 11 -29 23 -44 35 c0 12 -1 26 -1 40 c0 15 0 30 0 46 v166 c0 36 1 68 1 95 c1 27 3 51 4 70 c2 20 4 36 6 50 c2 13 5 24 7 33 v3 h-148 v-3 c2 -9 5 -20 7 -33 c3 -14 5 -30 6 -50 c2 -19 3 -43 4 -70 c1 -27 2 -59 2 -95 Z M4231 758 c0 -36 -1 -68 -2 -95 c-1 -27 -2 -50 -4 -70 c-1 -20 -3 -36 -6 -50 c-2 -13 -4 -24 -7 -33 v-2 h148 v2 c-2 9 -5 20 -7 33 c-2 14 -4 30 -6 50 c-1 20 -3 43 -4 70 c0 27 -1 59 -1 95 v320 l210 -188 c37 -32 55 -59 55 -80 h149 v2 c-11 4 -22 8 -32 13 c-10 6 -20 12 -30 19 c-10 8 -20 16 -31 25 c-11 9 -23 20 -36 31 l-188 171 l258 305 c8 10 16 19 25 29 c9 9 18 18 27 26 c9 8 18 16 26 22 c9 6 17 9 24 11 v3 h-186 c0 -11 -3 -23 -9 -35 c-6 -12 -16 -27 -31 -46 l-231 -274 v104 c0 36 1 68 1 95 c1 27 3 51 4 70 c2 20 4 36 6 50 c2 13 5 24 7 33 v3 h-148 v-3 c3 -9 5 -20 7 -33 c3 -14 5 -30 6 -50 c2 -19 3 -43 4 -70 c1 -27 2 -59 2 -95 Z M745 323 l-204 21 l-27 -257 l-26 3 l27 257 l-199 21 l-27 -258 l-26 3 l27 258 l-205 21 c-14 -137 70 -264 200 -317 l-6 -54 l200 -21 l5 54 c138 25 247 131 261 269 Z M36 437 l767 -80 c22 -3 42 13 44 35 c3 22 -13 42 -35 44 l-768 81 c-22 2 -41 -14 -44 -36 c-2 -22 14 -41 36 -44 Z"/></svg></h1>
+      <p><span lang="en">Student club for factory &amp; office tours</span><span lang="de">Studentische Initiative für Werks- und Unternehmensbesuche</span></p>
       <div class="btns">
                 <a class="btn solid" href="#signup"><span lang="en">Join the next tour</span><span lang="de">Zur nächsten Tour anmelden</span></a>
         <a class="btn" href="#host"><span lang="en">Host a tour</span><span lang="de">Tour ausrichten</span></a>
       </div>
     </div>
-    <div class="photo"><img fetchpriority="high" src="images/hero-formlabs.jpg" data-alt-de="Studierende im Gespräch mit einem Formlabs-Mitarbeiter neben 3D-Druck-Geräten" alt="Students talking with a Formlabs employee next to 3D-printing equipment"></div>
+    <div class="photo"><img fetchpriority="high" src="images/hero-formlabs.jpg" data-alt-de="Studierende im Gespräch mit einem Formlabs-Mitarbeiter neben 3D-Druckern" alt="Students talking with a Formlabs employee next to 3D-printing equipment"></div>
     <div class="side" aria-hidden="true"><span>HTWERK BERLIN</span></div>
   </section>
 
   <section class="split about" id="about">
     <div class="text">
       <h2><span lang="en">About us</span><span lang="de">Über uns</span></h2>
-      <p><span lang="en">It started with a simple frustration: engineering students spend years learning theory but rarely get to see inside the factories and companies they're studying to join.</span><span lang="de">Am Anfang stand ein einfacher Frust: Ingenieurstudierende lernen jahrelang Theorie, sehen aber selten die Fabriken und Unternehmen von innen, für die sie später arbeiten wollen.</span></p>
-      <p><span lang="en">HTWerk was founded to close that gap. What began as an idea at HTW Berlin has grown into a student initiative connecting Berlin's university students with leading companies across engineering, energy, and manufacturing, through curated factory tours that go beyond the standard campus recruiting pitch.</span><span lang="de">HTWerk wurde gegründet, um diese Lücke zu schließen. Aus einer Idee an der HTW Berlin ist eine studentische Initiative geworden, die Berliner Studierende mit führenden Unternehmen aus Technik, Energie und Fertigung zusammenbringt: mit kuratierten Werksbesichtigungen, die über den üblichen Recruiting-Vortrag auf dem Campus hinausgehen.</span></p>
-      <p><span lang="en">We've taken students behind the scenes at BMW Motorrad Berlin, onto the 3D-printing floor at Formlabs, and into Siemens Energy and 1KOMMA5°. Each tour is built to show not just what these companies make, but how they think, build, and recruit.</span><span lang="de">Wir haben Studierende hinter die Kulissen von BMW Motorrad Berlin gebracht, in die 3D-Druck-Fertigung von Formlabs und zu Siemens Energy und 1KOMMA5°. Jede Tour zeigt nicht nur, was diese Unternehmen herstellen, sondern auch, wie sie denken, bauen und einstellen.</span></p>
-      <p><span lang="en">Over 60 students have joined us so far, and we're just getting started.</span><span lang="de">Über 60 Studierende waren bisher dabei, und wir fangen gerade erst an.</span></p>
-      <p><strong><span lang="en">Founded by students, for students.</span><span lang="de">Von Studierenden gegründet, für Studierende.</span></strong></p>
+      <p><span lang="en">It started with a simple frustration: engineering students spend years learning theory but rarely get to see inside the factories and companies they're studying to join.</span><span lang="de">Am Anfang stand ein einfacher Frust: Im Ingenieurstudium lernt man jahrelang Theorie, sieht die Werke und Unternehmen, in denen man später arbeiten will, aber kaum von innen.</span></p>
+      <p><span lang="en">HTWerk was founded to close that gap. What began as an idea at HTW Berlin has grown into a student initiative connecting Berlin's university students with leading companies across engineering, energy, and manufacturing, through curated factory tours that go beyond the standard campus recruiting pitch.</span><span lang="de">HTWerk schließt diese Lücke. Aus einer Idee an der HTW Berlin ist eine studentische Initiative geworden, die Studierende der Berliner Hochschulen mit führenden Unternehmen aus Technik, Energie und Produktion zusammenbringt. Unsere Werksbesichtigungen sind sorgfältig vorbereitet und zeigen mehr als der übliche Recruiting-Vortrag auf dem Campus.</span></p>
+      <p><span lang="en">We've taken students behind the scenes at BMW Motorrad Berlin, onto the 3D-printing floor at Formlabs, and into Siemens Energy and 1KOMMA5°. Each tour is built to show not just what these companies make, but how they think, build, and recruit.</span><span lang="de">Wir haben mit Studierenden hinter die Kulissen von BMW Motorrad in Berlin geschaut, standen bei Formlabs zwischen den 3D-Druckern und waren bei Siemens Energy und 1KOMMA5° zu Gast. Jede Tour zeigt nicht nur, was diese Unternehmen herstellen, sondern auch, wie sie denken, entwickeln und Nachwuchs gewinnen.</span></p>
+      <p><span lang="en">Over 60 students have joined us so far, and we're just getting started.</span><span lang="de">Mehr als 60 Studierende waren bisher dabei, und das ist erst der Anfang.</span></p>
+      <p><strong><span lang="en">Founded by students, for students.</span><span lang="de">Von Studierenden für Studierende.</span></strong></p>
     </div>
     <div class="stack">
       <div class="founder">
         <img loading="lazy" decoding="async" src="images/founder.jpg" data-alt-de="Porträt von Linus Rüsseler" alt="Portrait of Linus Rüsseler">
         <div class="cap"><span lang="en">Linus Rüsseler – Founder, Partnership management</span><span lang="de">Linus Rüsseler – Gründer, Partnermanagement</span></div>
       </div>
-      <div class="wide"><img loading="lazy" decoding="async" src="images/about-team.jpg" data-alt-de="Studierende um einen Laptop versammelt bei einem Unternehmensbesuch" alt="Students gathered around a laptop during a company visit"></div>
+      <div class="wide"><img loading="lazy" decoding="async" src="images/about-team.jpg" data-alt-de="Studierende stehen bei einem Unternehmensbesuch um einen Laptop" alt="Students gathered around a laptop during a company visit"></div>
     </div>
   </section>
 
@@ -212,30 +217,30 @@ footer a{margin-right:1.25rem}
   </section>
   <section class="host" id="host">
     <div class="split">
-      <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-briefing.jpg" data-alt-de="Guide weist Studierende in Besucherwesten bei BMW Motorrad Berlin ein" alt="Guide briefing students in visitor vests at BMW Motorrad Berlin"></div>
-      <div class="text"><h2><span lang="en">What hosting an HTWerk event involves</span><span lang="de">Was zu einer HTWerk-Tour gehört</span></h2><p class="sofar"><span lang="en">So far: 4 tours with more than 60 students.</span><span lang="de">Bisher: 4 Touren mit über 60 Studierenden.</span></p><h3><span lang="en">Before the visit</span><span lang="de">Vor dem Besuch</span></h3><ul>
-        <li><span lang="en">Designate a point of contact to coordinate logistics with the HTWerk team</span><span lang="de">Benennen Sie eine Ansprechperson, die die Organisation mit dem HTWerk-Team abstimmt</span></li>
-        <li><span lang="en">Confirm a date and rough itinerary: duration, meeting point, any access restrictions or safety requirements</span><span lang="de">Bestätigen Sie Termin und groben Ablauf: Dauer, Treffpunkt, Zugangsbeschränkungen oder Sicherheitsvorgaben</span></li>
-        <li><span lang="en">Provide any necessary safety gear or briefings in advance if required (e.g. safety shoes, vests, glasses for factory floors)</span><span lang="de">Stellen Sie bei Bedarf Schutzausrüstung bereit oder geben Sie vorab eine Sicherheitsunterweisung (z. B. Sicherheitsschuhe, Westen, Schutzbrillen für die Fertigung)</span></li>
+      <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-briefing.jpg" data-alt-de="Ein Guide weist Studierende in Besucherwesten bei BMW Motorrad in Berlin ein" alt="Guide briefing students in visitor vests at BMW Motorrad Berlin"></div>
+      <div class="text"><h2><span lang="en">What hosting an HTWerk event involves</span><span lang="de">So richten Sie eine HTWerk-Tour aus</span></h2><p class="sofar"><span lang="en">So far: 4 tours with more than 60 students.</span><span lang="de">Bisher: 4 Touren mit mehr als 60 Studierenden.</span></p><h3><span lang="en">Before the visit</span><span lang="de">Vor dem Besuch</span></h3><ul>
+        <li><span lang="en">Designate a point of contact to coordinate logistics with the HTWerk team</span><span lang="de">Eine Ansprechperson benennen, die die Organisation mit dem HTWerk-Team abstimmt</span></li>
+        <li><span lang="en">Confirm a date and rough itinerary: duration, meeting point, any access restrictions or safety requirements</span><span lang="de">Termin und groben Ablauf festlegen: Dauer, Treffpunkt, Zugangsregeln und Sicherheitsvorgaben</span></li>
+        <li><span lang="en">Provide any necessary safety gear or briefings in advance if required (e.g. safety shoes, vests, glasses for factory floors)</span><span lang="de">Falls nötig, Schutzausrüstung bereitstellen oder vorab eine Sicherheitsunterweisung geben (z. B. Sicherheitsschuhe, Warnwesten oder Schutzbrillen für die Fertigung)</span></li>
       </ul></div>
     </div>
     <div class="split">
       <div class="photo"><img loading="lazy" decoding="async" src="images/during-visit.jpg" data-alt-de="Studierende und Gastgeber schauen bei einem Unternehmensbesuch auf einen Bildschirm" alt="Students and hosts looking at a screen during a company visit"></div>
       <div class="text"><h3><span lang="en">During the visit</span><span lang="de">Während des Besuchs</span></h3><ul>
-        <li><span lang="en">Provide a host or guide, ideally someone who knows the space and can speak to the technical and cultural side of the company</span><span lang="de">Stellen Sie eine Person, die durch den Besuch führt, idealerweise jemanden, der die Räume kennt und über Technik und Kultur des Unternehmens sprechen kann</span></li>
-        <li><span lang="en">Give a short company or team introduction (10–15 minutes is often enough)</span><span lang="de">Stellen Sie Unternehmen oder Team kurz vor (10–15 Minuten reichen oft)</span></li>
-        <li><span lang="en">Lead the actual tour: factory floor, office space, or showroom</span><span lang="de">Führen Sie durch Fertigung, Büro oder Showroom</span></li>
-        <li><span lang="en">Optional but highly recommended: a Q&amp;A, informal networking, or coffee at the end. This is where a lot of the real value happens for students, whether it's a deeper look at your products, your culture, or the day-to-day in open roles.</span><span lang="de">Optional, aber sehr empfohlen: Fragerunde, lockeres Networking oder Kaffee zum Abschluss. Hier entsteht für Studierende oft der größte Mehrwert, ob durch einen tieferen Einblick in Ihre Produkte, Ihre Kultur oder den Arbeitsalltag in offenen Stellen.</span></li>
+        <li><span lang="en">Provide a host or guide, ideally someone who knows the space and can speak to the technical and cultural side of the company</span><span lang="de">Eine Person für die Führung stellen, am besten jemanden, der sich vor Ort auskennt und über Technik und Unternehmenskultur sprechen kann</span></li>
+        <li><span lang="en">Give a short company or team introduction (10–15 minutes is often enough)</span><span lang="de">Unternehmen oder Team kurz vorstellen (10 bis 15 Minuten reichen meist)</span></li>
+        <li><span lang="en">Lead the actual tour: factory floor, office space, or showroom</span><span lang="de">Die eigentliche Führung übernehmen: durch Fertigung, Büro oder Showroom</span></li>
+        <li><span lang="en">Optional but highly recommended: a Q&amp;A, informal networking, or coffee at the end. This is where a lot of the real value happens for students, whether it's a deeper look at your products, your culture, or the day-to-day in open roles.</span><span lang="de">Freiwillig, aber sehr zu empfehlen: eine Fragerunde, lockeres Networking oder ein Kaffee zum Abschluss. Davon haben die Studierenden oft am meisten, weil sie hier mehr über Ihre Produkte, Ihre Unternehmenskultur oder den Alltag in Ihren offenen Stellen erfahren.</span></li>
       </ul></div>
     </div>
     <div class="split">
       <div class="photo"><img loading="lazy" decoding="async" src="images/networking.jpg" data-alt-de="Studierende im Gespräch mit Formlabs-Mitarbeitenden nach der Tour" alt="Students chatting with Formlabs staff after the tour"></div>
       <div class="text"><h3><span lang="en">What we handle</span><span lang="de">Das übernehmen wir</span></h3><ul>
-        <li><span lang="en">Recruiting and coordinating the student group, tailored to your recruiting goals</span><span lang="de">Auswahl und Koordination der Studierendengruppe, abgestimmt auf Ihre Recruiting-Ziele</span></li>
-        <li><span lang="en">Communication, registration, and confirmations with attendees</span><span lang="de">Kommunikation, Anmeldung und Bestätigungen mit den Teilnehmenden</span></li>
-        <li><span lang="en">On-site coordination with your team</span><span lang="de">Abstimmung mit Ihrem Team vor Ort</span></li>
-        <li><span lang="en">Post-event content (LinkedIn recap, photos if permitted) to show your company to a wider student audience</span><span lang="de">Inhalte nach der Tour (LinkedIn-Rückblick, Fotos nach Freigabe), die Ihr Unternehmen einem größeren Kreis von Studierenden zeigen</span></li>
-        <li><span lang="en">Student contact information after the visit</span><span lang="de">Kontaktdaten der Studierenden nach dem Besuch</span></li>
+        <li><span lang="en">Recruiting and coordinating the student group, tailored to your recruiting goals</span><span lang="de">Zusammenstellung und Koordination der Studierendengruppe, abgestimmt auf Ihre Recruiting-Ziele</span></li>
+        <li><span lang="en">Communication, registration, and confirmations with attendees</span><span lang="de">Kommunikation mit den Teilnehmenden, von der Anmeldung bis zur Bestätigung</span></li>
+        <li><span lang="en">On-site coordination with your team</span><span lang="de">Koordination vor Ort, gemeinsam mit Ihrem Team</span></li>
+        <li><span lang="en">Post-event content (LinkedIn recap, photos if permitted) to show your company to a wider student audience</span><span lang="de">Inhalte nach der Tour (Rückblick auf LinkedIn, Fotos nach Freigabe), mit denen Ihr Unternehmen noch mehr Studierende erreicht</span></li>
+        <li><span lang="en">Student contact information after the visit</span><span lang="de">Kontaktdaten der teilnehmenden Studierenden nach dem Besuch</span></li>
       </ul></div>
     </div>
   </section>
@@ -246,7 +251,7 @@ footer a{margin-right:1.25rem}
         <h2 style="margin:0"><span lang="en">Past visits</span><span lang="de">Bisherige Besuche</span></h2>
         <span class="arrow" aria-hidden="true"></span>
       </div>
-      <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-make-life-a-ride.jpg" data-alt-de="Studierende in Besucherwesten hören einem Guide vor BMW Motorrad Berlin zu" alt="Students in visitor vests listening to a guide outside BMW Motorrad Berlin"></div>
+      <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-make-life-a-ride.jpg" data-alt-de="Studierende in Besucherwesten hören vor dem BMW Motorrad Werk Berlin einem Guide zu" alt="Students in visitor vests listening to a guide outside BMW Motorrad Berlin"></div>
     </div>
 
     <!-- Die Tour-Seiten (data-recap) sind noch nicht verlinkt, weil dort nur Platzhalter stehen.
@@ -265,26 +270,26 @@ footer a{margin-right:1.25rem}
       <div class="name"><div><h3>Formlabs</h3></div></div>
     </div>
     <div class="visit" data-recap="bmw-motorrad.html">
-      <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-tour.jpg" data-alt-de="Guide spricht zu Studierenden im BMW Motorrad Werk Berlin" alt="Guide addressing students inside BMW Motorrad Berlin"></div>
+      <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-tour.jpg" data-alt-de="Ein Guide spricht im BMW Motorrad Werk Berlin zu Studierenden" alt="Guide addressing students inside BMW Motorrad Berlin"></div>
       <div class="name"><div><h3>BMW Motorrad</h3></div></div>
     </div>
   </section>
 
   <section class="process">
     <div class="inner">
-      <h2><span lang="en">How a visit comes together</span><span lang="de">So entsteht ein Besuch</span></h2>
+      <h2><span lang="en">How a visit comes together</span><span lang="de">So kommt eine Tour zustande</span></h2>
       <ol class="steps">
-        <li><div class="n">01</div><h3><span lang="en">Reach out</span><span lang="de">Kontakt aufnehmen</span></h3><p><span lang="en">Get in touch and tell us your recruiting goals. We confirm a date and rough itinerary together.</span><span lang="de">Melden Sie sich und nennen Sie uns Ihre Recruiting-Ziele. Termin und groben Ablauf legen wir gemeinsam fest.</span></p></li>
-        <li><div class="n">02</div><h3><span lang="en">We fill the room</span><span lang="de">Wir füllen den Raum</span></h3><p><span lang="en">HTWerk recruits and coordinates the student group, tailored to match who you want to reach.</span><span lang="de">HTWerk gewinnt und koordiniert die Studierendengruppe, passend zu der Zielgruppe, die Sie erreichen möchten.</span></p></li>
-        <li><div class="n">03</div><h3><span lang="en">Host the tour</span><span lang="de">Tour durchführen</span></h3><p><span lang="en">You lead the visit, we handle logistics and follow up with a LinkedIn recap and student contacts.</span><span lang="de">Sie führen durch den Besuch, wir kümmern uns um die Organisation und liefern danach einen LinkedIn-Rückblick und die Kontakte der Studierenden.</span></p></li>
+        <li><div class="n">01</div><h3><span lang="en">Reach out</span><span lang="de">Sie melden sich</span></h3><p><span lang="en">Get in touch and tell us your recruiting goals. We confirm a date and rough itinerary together.</span><span lang="de">Schreiben Sie uns und nennen Sie Ihre Recruiting-Ziele. Termin und groben Ablauf legen wir gemeinsam fest.</span></p></li>
+        <li><div class="n">02</div><h3><span lang="en">We fill the room</span><span lang="de">Wir bringen die Studierenden mit</span></h3><p><span lang="en">HTWerk recruits and coordinates the student group, tailored to match who you want to reach.</span><span lang="de">HTWerk stellt die Gruppe zusammen und koordiniert sie, passend zu den Studierenden, die Sie erreichen möchten.</span></p></li>
+        <li><div class="n">03</div><h3><span lang="en">Host the tour</span><span lang="de">Sie zeigen Ihr Unternehmen</span></h3><p><span lang="en">You lead the visit, we handle logistics and follow up with a LinkedIn recap and student contacts.</span><span lang="de">Sie führen durch den Besuch, wir kümmern uns um die Organisation. Danach veröffentlichen wir einen Rückblick auf LinkedIn und schicken Ihnen die Kontakte der Studierenden.</span></p></li>
       </ol>
     </div>
   </section>
 
   <section class="signup dark" id="signup">
     <div class="inner">
-      <h2><span lang="en">Join the next tour</span><span lang="de">Bei der nächsten Tour dabei sein</span></h2>
-      <p><span lang="en">Our upcoming tours are listed on Luma. Register there for the next visit. HTWerk tours are open to students from all Berlin universities.</span><span lang="de">Unsere nächsten Touren stehen auf Luma. Melde dich dort für den nächsten Besuch an. HTWerk-Touren stehen Studierenden aller Berliner Hochschulen offen.</span></p>
+      <h2><span lang="en">Join the next tour</span><span lang="de">Sei bei der nächsten Tour dabei</span></h2>
+      <p><span lang="en">Our upcoming tours are listed on Luma. Register there for the next visit. HTWerk tours are open to students from all Berlin universities.</span><span lang="de">Unsere kommenden Touren findest du auf Luma. Dort meldest du dich auch an. Mitmachen können Studierende aller Berliner Hochschulen.</span></p>
       <div class="btns">
         <!-- Link zur Anmeldung (Luma). Das ist die einzige Stelle: alle anderen "Join the next tour"-Buttons fuehren hierher. -->
         <a class="btn solid" href="https://luma.com/user/LinusRuesseler"><span lang="en">Register on Luma</span><span lang="de">Auf Luma anmelden</span></a>
@@ -301,7 +306,7 @@ footer a{margin-right:1.25rem}
       </div>
       <div>
         <p><span lang="en"><strong>Companies:</strong> tell us what you'd like to show and who you want to reach. We'll take it from there.</span><span lang="de"><strong>Unternehmen:</strong> Sagen Sie uns, was Sie zeigen und wen Sie erreichen möchten. Um den Rest kümmern wir uns.</span></p>
-        <p><span lang="en"><strong>Students:</strong> questions about a tour? Write to us, or <a href="#signup">register for the next tour</a>.</span><span lang="de"><strong>Studierende:</strong> Fragen zu einer Tour? Schreib uns oder <a href="#signup">melde dich für die nächste Tour an</a>.</span></p>
+        <p><span lang="en"><strong>Students:</strong> questions about a tour? Write to us, or <a href="#signup">register for the next tour</a>.</span><span lang="de"><strong>Studierende:</strong> Du hast Fragen zu einer Tour? Schreib uns oder <a href="#signup">melde dich gleich für die nächste Tour an</a>.</span></p>
         <div class="btns">
           <a class="btn solid" href="mailto:Linus.Ruesseler@Student.HTW-Berlin.de"><span lang="en">Email us</span><span lang="de">E-Mail schreiben</span></a>
         </div>
@@ -313,7 +318,7 @@ footer a{margin-right:1.25rem}
 <footer>
   <div class="inner">
     <div><!-- TODO: impressum.html und datenschutz.html anlegen --><a href="impressum.html"><span lang="en">Legal notice</span><span lang="de">Impressum</span></a><a href="datenschutz.html"><span lang="en">Privacy policy</span><span lang="de">Datenschutz</span></a></div>
-    <div>© 2026 HTWerk</div>
+    <div class="mark"><svg viewBox="0 0 1498 2566" aria-hidden="true" focusable="false"><path d="M1216 1753 c-31 -1 -71 -2 -118 -2 c-48 -1 -99 -1 -155 -2 c-56 -1 -114 -1 -174 -2 c-61 0 -120 -1 -177 -1 c-58 0 -113 0 -165 1 c-52 0 -98 2 -137 3 v352 c0 67 1 126 3 176 c2 51 5 94 7 130 c3 37 7 67 11 91 c4 25 9 45 14 62 v5 h-285 v-5 c5 -17 10 -37 14 -62 c4 -24 8 -54 11 -91 c3 -36 6 -79 7 -130 c2 -50 3 -109 3 -176 v-771 c0 -68 -1 -126 -3 -176 c-1 -51 -4 -94 -7 -131 c-3 -37 -7 -67 -11 -92 c-4 -24 -9 -45 -14 -61 v-5 h285 v5 c-5 16 -10 37 -14 61 c-4 25 -8 55 -11 92 c-2 37 -5 80 -7 131 c-2 50 -3 108 -3 176 v303 c41 2 88 3 140 3 c52 0 107 0 164 0 c57 0 115 -1 174 -2 c58 -1 115 -2 170 -3 c55 -1 107 -2 154 -4 c48 -1 89 -3 124 -5 v-292 c0 -68 -1 -126 -3 -176 c-2 -51 -4 -94 -7 -131 c-3 -37 -6 -67 -10 -92 c-5 -24 -9 -45 -14 -61 v-5 h284 v5 c-4 16 -9 37 -13 61 c-5 25 -8 55 -11 92 c-4 37 -6 80 -8 131 c-1 50 -2 108 -2 176 v771 c0 67 1 126 2 176 c2 51 4 94 8 130 c3 37 6 67 11 91 c4 25 9 45 13 62 v5 h-284 v-5 c5 -17 9 -37 14 -62 c4 -24 7 -54 10 -91 c3 -36 5 -79 7 -130 c2 -50 3 -109 3 -176 Z M1351 562 l-400 42 l-54 -517 l-26 3 l54 517 l-369 39 l-54 -518 l-26 3 l55 518 l-400 42 c-27 -254 129 -487 369 -586 l-7 -66 l368 -39 l7 66 c255 47 456 243 483 496 Z M36 741 l1418 -149 c22 -3 42 13 44 35 c2 22 -14 42 -35 44 l-1419 149 c-22 3 -41 -13 -44 -35 c-2 -22 14 -42 36 -44 Z"/></svg>© 2026 HTWerk</div>
   </div>
 </footer>
 <script>
