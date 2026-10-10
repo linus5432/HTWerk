@@ -55,6 +55,11 @@ main{display:flex;flex-direction:column}
 .shots figure{margin:0;max-width:none}
 .shots img{width:100%;max-width:none;aspect-ratio:4/3;object-fit:cover}
 @media (max-width:40rem){.shots{grid-template-columns:1fr}}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;max-width:60rem;margin-top:3rem}
+.gallery a{display:block}
+.gallery img{width:100%;height:auto;max-width:none;margin:0;aspect-ratio:4/3;object-fit:cover;transition:opacity .2s}
+.gallery a:hover img{opacity:.82}
+@media (max-width:40rem){.gallery{grid-template-columns:1fr 1fr;gap:.5rem}}
 .post blockquote{margin:2.5rem 0;padding-left:1.25rem;border-left:3px solid var(--black);font-family:"Marcellus",Georgia,serif;font-size:1.5rem;line-height:1.35}
 .next{border-top:1px solid var(--line);padding-top:3rem;padding-bottom:4rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
 .next .serif{font-size:clamp(1.6rem,3vw,2.2rem)}
@@ -116,32 +121,41 @@ footer a{margin-right:1.25rem}
 
          Zwei Fotos nebeneinander, fuer beide Sprachen gemeinsam (steht unter dem deutschen Text):
                                           <div class="shots"> <figure>...</figure> <figure>...</figure> </div>
+
+         Galerie aus vielen Fotos, je drei nebeneinander (kleines Bild im Raster, Klick oeffnet das grosse):
+                                          <div class="gallery"> <a href="images/gross.jpg"><img src="images/klein.jpg" alt="..."></a> ... </div>
          ===================================================================== -->
 
     <!-- ---------- ENGLISCHER TEXT ---------- -->
     <div lang="en">
       <p class="lead">At Formlabs in Berlin, 20 of us stood among the 3D printers. It was our first tour with students from several universities.</p>
-      <p>The Formlabs team took time for our questions, right next to the printers. After the tour, the conversations with the staff carried on.</p>
+      <p>Formlabs started with an introduction to the company and the customers it works with. Then we went round the machines in groups: the printers, the post-processing units and the wall of material samples.</p>
+      <p>Printed parts were laid out on the tables, from drone frames to dental models. The Formlabs team took time for our questions, right at the machines, and the conversations carried on after the tour.</p>
       <p>Alongside students from HTW Berlin, students from TU Berlin and BSBI joined for the first time. HTWerk tours are open to students from all Berlin universities.</p>
     </div>
 
     <!-- ---------- DEUTSCHER TEXT ---------- -->
     <div lang="de">
       <p class="lead">Bei Formlabs in Berlin standen wir mit 20 Studierenden zwischen den 3D-Druckern. Es war unsere erste Tour mit Studierenden mehrerer Hochschulen.</p>
-      <p>Das Team von Formlabs hat sich Zeit für unsere Fragen genommen, direkt an den Druckern. Nach der Tour gingen die Gespräche mit den Mitarbeitenden weiter.</p>
+      <p>Zum Auftakt hat Formlabs das Unternehmen und seine Kunden vorgestellt. Danach ging es in Gruppen zu den Geräten: zu den Druckern, zur Nachbearbeitung und zur Wand mit den Materialmustern.</p>
+      <p>Auf den Tischen lagen gedruckte Teile, vom Drohnenrahmen bis zum Zahnmodell. Das Team von Formlabs hat sich Zeit für unsere Fragen genommen, direkt an den Geräten, und nach der Tour gingen die Gespräche weiter.</p>
       <p>Neben Studierenden der HTW Berlin waren zum ersten Mal auch Studierende der TU Berlin und der BSBI dabei. HTWerk-Touren stehen Studierenden aller Berliner Hochschulen offen.</p>
     </div>
 
-    <!-- ---------- FOTOS (für beide Sprachen gemeinsam) ---------- -->
-    <div class="shots">
-      <figure>
-        <img loading="lazy" decoding="async" src="images/hero-formlabs.jpg" data-alt-de="Studierende im Gespräch mit einem Formlabs-Mitarbeiter neben 3D-Druckern" alt="Students talking with a Formlabs employee next to 3D-printing equipment">
-        <figcaption><span lang="en">Questions at the printers</span><span lang="de">Fragen direkt an den Druckern</span></figcaption>
-      </figure>
-      <figure>
-        <img loading="lazy" decoding="async" src="images/networking.jpg" data-alt-de="Studierende im Gespräch mit Formlabs-Mitarbeitenden nach der Tour" alt="Students chatting with Formlabs staff after the tour">
-        <figcaption><span lang="en">Conversations after the tour</span><span lang="de">Gespräche nach der Tour</span></figcaption>
-      </figure>
+    <!-- ---------- FOTOGALERIE (für beide Sprachen gemeinsam). Ein Klick öffnet das Foto groß. ---------- -->
+    <div class="gallery">
+      <a href="images/formlabs/01.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/formlabs/01-s.jpg" data-alt-de="Ein Formlabs-Mitarbeiter stellt auf zwei Bildschirmen die Kunden des Unternehmens vor, Studierende hören zu" alt="A Formlabs employee presents the company's customers on two screens while students listen"></a>
+      <a href="images/formlabs/02.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/formlabs/02-s.jpg" data-alt-de="Ein Formlabs-Mitarbeiter erklärt gedruckte Teile auf einem Tisch vor einem Regal mit 3D-Druckern" alt="A Formlabs employee explains printed parts on a table in front of a shelf of 3D printers"></a>
+      <a href="images/formlabs/03.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/formlabs/03-s.jpg" data-alt-de="Studierende stehen um einen Tisch mit gedruckten Teilen, ein Formlabs-Mitarbeiter zeigt eines davon" alt="Students stand around a table of printed parts while a Formlabs employee shows one of them"></a>
+      <a href="images/hero-formlabs.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/formlabs/04-s.jpg" data-alt-de="Studierende im Gespräch mit einem Formlabs-Mitarbeiter neben 3D-Druckern" alt="Students talking with a Formlabs employee next to 3D-printing equipment"></a>
+      <a href="images/formlabs/05.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/formlabs/05-s.jpg" data-alt-de="Ein Formlabs-Mitarbeiter greift in einen geöffneten 3D-Drucker, zwei Studierende schauen zu" alt="A Formlabs employee reaches into an opened 3D printer while two students watch"></a>
+      <a href="images/formlabs/06.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/formlabs/06-s.jpg" data-alt-de="Ein Formlabs-Mitarbeiter erklärt einer Gruppe Studierender ein Nachbearbeitungsgerät mit geöffneter Klappe" alt="A Formlabs employee explains a post-processing machine with its lid open to a group of students"></a>
+      <a href="images/formlabs/07.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/formlabs/07-s.jpg" data-alt-de="Studierende hören einem Formlabs-Mitarbeiter an einem Tisch mit gedruckten Teilen zu" alt="Students listen to a Formlabs employee at a table of printed parts"></a>
+      <a href="images/formlabs/08.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/formlabs/08-s.jpg" data-alt-de="Ein Formlabs-Mitarbeiter hält ein Druckerteil hoch, daneben ein Tisch mit gedruckten Zahnmodellen" alt="A Formlabs employee holds up a printer part beside a table of printed dental models"></a>
+      <a href="images/formlabs/09.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/formlabs/09-s.jpg" data-alt-de="Studierende hören einem Formlabs-Mitarbeiter vor einer orangefarbenen Wand mit Formlabs-Logo zu" alt="Students listen to a Formlabs employee in front of an orange wall with the Formlabs logo"></a>
+      <a href="images/formlabs/10.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/formlabs/10-s.jpg" data-alt-de="Wand mit gedruckten Materialmustern neben dem Schriftzug „Tools that bring ideas to life“" alt="Wall of printed material samples next to the slogan &quot;Tools that bring ideas to life&quot;"></a>
+      <a href="images/formlabs/11.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/formlabs/11-s.jpg" data-alt-de="Ein 3D-Drucker und zwei Geräte zur Nachbearbeitung auf einer Werkbank" alt="A 3D printer and two post-processing units on a workbench"></a>
+      <a href="images/networking.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/formlabs/12-s.jpg" data-alt-de="Studierende im Gespräch mit Formlabs-Mitarbeitenden nach der Tour" alt="Students chatting with Formlabs staff after the tour"></a>
     </div>
 
     <!-- =====================================================================

@@ -55,6 +55,11 @@ main{display:flex;flex-direction:column}
 .shots figure{margin:0;max-width:none}
 .shots img{width:100%;max-width:none;aspect-ratio:4/3;object-fit:cover}
 @media (max-width:40rem){.shots{grid-template-columns:1fr}}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;max-width:60rem;margin-top:3rem}
+.gallery a{display:block}
+.gallery img{width:100%;height:auto;max-width:none;margin:0;aspect-ratio:4/3;object-fit:cover;transition:opacity .2s}
+.gallery a:hover img{opacity:.82}
+@media (max-width:40rem){.gallery{grid-template-columns:1fr 1fr;gap:.5rem}}
 .post blockquote{margin:2.5rem 0;padding-left:1.25rem;border-left:3px solid var(--black);font-family:"Marcellus",Georgia,serif;font-size:1.5rem;line-height:1.35}
 .next{border-top:1px solid var(--line);padding-top:3rem;padding-bottom:4rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
 .next .serif{font-size:clamp(1.6rem,3vw,2.2rem)}
@@ -116,6 +121,9 @@ footer a{margin-right:1.25rem}
 
          Zwei Fotos nebeneinander, fuer beide Sprachen gemeinsam (steht unter dem deutschen Text):
                                           <div class="shots"> <figure>...</figure> <figure>...</figure> </div>
+
+         Galerie aus vielen Fotos, je drei nebeneinander (kleines Bild im Raster, Klick oeffnet das grosse):
+                                          <div class="gallery"> <a href="images/gross.jpg"><img src="images/klein.jpg" alt="..."></a> ... </div>
          ===================================================================== -->
 
     <!-- ---------- ENGLISCHER TEXT ---------- -->
