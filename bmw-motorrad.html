@@ -58,6 +58,7 @@ main{display:flex;flex-direction:column}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;max-width:60rem;margin-top:3rem}
 .gallery a{display:block}
 .gallery img{width:100%;height:auto;max-width:none;margin:0;aspect-ratio:4/3;object-fit:cover;transition:opacity .2s}
+.gallery img.p{object-position:50% 25%}
 .gallery a:hover img{opacity:.82}
 @media (max-width:40rem){.gallery{grid-template-columns:1fr 1fr;gap:.5rem}}
 .post blockquote{margin:2.5rem 0;padding-left:1.25rem;border-left:3px solid var(--black);font-family:"Marcellus",Georgia,serif;font-size:1.5rem;line-height:1.35}
@@ -129,27 +130,51 @@ footer a{margin-right:1.25rem}
     <!-- ---------- ENGLISCHER TEXT ---------- -->
     <div lang="en">
       <p class="lead">Our first tour took us to the BMW Motorrad plant in Berlin, with 14 students.</p>
-      <p>After a briefing, we walked through the plant in visitor vests with one of its guides.</p>
+      <p>We met outside the brick building with the words "Make Life a Ride" on the wall. Inside, the BMW Motorrad Welt welcomed us with a large screen and motorcycles on display.</p>
+      <p>After a briefing, we followed our guide through the plant in visitor vests and with earpieces. The photos show the welcome area and the exhibition.</p>
       <p>This is where HTWerk started. The tour showed that the format works: a small group and a plant you don't otherwise get to see from the inside while you study.</p>
     </div>
 
     <!-- ---------- DEUTSCHER TEXT ---------- -->
     <div lang="de">
       <p class="lead">Unsere erste Tour führte ins BMW Motorrad Werk Berlin. 14 Studierende waren dabei.</p>
-      <p>Nach einer Einweisung ging es in Besucherwesten und mit einem Guide durch das Werk.</p>
+      <p>Los ging es vor dem Backsteinbau mit dem Schriftzug „Make Life a Ride“. Drinnen empfing uns die BMW Motorrad Welt mit einer großen Leinwand und ausgestellten Motorrädern.</p>
+      <p>Nach der Einweisung ging es in Besucherwesten und mit Kopfhörern hinter unserem Guide her durch das Werk. Die Fotos zeigen den Empfang und die Ausstellung.</p>
       <p>Mit dieser Tour hat HTWerk angefangen. Sie hat gezeigt, dass das Format funktioniert: eine kleine Gruppe und ein Werk, das man im Studium sonst nicht von innen sieht.</p>
     </div>
 
-    <!-- ---------- FOTOS (für beide Sprachen gemeinsam) ---------- -->
-    <div class="shots">
-      <figure>
-        <img loading="lazy" decoding="async" src="images/bmw-briefing.jpg" data-alt-de="Ein Guide weist Studierende in Besucherwesten bei BMW Motorrad in Berlin ein" alt="Guide briefing students in visitor vests at BMW Motorrad Berlin">
-        <figcaption><span lang="en">Briefing before the tour</span><span lang="de">Einweisung vor der Tour</span></figcaption>
-      </figure>
-      <figure>
-        <img loading="lazy" decoding="async" src="images/bmw-make-life-a-ride.jpg" data-alt-de="Studierende in Besucherwesten hören vor dem BMW Motorrad Werk Berlin einem Guide zu" alt="Students in visitor vests listening to a guide outside BMW Motorrad Berlin">
-        <figcaption><span lang="en">Outside the plant</span><span lang="de">Vor dem Werk</span></figcaption>
-      </figure>
+    <!-- ---------- FOTOGALERIE (für beide Sprachen gemeinsam). Ein Klick öffnet das Foto groß. ---------- -->
+    <div class="gallery">
+      <a href="images/bmw-motorrad/01.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/01-s.jpg" data-alt-de="Studierende in Besucherwesten hören dem Guide vor der Backsteinwand mit dem Schriftzug „Make Life a Ride“ zu" alt="Students in visitor vests listen to the guide outside, with &quot;Make Life a Ride&quot; on the brick wall"></a>
+      <a href="images/bmw-motorrad/02.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/02-s.jpg" data-alt-de="Die Gruppe in Besucherwesten vor dem Backsteinbau, der Guide erklärt" alt="The group in visitor vests outside the brick building while the guide explains"></a>
+      <a href="images/bmw-motorrad/03.jpg"><img class="p" loading="lazy" decoding="async" width="480" height="640" src="images/bmw-motorrad/03-s.jpg" data-alt-de="Die Gruppe vor dem Backsteinbau, von hinten gesehen" alt="The group outside the brick building, seen from behind"></a>
+      <a href="images/bmw-motorrad/04.jpg"><img class="p" loading="lazy" decoding="async" width="480" height="640" src="images/bmw-motorrad/04-s.jpg" data-alt-de="Der Guide in blauer Weste spricht vor dem Backsteinbau ins Mikrofon" alt="The guide in a blue vest speaks into a microphone outside the brick building"></a>
+      <a href="images/bmw-motorrad/05.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/05-s.jpg" data-alt-de="Der Guide gestikuliert beim Sprechen vor dem Backsteinbau" alt="The guide gestures while speaking outside"></a>
+      <a href="images/bmw-motorrad/06.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/06-s.jpg" data-alt-de="Der Guide und ein Student mit Kopfhörer vor dem Backsteinbau" alt="The guide and a student with an earpiece outside"></a>
+      <a href="images/bmw-motorrad/07.jpg"><img class="p" loading="lazy" decoding="async" width="480" height="640" src="images/bmw-motorrad/07-s.jpg" data-alt-de="Der Guide zeigt beim Sprechen zur Seite" alt="The guide points to the side while speaking"></a>
+      <a href="images/bmw-motorrad/08.jpg"><img class="p" loading="lazy" decoding="async" width="480" height="640" src="images/bmw-motorrad/08-s.jpg" data-alt-de="Der Guide erklärt mit erhobener Hand" alt="The guide explains with a raised hand"></a>
+      <a href="images/bmw-motorrad/09.jpg"><img class="p" loading="lazy" decoding="async" width="480" height="640" src="images/bmw-motorrad/09-s.jpg" data-alt-de="Der Guide spricht draußen zu Studierenden" alt="The guide speaks to students outside"></a>
+      <a href="images/bmw-motorrad/10.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/10-s.jpg" data-alt-de="Blick über die Schultern der Studierenden in Besucherwesten auf den Guide" alt="The guide seen over the shoulders of students in visitor vests"></a>
+      <a href="images/bmw-motorrad/11.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/11-s.jpg" data-alt-de="Die Gruppe in Besucherwesten vor einer Leinwand mit der Aufschrift „BMW Group iFactory Experience“" alt="The group in visitor vests in front of a screen reading &quot;BMW Group iFactory Experience&quot;"></a>
+      <a href="images/bmw-motorrad/12.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/12-s.jpg" data-alt-de="Die Gruppe schaut im Empfangsbereich auf die Leinwand" alt="The group watches the screen in the welcome area"></a>
+      <a href="images/bmw-motorrad/13.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/13-s.jpg" data-alt-de="Sitzecke vor einer Leinwand mit der Aufschrift „Welcome Home“" alt="Seating area in front of a screen reading &quot;Welcome Home&quot;"></a>
+      <a href="images/bmw-motorrad/14.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/14-s.jpg" data-alt-de="„Welcome Home“ auf der Leinwand über einem Motorradrad" alt="&quot;Welcome Home&quot; on the screen above a motorcycle wheel"></a>
+      <a href="images/bmw-motorrad/15.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/15-s.jpg" data-alt-de="Leinwand mit dem Emblem „100 Years BMW Motorrad“" alt="Screen showing the &quot;100 Years BMW Motorrad&quot; emblem"></a>
+      <a href="images/bmw-motorrad/16.jpg"><img class="p" loading="lazy" decoding="async" width="480" height="640" src="images/bmw-motorrad/16-s.jpg" data-alt-de="Leinwand mit einem Motorradfahrer hinter einer Lichtinstallation" alt="Screen showing a motorcycle rider behind a light installation"></a>
+      <a href="images/bmw-motorrad/17.jpg"><img class="p" loading="lazy" decoding="async" width="480" height="640" src="images/bmw-motorrad/17-s.jpg" data-alt-de="Leinwand mit einem Geländefahrer hinter einer Lichtinstallation" alt="Screen showing an off-road rider behind a light installation"></a>
+      <a href="images/bmw-motorrad/18.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/18-s.jpg" data-alt-de="Studierende in Besucherwesten stehen zur Einweisung in einer Reihe" alt="Students in visitor vests stand in a row for the briefing"></a>
+      <a href="images/bmw-motorrad/19.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/19-s.jpg" data-alt-de="Der Guide weist die aufgereihten Studierenden ein" alt="The guide briefs the students standing in a row"></a>
+      <a href="images/bmw-motorrad/20.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/20-s.jpg" data-alt-de="Der Guide zeigt bei der Einweisung auf einen Bildschirm" alt="The guide points at a screen during the briefing"></a>
+      <a href="images/bmw-motorrad/21.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/21-s.jpg" data-alt-de="Die Gruppe steht in der Halle im Halbkreis um den Guide" alt="The group stands in a semicircle around the guide in the hall"></a>
+      <a href="images/bmw-motorrad/22.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/22-s.jpg" data-alt-de="Der Guide spricht zwischen Motorrädern mit Studierenden" alt="The guide talks to students among motorcycles"></a>
+      <a href="images/bmw-motorrad/23.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/23-s.jpg" data-alt-de="Der Guide mit Mikrofon inmitten von Studierenden in Besucherwesten" alt="The guide with a microphone surrounded by students in visitor vests"></a>
+      <a href="images/bmw-motorrad/24.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/24-s.jpg" data-alt-de="Der Guide mit Mikrofon zwischen Studierenden am Fenster" alt="The guide with a microphone among students by the window"></a>
+      <a href="images/bmw-motorrad/25.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/25-s.jpg" data-alt-de="Der Guide mit Mikrofon neben einem Motorrad" alt="The guide with a microphone next to a motorcycle"></a>
+      <a href="images/bmw-motorrad/26.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/26-s.jpg" data-alt-de="Ausgestellte Motorräder vor einem großen Bild einer Küstenstraße" alt="Motorcycles on display in front of a large picture of a coastal road"></a>
+      <a href="images/bmw-motorrad/27.jpg"><img class="p" loading="lazy" decoding="async" width="480" height="640" src="images/bmw-motorrad/27-s.jpg" data-alt-de="Ein ausgestelltes Motorrad neben einer Betonsäule" alt="A motorcycle on display next to a concrete pillar"></a>
+      <a href="images/bmw-motorrad/28.jpg"><img class="p" loading="lazy" decoding="async" width="480" height="640" src="images/bmw-motorrad/28-s.jpg" data-alt-de="Ein ausgestelltes Motorrad unter Holzregalen" alt="A motorcycle on display under wooden shelves"></a>
+      <a href="images/bmw-motorrad/29.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/bmw-motorrad/29-s.jpg" data-alt-de="Ausgestellte Tourenmotorräder" alt="Touring motorcycles on display"></a>
+      <a href="images/bmw-motorrad/30.jpg"><img class="p" loading="lazy" decoding="async" width="480" height="640" src="images/bmw-motorrad/30-s.jpg" data-alt-de="Ein ausgestelltes Motorrad im Geländelook" alt="An off-road-style motorcycle on display"></a>
     </div>
 
     <!-- =====================================================================

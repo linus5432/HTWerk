@@ -58,6 +58,7 @@ main{display:flex;flex-direction:column}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;max-width:60rem;margin-top:3rem}
 .gallery a{display:block}
 .gallery img{width:100%;height:auto;max-width:none;margin:0;aspect-ratio:4/3;object-fit:cover;transition:opacity .2s}
+.gallery img.p{object-position:50% 25%}
 .gallery a:hover img{opacity:.82}
 @media (max-width:40rem){.gallery{grid-template-columns:1fr 1fr;gap:.5rem}}
 .post blockquote{margin:2.5rem 0;padding-left:1.25rem;border-left:3px solid var(--black);font-family:"Marcellus",Georgia,serif;font-size:1.5rem;line-height:1.35}
@@ -129,15 +130,25 @@ footer a{margin-right:1.25rem}
     <!-- ---------- ENGLISCHER TEXT ---------- -->
     <div lang="en">
       <p class="lead">Our fourth tour took us to 1KOMMA5°.</p>
-      <p>1KOMMA5° offers solar systems, battery storage and heat pumps from a single source and connects them through its own software. During our visit we got to know the company and the team behind it.</p>
+      <p>1KOMMA5° offers solar systems, battery storage and heat pumps from a single source and connects them through its own software. During our visit we met the team, stood in front of a wall of screens and saw the app that shows how energy flows through a home.</p>
       <p>Many of us study engineering with a focus on energy, so what 1KOMMA5° does is close to what we study.</p>
     </div>
 
     <!-- ---------- DEUTSCHER TEXT ---------- -->
     <div lang="de">
       <p class="lead">Unsere vierte Tour führte zu 1KOMMA5°.</p>
-      <p>1KOMMA5° bietet Solaranlagen, Stromspeicher und Wärmepumpen aus einer Hand an und vernetzt sie über eine eigene Software. Bei unserem Besuch haben wir das Unternehmen und das Team dahinter kennengelernt.</p>
+      <p>1KOMMA5° bietet Solaranlagen, Stromspeicher und Wärmepumpen aus einer Hand an und vernetzt sie über eine eigene Software. Bei unserem Besuch haben wir das Team kennengelernt, vor einer Wand aus Bildschirmen gestanden und die App gesehen, die den Energiefluss im Haus zeigt.</p>
       <p>Viele von uns studieren mit Schwerpunkt Energie. Was 1KOMMA5° macht, liegt deshalb nah an unserem Studium.</p>
+    </div>
+
+    <!-- ---------- FOTOGALERIE (für beide Sprachen gemeinsam). Ein Klick öffnet das Foto groß. ---------- -->
+    <div class="gallery">
+      <a href="images/1komma5/01.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/1komma5/01-s.jpg" data-alt-de="Studierende stehen im Kreis und hören einem der Gastgeber bei 1KOMMA5° zu" alt="Students stand in a circle listening to one of the hosts at 1KOMMA5°"></a>
+      <a href="images/1komma5/02.jpg"><img class="p" loading="lazy" decoding="async" width="480" height="640" src="images/1komma5/02-s.jpg" data-alt-de="Die Gruppe in einem violett beleuchteten Raum, von hinten gesehen" alt="The group in a purple-lit room, seen from behind"></a>
+      <a href="images/1komma5/03.jpg"><img loading="lazy" decoding="async" width="640" height="480" src="images/1komma5/03-s.jpg" data-alt-de="Die Gruppe vor einer Wand aus Bildschirmen mit Diagrammen" alt="The group in front of a wall of screens showing charts"></a>
+      <a href="images/1komma5/04.jpg"><img class="p" loading="lazy" decoding="async" width="480" height="640" src="images/1komma5/04-s.jpg" data-alt-de="Ein Smartphone mit einer App, die ein Haus mit Solaranlage zeigt" alt="A phone showing an app with a house and solar panels"></a>
+      <a href="images/1komma5/05.jpg"><img class="p" loading="lazy" decoding="async" width="480" height="640" src="images/1komma5/05-s.jpg" data-alt-de="Gruppenfoto der Studierenden hinter einem großen 1K5°-Schriftzug" alt="Group photo of the students behind a large 1K5° sign"></a>
+      <a href="images/1komma5/06.jpg"><img class="p" loading="lazy" decoding="async" width="480" height="640" src="images/1komma5/06-s.jpg" data-alt-de="Blick aus einem Fenster in einen Backstein-Innenhof" alt="View from a window into a brick courtyard"></a>
     </div>
 
     <!-- =====================================================================

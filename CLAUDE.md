@@ -24,7 +24,7 @@ Reines HTML und CSS mit wenig JavaScript, kein Build-Schritt, kein Framework.
 | --- | --- |
 | `index.html` | Startseite: Titel, About us, Core Team, Hosting, Past visits, Ablauf, Anmeldung, Kontakt |
 | `1komma5.html`, `siemens-energy.html`, `formlabs.html`, `bmw-motorrad.html` | Je eine Unterseite pro Tour mit einem kurzen Rückblick. Von der Startseite unter `#visits` verlinkt |
-| `images/` | 12 Fotos aus der Partner-Präsentation (JPG, max. 1400 px), der Ordner `formlabs/` mit den Galerie-Fotos der Formlabs-Tour, `og-image.jpg` (Vorschaubild 1200 x 630 für geteilte Links, mit Logo) und das Logo als Datei: `logo-htwerk.svg` (Wortmarke) und `logo-htwerk-monogramm.svg` (H mit Helm), beide schwarz |
+| `images/` | 12 Fotos aus der Partner-Präsentation (JPG, max. 1400 px), die Ordner `bmw-motorrad/`, `formlabs/` und `1komma5/` mit den Galerie-Fotos der Touren, `HTWerk/` mit den hochgeladenen Originalen, `og-image.jpg` (Vorschaubild 1200 x 630 für geteilte Links, mit Logo) und das Logo als Datei: `logo-htwerk.svg` (Wortmarke) und `logo-htwerk-monogramm.svg` (H mit Helm), beide schwarz |
 | `fonts/` | Schriftdateien (woff2), `fonts.css` mit den `@font-face`-Regeln, Lizenztexte (SIL OFL) |
 | `favicon.svg`, `favicon.png`, `apple-touch-icon.png` | Icon: weißes Monogramm (H mit Helm) auf Schwarz |
 | `CNAME` | Domain für GitHub Pages |
@@ -84,19 +84,25 @@ Alle anderen „Join the next tour“-Buttons, auch auf den Tour-Seiten, führen
 
 - Jede Tour ist in `index.html` unter `#visits` ein `<a class="visit" href="….html">` mit der Zeile
   „Read the recap / Zum Rückblick“ unter dem `<h3>`.
-- Auf den Tour-Seiten stehen kurze Rückblicke (Einleitung und zwei Absätze je Sprache). Sie enthalten nur,
+- Auf den Tour-Seiten stehen kurze Rückblicke (Einleitung und zwei bis vier Absätze je Sprache). Sie enthalten nur,
   was belegt ist: Reihenfolge der Touren, Teilnehmerzahlen (BMW Motorrad 14, Formlabs 20, Siemens Energy 20),
   beteiligte Hochschulen und was auf den Fotos zu sehen ist. Nichts dazuerfinden; neue Details kommen von Linus.
 - Unter dem Namen steht eine Zeile `.meta` (Art des Besuchs, Teilnehmerzahl). Das Datum fehlt bei allen vier Touren.
 - Der editierbare Bereich liegt zwischen den Kommentaren `AB HIER SCHREIBST DU DEINEN BLOG-TEXT`
   und `ENDE DEINES TEXTES`. Dort stehen auch Bausteine zum Kopieren.
-- Fotos im Text: `<div class="shots">` mit zwei `<figure>` nebeneinander, für beide Sprachen gemeinsam
-  (Bildunterschrift zweisprachig, Alt-Text über `data-alt-de`). BMW Motorrad hat zwei Fotos,
-  für Siemens Energy und 1KOMMA5° gibt es außer dem Titelfoto keine.
-- Galerie: `<div class="gallery">` zeigt viele Fotos zu je drei nebeneinander (am Handy zwei), ohne Bildunterschrift.
-  Jedes Bild ist ein Link auf die große Datei. Formlabs hat eine Galerie aus zwölf Fotos: zehn liegen in
-  `images/formlabs/` (`01.jpg` groß mit 1400 px, `01-s.jpg` klein mit 640 px für das Raster), dazu
-  `hero-formlabs.jpg` und `networking.jpg`. Neue Fotos genauso anlegen und ohne EXIF-Daten speichern.
+- Galerie: `<div class="gallery">` zeigt Fotos zu je drei nebeneinander (am Handy zwei), ohne Bildunterschrift,
+  für beide Sprachen gemeinsam (Alt-Text englisch in `alt`, deutsch in `data-alt-de`). Jedes Bild ist ein Link
+  auf die große Datei. Hochformate haben die Klasse `p`, damit der Ausschnitt weiter oben sitzt.
+  - BMW Motorrad: 30 Fotos in `images/bmw-motorrad/`
+  - Formlabs: 39 Fotos in `images/formlabs/`
+  - 1KOMMA5°: 6 Fotos in `images/1komma5/`
+  - Siemens Energy: keine Galerie, es gibt nur das Gruppenfoto (Titelfoto)
+  Je Foto zwei Dateien: `01.jpg` (längste Seite 1400 px) und `01-s.jpg` (640 px, fürs Raster), ohne EXIF-Daten.
+- `images/HTWerk/` enthält die Originale, die Linus hochgeladen hat (WhatsApp-Dateinamen). Die Seiten verlinken
+  sie nicht. Der Unterordner `SiemensEnergy` enthält ein Foto von Siemens Energy und sechs von 1KOMMA5°.
+  Nicht verwendet: ein Hundefoto und zwei Gruppenfotos im Formlabs-Ordner (dasselbe Motiv wie das Titelfoto)
+  sowie das Gruppenfoto von Siemens Energy (ist schon das Titelfoto).
+- Einzelne Fotos mit Bildunterschrift im Text: `<div class="shots">` mit zwei `<figure>` nebeneinander (derzeit ungenutzt).
 - Die vier Seiten sind bis auf Name, Texte, Fotos und „Next visit“-Link identisch.
   Änderungen am Gerüst in allen vier Dateien nachziehen.
 - Neue Tour: eine bestehende Tour-Seite kopieren, Name, Texte, Fotos und Alt-Texte anpassen,
