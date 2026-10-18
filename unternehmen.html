@@ -247,9 +247,11 @@ header{justify-content:space-between;align-items:center}
   .hero.co>.text>:nth-child(5){animation-delay:.75s}
 }
 html.anim .rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.22,1,.36,1) var(--d,0s),transform .8s cubic-bezier(.22,1,.36,1) var(--d,0s)}
+html.anim .rv.from-top{transform:translateY(-28px)}
 html.anim .rv.in{opacity:1;transform:none}
 html.anim .rv-photo{overflow:hidden}
 html.anim .rv-photo img{clip-path:inset(100% 0 0 0);transform:scale(1.12);transform-origin:50% 100%;transition:clip-path 1.15s cubic-bezier(.77,0,.18,1) var(--d,0s),transform 1.9s cubic-bezier(.22,1,.36,1) var(--d,0s)}
+html.anim .rv-photo.from-top img{clip-path:inset(0 0 100% 0);transform-origin:50% 0}
 html.anim .rv-photo.in img{clip-path:inset(0 0 0 0);transform:none}
 /* Buttons füllen sich beim Hover von links, Navigation mit wachsender Unterstreichung */
 .btn{transition:box-shadow .38s cubic-bezier(.65,0,.35,1),color .38s cubic-bezier(.65,0,.35,1),transform .25s ease}
@@ -446,7 +448,12 @@ new IntersectionObserver(function(e,o){if(e[0].isIntersecting){m.classList.add('
     var p=el.parentNode,i=count.get(p)||0;count.set(p,i+1);
     el.style.setProperty('--d',Math.min(i,5)*0.08+'s');
   });
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.12});
+  /* In beide Richtungen: verlässt ein Element den Bildschirm, wird es zurückgesetzt und kommt beim nächsten Mal
+     aus der Richtung herein, aus der es auftaucht (von oben beim Hochscrollen, von unten beim Runterscrollen) */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){var t=e.target;
+    if(e.isIntersecting&&e.intersectionRatio>=.12){t.classList.add('in')}
+    else if(!e.isIntersecting){t.classList.remove('in');t.classList.toggle('from-top',e.boundingClientRect.top<0)}
+  })},{threshold:[0,.12]});
   els.forEach(function(el){io.observe(el)});
 })();
 </script>

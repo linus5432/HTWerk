@@ -52,6 +52,8 @@ Vorlage ist die Partner-Präsentation „HTWerk Partner Proposal 2026“:
   Rolltor (von unten nach oben), Texte steigen nacheinander nach dem Helm auf. Beim Scrollen: Elemente aus der
   Selektorliste im Skript (`sel`) steigen auf (`.rv`), Fotos der `.split`-Abschnitte öffnen sich als Rolltor (`.rv-photo`).
   Buttons füllen sich beim Hover von links, Navigationslinks mit wachsender Unterstreichung.
+  Das Einblenden läuft in beide Richtungen: Verlässt ein Element den Bildschirm, wird es zurückgesetzt und kommt
+  beim Hochscrollen von oben herein (Klasse `.from-top`, Rolltor öffnet sich dann von oben nach unten).
   Ohne JavaScript bleibt alles sofort sichtbar. Neue Abschnitte bei Bedarf in `sel` aufnehmen.
 
 ## Logo
