@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" data-title-en="Host a tour – HTWerk" data-title-de="Tour ausrichten – HTWerk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Host a tour – HTWerk</title>
+<script>
+/* Sprache waehlen, bevor die Seite gezeichnet wird: ?lang= in der Adresse, sonst gespeicherte Wahl, sonst Browsersprache */
+(function(){var l;try{l=localStorage.getItem('htwerk-lang')}catch(e){}var q=(location.search.match(/[?&]lang=(de|en)/)||[])[1];if(q)l=q;if(l!=='de'&&l!=='en')l=/^de/i.test(navigator.language||'')?'de':'en';document.documentElement.lang=l})();
+</script>
+<meta name="description" content="Show Berlin university students your factory or office. HTWerk puts the group together and handles the logistics, you lead the tour.">
+<link rel="canonical" href="https://htwerk.de/unternehmen.html">
+<link rel="alternate" hreflang="de" href="https://htwerk.de/unternehmen.html?lang=de">
+<link rel="alternate" hreflang="en" href="https://htwerk.de/unternehmen.html?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://htwerk.de/unternehmen.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HTWerk">
+<meta property="og:title" content="Host a tour – HTWerk">
+<meta property="og:description" content="Show Berlin university students your factory or office. HTWerk puts the group together and handles the logistics, you lead the tour.">
+<meta property="og:url" content="https://htwerk.de/unternehmen.html">
+<meta property="og:image" content="https://htwerk.de/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="HTWerk, student club for factory and office tours. Students talking with a Formlabs employee next to 3D-printing equipment.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{--black:#000;--white:#fff;--grey:#6B6B6B;--line:#E2E2E2}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--black);font:400 1.0625rem/1.6 "IBM Plex Sans","Helvetica Neue",Arial,sans-serif}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+h1,h2,h3,.serif{font-family:"Marcellus","Optima",Georgia,serif;font-weight:400;letter-spacing:-.01em}
+.inner{padding:0 clamp(1.25rem,6vw,6.5rem)}
+
+/* header */
+header{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:flex-end;padding:1.25rem clamp(1.25rem,3vw,2.5rem)}
+nav{display:flex;gap:1.5rem;background:var(--white);padding:.55rem 1.1rem}
+nav a{text-decoration:none;font-weight:600;font-size:.92rem}
+nav a:hover{text-decoration:underline}
+html[lang="en"] [lang="de"],html[lang="de"] [lang="en"]{display:none}
+nav{align-items:center}
+.langsw{display:flex;border-left:1px solid var(--line);padding-left:1rem;gap:.15rem}
+.langsw button{font:inherit;font-weight:600;font-size:.85rem;background:none;border:0;padding:.2rem .35rem;cursor:pointer;color:var(--grey)}
+.langsw button[aria-pressed="true"]{color:var(--black);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
+
+/* split layout used throughout, like the deck */
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
+.split>.text{display:flex;flex-direction:column;justify-content:center;padding:5rem clamp(1.25rem,6vw,6.5rem)}
+.split>.photo{position:relative;min-height:22rem}
+.split>.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dark{background:var(--black);color:var(--white)}
+
+/* hero */
+.hero{grid-template-columns:40% 1fr 4.5rem}
+/* Logo (Entwurf „Helm“): Wortmarke als SVG, der Text „HTWerk“ bleibt für Screenreader und Suchmaschinen */
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.hero h1{margin:0 0 1.9rem;line-height:0}
+.hero h1 svg{display:block;width:clamp(13rem,25vw,28rem);height:auto;fill:currentColor}
+.hero>.text{padding-left:clamp(1.25rem,4vw,4rem);padding-right:clamp(1.25rem,3vw,3rem)}
+.hero p{font-size:clamp(1.1rem,1.6vw,1.35rem);margin:0 0 2.25rem}
+.side{display:flex;align-items:center;justify-content:center;background:var(--white)}
+.side span{writing-mode:vertical-rl;font-size:.8rem;letter-spacing:.08em;white-space:nowrap}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.85rem 1.4rem;font-weight:600;text-decoration:none;border:1.5px solid currentColor}
+.btn.solid{background:var(--white);color:var(--black);border-color:var(--white)}
+.btn:hover{opacity:.75}
+.light .btn.solid{background:var(--black);color:var(--white);border-color:var(--black)}
+
+/* about */
+.about{grid-template-columns:1fr 1fr;min-height:auto}
+.about .text p{max-width:30rem;margin:0 0 1.1rem}
+h2{font-size:clamp(2.6rem,5.5vw,4.5rem);line-height:1;margin:0 0 2.5rem}
+.stack{display:grid;grid-template-rows:auto 1fr}
+.founder{display:grid;grid-template-columns:1fr 1fr}
+.founder img{width:100%;aspect-ratio:3/3.3;object-fit:cover;object-position:top}
+.founder .cap{background:var(--black);color:var(--white);display:flex;align-items:center;padding:1.5rem;font-size:.95rem;align-self:end;min-height:50%}
+.stack .wide{position:relative;min-height:22rem}
+.stack .wide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* process: a real sequence, so numbered */
+.process{padding:7rem 0}
+.process h2{font-size:clamp(3rem,8vw,6.5rem);max-width:14ch;margin-bottom:4.5rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;list-style:none;margin:0;padding:0}
+.steps .n{font-family:"Marcellus",Georgia,serif;font-size:2.4rem;line-height:1;color:var(--grey)}
+.steps h3{font-size:1.6rem;margin:.25rem 0 .4rem}
+.steps p{margin:0;color:var(--grey);font-family:"Marcellus",Georgia,serif;font-size:1.25rem;line-height:1.3}
+
+/* hosting */
+.host h3{font-family:"IBM Plex Sans",Arial,sans-serif;font-weight:700;font-size:1.25rem;margin:2rem 0 .75rem}
+.host h3:first-of-type{margin-top:0}
+.host ul{margin:0;padding-left:1.2rem;max-width:34rem}
+.host li{margin-bottom:.6rem}
+.host .text{padding-top:6rem;padding-bottom:6rem}
+.host .sofar{font-family:"Marcellus",Georgia,serif;font-size:1.4rem;line-height:1.3;color:var(--grey);margin:-1.25rem 0 2.25rem}
+.host .split{min-height:80vh}
+.host .split+.split{border-top:1px solid var(--line)}
+.host-photos{display:grid;grid-template-rows:1fr 1fr}
+.host-photos div{position:relative;min-height:16rem}
+.host-photos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* past visits */
+.visits-intro{grid-template-columns:40% 1fr;min-height:70vh}
+.arrow{display:block;width:min(19rem,80%);height:2px;background:currentColor;position:relative;margin-top:1.5rem}
+.arrow::after{content:"";position:absolute;right:-1px;top:-5px;border:6px solid transparent;border-left:10px solid currentColor;border-right:0}
+.visit{display:grid;grid-template-columns:1fr 23rem;min-height:85vh;border-top:1px solid var(--line)}
+.visit .photo{position:relative;min-height:22rem}
+.visit .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.visit .name{display:flex;align-items:center;justify-content:center;padding:2rem}
+.visit .name div{writing-mode:vertical-rl;transform:rotate(180deg)}
+.visit h3{font-family:"IBM Plex Sans",Arial,sans-serif;font-weight:700;font-size:clamp(2.2rem,4vw,3.4rem);line-height:1;margin:0;text-transform:uppercase}
+.visit p{margin:0 1rem 0 0;color:var(--grey);font-size:.95rem}
+
+a.visit{text-decoration:none;color:inherit}
+a.visit p{text-decoration:underline;text-underline-offset:3px}
+a.visit .photo img{transition:opacity .2s}
+a.visit:hover .photo img,a.visit:focus-visible .photo img{opacity:.82}
+a.visit:hover h3{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.signup{padding:7rem 0}
+.signup h2{font-size:clamp(3rem,8vw,6.5rem);margin-bottom:1.5rem}
+.signup p{max-width:32rem;margin:0 0 2rem;font-size:1.15rem}
+/* team */
+.team .text h2{margin-bottom:3rem}
+.member{margin-bottom:2rem}
+.member .serif{font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.1;display:block}
+.member>span{font-size:.95rem}
+
+/* join + contact */
+.contact{padding:7rem 0;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.contact h2{font-size:clamp(3.2rem,8vw,6.5rem);margin-bottom:2rem}
+.contact p{max-width:30rem;margin:0 0 1.5rem}
+.mail{font-size:clamp(1.1rem,2vw,1.5rem)}
+footer{border-top:1px solid var(--line);padding:1.5rem 0 2.5rem;font-size:.9rem;color:var(--grey)}
+footer .inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+footer a{margin-right:1.25rem}
+.mark{display:flex;align-items:center;gap:.7rem}
+.mark svg{height:2.3rem;width:auto;fill:var(--black)}
+
+@media (max-width:52rem){
+  nav{gap:1rem;padding:.5rem .8rem}
+  nav a{font-size:.85rem}
+  .split,.hero,.about,.visits-intro{grid-template-columns:1fr;min-height:auto}
+  .hero .side{display:none}
+  .hero .text{padding-top:7rem;min-height:70vh}
+  .split>.photo{min-height:60vw}
+  .host .photo-col{order:2}
+  .visit{grid-template-columns:1fr;min-height:auto}
+  .visit .photo{min-height:70vw}
+  .visit .name{justify-content:flex-start;padding:1.5rem 1.25rem 2.5rem}
+  .visit .name div{writing-mode:horizontal-tb;transform:none}
+  .steps,.contact{grid-template-columns:1fr}
+  .process,.contact,.signup{padding:4.5rem 0}
+}
+@media (max-width:34rem){nav a:nth-child(1),nav a:nth-child(3){display:none}nav a{white-space:nowrap}nav{gap:.75rem}.langsw{padding-left:.75rem}}
+@media (max-width:26rem){nav a:nth-child(2){display:none}}
+@media (max-width:23.5rem){.brand svg{height:1.6rem}nav{gap:.6rem;padding:.45rem .6rem}.langsw{padding-left:.5rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Seite für Unternehmen */
+header{justify-content:space-between;align-items:center}
+.brand{display:block;line-height:0;color:var(--white)}
+.brand svg{display:block;height:2.4rem;width:auto;fill:currentColor}
+.hero.co{grid-template-columns:45% 1fr}
+.hero.co h1{line-height:1.05;font-size:clamp(2.6rem,4.6vw,4.2rem);margin:0 0 1.5rem}
+.hero.co .lead{font-size:clamp(1.05rem,1.4vw,1.2rem);max-width:30rem;margin:0 0 1.25rem}
+.hero.co .sofar{font-family:"Marcellus",Georgia,serif;font-size:1.3rem;line-height:1.3;color:#B5B5B5;margin:0 0 2.25rem}
+.contact .more{color:var(--grey)}
+@media (max-width:52rem){.hero.co{grid-template-columns:1fr}.hero.co .text{min-height:auto;padding-bottom:4rem}.brand svg{height:2rem}}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html" aria-label="HTWerk"><svg viewBox="0 0 4799 1487" aria-hidden="true" focusable="false"><path d="M678 1027 c-17 -1 -38 -1 -64 -1 c-25 -1 -53 -1 -83 -1 c-31 -1 -62 -1 -95 -1 c-32 -1 -64 -1 -96 -1 c-31 0 -61 0 -89 0 c-28 1 -53 1 -74 2 v191 c0 36 1 68 2 95 c1 27 2 51 4 70 c1 20 3 36 6 50 c2 13 4 24 7 33 v3 h-154 v-3 c3 -9 5 -20 7 -33 c3 -14 5 -30 7 -50 c1 -19 3 -43 3 -70 c1 -27 2 -59 2 -95 v-418 c0 -36 -1 -68 -2 -95 c0 -27 -2 -51 -3 -71 c-2 -20 -4 -36 -7 -49 c-2 -14 -4 -25 -7 -34 v-2 h154 v2 c-3 9 -5 20 -7 34 c-3 13 -5 29 -6 49 c-2 20 -3 44 -4 71 c-1 27 -2 59 -2 95 v164 c23 1 48 2 76 2 c28 0 58 0 89 0 c30 0 62 -1 94 -1 c32 0 62 -1 92 -2 c30 0 58 -1 83 -2 c26 -1 49 -2 67 -2 v-159 c0 -36 0 -68 -1 -95 c-1 -27 -2 -51 -4 -71 c-1 -20 -3 -36 -6 -49 c-2 -14 -5 -25 -7 -34 v-2 h154 v2 c-3 9 -5 20 -8 34 c-2 13 -4 29 -6 49 c-1 20 -3 44 -3 71 c-1 27 -2 59 -2 95 v418 c0 36 1 68 2 95 c0 27 2 51 3 70 c2 20 4 36 6 50 c3 13 5 24 8 33 v3 h-154 v-3 c2 -9 5 -20 7 -33 c3 -14 5 -30 6 -50 c2 -19 3 -43 4 -70 c1 -27 1 -59 1 -95 Z M1226 603 c-50 0 -96 2 -137 7 c-40 4 -75 9 -105 14 c-34 7 -65 14 -92 21 l19 -103 c5 0 13 0 23 1 c10 0 22 1 34 1 c13 1 26 1 40 1 c14 0 27 0 40 1 c12 0 23 0 33 0 c9 1 16 1 21 1 h366 c4 0 11 0 21 -1 c9 0 20 0 33 0 c12 -1 25 -1 39 -1 c14 0 27 0 40 -1 c13 0 24 -1 34 -1 c11 -1 18 -1 23 -1 l19 103 c-27 -7 -58 -14 -92 -21 c-30 -5 -65 -10 -106 -14 c-40 -5 -86 -7 -136 -7 v613 c0 36 0 68 1 95 c2 27 3 51 4 70 c2 20 4 36 6 50 c2 13 5 24 7 33 v3 h-153 v-3 c3 -9 5 -20 7 -33 c2 -14 4 -30 6 -50 c2 -19 3 -43 4 -70 c1 -27 1 -59 1 -95 Z M2356 668 l257 623 l249 -612 c10 -25 17 -46 22 -64 c5 -17 7 -32 7 -45 c0 -3 0 -7 0 -11 c-1 -5 -1 -8 -2 -10 v-2 h127 v2 c-9 10 -18 25 -28 45 c-10 21 -22 46 -35 76 l-343 817 h-49 l-249 -606 l-228 606 h-48 l-314 -785 c-8 -18 -16 -36 -24 -53 c-8 -17 -15 -33 -22 -47 c-7 -13 -14 -25 -19 -34 c-6 -10 -10 -16 -13 -19 v-2 h178 v2 c-1 5 -2 9 -2 11 c0 3 0 6 0 9 c0 15 2 30 5 46 c4 17 10 36 19 59 l241 610 l231 -614 Z M3317 1478 c-48 0 -92 -7 -134 -22 c-41 -15 -77 -37 -108 -66 c-31 -29 -55 -65 -73 -107 c-17 -43 -26 -91 -26 -146 c0 -48 8 -93 24 -135 c16 -41 39 -77 67 -107 c29 -30 63 -54 101 -71 c38 -17 79 -26 124 -26 c44 0 85 8 122 23 c38 15 71 37 98 66 c28 29 50 65 66 107 c16 43 24 91 26 145 c-49 0 -97 -1 -145 -1 c-49 -1 -99 -1 -151 -1 c-37 0 -73 0 -109 1 c-35 0 -67 1 -95 1 c3 45 9 85 21 121 c11 36 27 67 47 92 c20 26 44 45 72 59 c29 14 61 20 97 20 c24 0 48 -3 70 -8 c22 -6 42 -14 60 -24 c18 -11 34 -23 48 -37 c14 -14 26 -29 36 -45 l8 4 l-48 114 c-23 12 -50 22 -83 31 c-32 8 -70 12 -115 12 Z M3232 1087 c42 0 85 0 128 0 c43 -1 82 -1 117 -3 c-4 -37 -11 -70 -21 -100 c-11 -29 -25 -54 -42 -75 c-16 -20 -36 -36 -59 -47 c-22 -11 -47 -17 -75 -17 c-24 0 -47 5 -68 16 c-21 11 -39 27 -54 47 c-16 21 -28 46 -37 76 c-10 30 -15 63 -17 102 c19 0 40 1 61 1 c21 0 44 0 67 0 Z M3729 1061 c0 -37 -1 -69 -2 -96 c-1 -27 -2 -50 -4 -70 c-1 -20 -3 -36 -6 -49 c-2 -14 -5 -25 -7 -34 v-2 h148 v2 c-3 10 -6 22 -9 36 c-2 14 -4 32 -5 55 c16 -14 32 -27 49 -39 c18 -13 35 -25 53 -34 c18 -10 36 -18 55 -24 c18 -6 37 -9 56 -9 c12 0 22 0 30 1 c9 2 16 3 23 5 c7 2 13 4 19 6 c5 3 11 5 16 7 l-32 123 l-10 -3 c-6 -19 -15 -34 -29 -45 c-14 -11 -34 -17 -58 -17 c-13 0 -27 2 -42 7 c-14 5 -29 11 -44 19 c-15 9 -30 18 -45 29 c-15 11 -29 23 -44 35 c0 12 -1 26 -1 40 c0 15 0 30 0 46 v166 c0 36 1 68 1 95 c1 27 3 51 4 70 c2 20 4 36 6 50 c2 13 5 24 7 33 v3 h-148 v-3 c2 -9 5 -20 7 -33 c3 -14 5 -30 6 -50 c2 -19 3 -43 4 -70 c1 -27 2 -59 2 -95 Z M4231 758 c0 -36 -1 -68 -2 -95 c-1 -27 -2 -50 -4 -70 c-1 -20 -3 -36 -6 -50 c-2 -13 -4 -24 -7 -33 v-2 h148 v2 c-2 9 -5 20 -7 33 c-2 14 -4 30 -6 50 c-1 20 -3 43 -4 70 c0 27 -1 59 -1 95 v320 l210 -188 c37 -32 55 -59 55 -80 h149 v2 c-11 4 -22 8 -32 13 c-10 6 -20 12 -30 19 c-10 8 -20 16 -31 25 c-11 9 -23 20 -36 31 l-188 171 l258 305 c8 10 16 19 25 29 c9 9 18 18 27 26 c9 8 18 16 26 22 c9 6 17 9 24 11 v3 h-186 c0 -11 -3 -23 -9 -35 c-6 -12 -16 -27 -31 -46 l-231 -274 v104 c0 36 1 68 1 95 c1 27 3 51 4 70 c2 20 4 36 6 50 c2 13 5 24 7 33 v3 h-148 v-3 c3 -9 5 -20 7 -33 c3 -14 5 -30 6 -50 c2 -19 3 -43 4 -70 c1 -27 2 -59 2 -95 Z M745 323 l-204 21 l-27 -257 l-26 3 l27 257 l-199 21 l-27 -258 l-26 3 l27 258 l-205 21 c-14 -137 70 -264 200 -317 l-6 -54 l200 -21 l5 54 c138 25 247 131 261 269 Z M36 437 l767 -80 c22 -3 42 13 44 35 c3 22 -13 42 -35 44 l-768 81 c-22 2 -41 -14 -44 -36 c-2 -22 14 -41 36 -44 Z"/></svg></a>
+  <nav aria-label="Main">
+    <a href="#visits"><span lang="en">Past visits</span><span lang="de">Bisherige Besuche</span></a>
+    <a href="#host"><span lang="en">How it works</span><span lang="de">So läuft es ab</span></a>
+    <a href="index.html"><span lang="en">For students</span><span lang="de">Für Studierende</span></a>
+    <a href="#contact"><span lang="en">Contact</span><span lang="de">Kontakt</span></a>
+    <span class="langsw" role="group" aria-label="Language / Sprache">
+      <button type="button" data-setlang="de">DE</button><button type="button" data-setlang="en">EN</button>
+    </span>
+  </nav>
+</header>
+
+<main>
+  <section class="split hero co">
+    <div class="text dark">
+      <h1><span lang="en">Show students your company</span><span lang="de">Zeigen Sie Studierenden Ihr Unternehmen</span></h1>
+      <p class="lead"><span lang="en">HTWerk brings students from Berlin's universities to your site for a factory or office tour. You show what you do, we handle the logistics.</span><span lang="de">HTWerk bringt Studierende der Berliner Hochschulen zu einer Werks- oder Unternehmensführung zu Ihnen. Sie zeigen, was Sie machen, um die Organisation kümmern wir uns.</span></p>
+      <p class="sofar"><span lang="en">So far: 4 tours with more than 60 students.</span><span lang="de">Bisher: 4 Touren mit mehr als 60 Studierenden.</span></p>
+      <div class="btns">
+        <a class="btn solid" lang="en" href="mailto:Linus.Ruesseler@Student.HTW-Berlin.de?subject=Tour%20request">Request a tour</a><a class="btn solid" lang="de" href="mailto:Linus.Ruesseler@Student.HTW-Berlin.de?subject=Tour-Anfrage">Tour anfragen</a>
+        <a class="btn" href="#host"><span lang="en">How it works</span><span lang="de">So läuft es ab</span></a>
+      </div>
+    </div>
+    <div class="photo"><img fetchpriority="high" src="images/networking.jpg" data-alt-de="Studierende im Gespräch mit Formlabs-Mitarbeitenden nach der Tour" alt="Students chatting with Formlabs staff after the tour"></div>
+  </section>
+
+  <section id="visits">
+    <div class="split visits-intro">
+      <div class="text">
+        <h2 style="margin:0"><span lang="en">Past visits</span><span lang="de">Bisherige Besuche</span></h2>
+        <span class="arrow" aria-hidden="true"></span>
+      </div>
+      <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-make-life-a-ride.jpg" data-alt-de="Studierende in Besucherwesten hören vor dem BMW Motorrad Werk Berlin einem Guide zu" alt="Students in visitor vests listening to a guide outside BMW Motorrad Berlin"></div>
+    </div>
+
+    <!-- Jede Tour verlinkt auf ihre Unterseite mit dem Rückblick. -->
+    <a class="visit" href="1komma5.html">
+      <div class="photo"><img loading="lazy" decoding="async" src="images/1komma5.jpg" data-alt-de="Gruppenfoto der Studierenden bei 1KOMMA5°" alt="Group photo of students at 1KOMMA5°"></div>
+      <div class="name"><div><h3>1KOMMA5°</h3><p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p></div></div>
+    </a>
+    <a class="visit" href="siemens-energy.html">
+      <div class="photo"><img loading="lazy" decoding="async" src="images/siemens-energy.jpg" data-alt-de="Studierende mit Schutzhelmen vor einem Elektrolyseur bei Siemens Energy" alt="Students in hard hats in front of an electrolyzer at Siemens Energy"></div>
+      <div class="name"><div><h3>Siemens Energy</h3><p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p></div></div>
+    </a>
+    <a class="visit" href="formlabs.html">
+      <div class="photo"><img loading="lazy" decoding="async" src="images/formlabs.jpg" data-alt-de="Gruppenfoto der Studierenden mit dem Formlabs-Team" alt="Group photo of students with the Formlabs team"></div>
+      <div class="name"><div><h3>Formlabs</h3><p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p></div></div>
+    </a>
+    <a class="visit" href="bmw-motorrad.html">
+      <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-tour.jpg" data-alt-de="Ein Guide spricht im BMW Motorrad Werk Berlin zu Studierenden" alt="Guide addressing students inside BMW Motorrad Berlin"></div>
+      <div class="name"><div><h3>BMW Motorrad</h3><p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p></div></div>
+    </a>
+  </section>
+
+  <section class="host" id="host">
+    <!-- Bisher-Zahl steht im Titel dieser Seite und im Abschnitt "Für Unternehmen" der Startseite -->
+    <div class="split">
+      <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-briefing.jpg" data-alt-de="Ein Guide weist Studierende in Besucherwesten bei BMW Motorrad in Berlin ein" alt="Guide briefing students in visitor vests at BMW Motorrad Berlin"></div>
+      <div class="text"><h2><span lang="en">What hosting an HTWerk event involves</span><span lang="de">So richten Sie eine HTWerk-Tour aus</span></h2><h3><span lang="en">Before the visit</span><span lang="de">Vor dem Besuch</span></h3><ul>
+        <li><span lang="en">Designate a point of contact to coordinate logistics with the HTWerk team</span><span lang="de">Eine Ansprechperson benennen, die die Organisation mit dem HTWerk-Team abstimmt</span></li>
+        <li><span lang="en">Confirm a date and rough itinerary: duration, meeting point, any access restrictions or safety requirements</span><span lang="de">Termin und groben Ablauf festlegen: Dauer, Treffpunkt, Zugangsregeln und Sicherheitsvorgaben</span></li>
+        <li><span lang="en">Provide any necessary safety gear or briefings in advance if required (e.g. safety shoes, vests, glasses for factory floors)</span><span lang="de">Falls nötig, Schutzausrüstung bereitstellen oder vorab eine Sicherheitsunterweisung geben (z. B. Sicherheitsschuhe, Warnwesten oder Schutzbrillen für die Fertigung)</span></li>
+      </ul></div>
+    </div>
+    <div class="split">
+      <div class="photo"><img loading="lazy" decoding="async" src="images/during-visit.jpg" data-alt-de="Studierende und Gastgeber schauen bei einem Unternehmensbesuch auf einen Bildschirm" alt="Students and hosts looking at a screen during a company visit"></div>
+      <div class="text"><h3><span lang="en">During the visit</span><span lang="de">Während des Besuchs</span></h3><ul>
+        <li><span lang="en">Provide a host or guide, ideally someone who knows the space and can speak to the technical and cultural side of the company</span><span lang="de">Eine Person für die Führung stellen, am besten jemanden, der sich vor Ort auskennt und über Technik und Unternehmenskultur sprechen kann</span></li>
+        <li><span lang="en">Give a short company or team introduction (10–15 minutes is often enough)</span><span lang="de">Unternehmen oder Team kurz vorstellen (10 bis 15 Minuten reichen meist)</span></li>
+        <li><span lang="en">Lead the actual tour: factory floor, office space, or showroom</span><span lang="de">Die eigentliche Führung übernehmen: durch Fertigung, Büro oder Showroom</span></li>
+        <li><span lang="en">Optional but highly recommended: a Q&amp;A, informal networking, or coffee at the end. This is where a lot of the real value happens for students, whether it's a deeper look at your products, your culture, or the day-to-day in open roles.</span><span lang="de">Freiwillig, aber sehr zu empfehlen: eine Fragerunde, lockeres Networking oder ein Kaffee zum Abschluss. Davon haben die Studierenden oft am meisten, weil sie hier mehr über Ihre Produkte, Ihre Unternehmenskultur oder den Alltag in Ihren offenen Stellen erfahren.</span></li>
+      </ul></div>
+    </div>
+    <div class="split">
+      <div class="photo"><img loading="lazy" decoding="async" src="images/about-team.jpg" data-alt-de="Studierende stehen bei einem Unternehmensbesuch um einen Laptop" alt="Students gathered around a laptop during a company visit"></div>
+      <div class="text"><h3><span lang="en">What we handle</span><span lang="de">Das übernehmen wir</span></h3><ul>
+        <li><span lang="en">Recruiting and coordinating the student group, tailored to your recruiting goals</span><span lang="de">Zusammenstellung und Koordination der Studierendengruppe, abgestimmt auf Ihre Recruiting-Ziele</span></li>
+        <li><span lang="en">Communication, registration, and confirmations with attendees</span><span lang="de">Kommunikation mit den Teilnehmenden, von der Anmeldung bis zur Bestätigung</span></li>
+        <li><span lang="en">On-site coordination with your team</span><span lang="de">Koordination vor Ort, gemeinsam mit Ihrem Team</span></li>
+        <li><span lang="en">Post-event content (LinkedIn recap, photos if permitted) to show your company to a wider student audience</span><span lang="de">Inhalte nach der Tour (Rückblick auf LinkedIn, Fotos nach Freigabe), mit denen Ihr Unternehmen noch mehr Studierende erreicht</span></li>
+        <li><span lang="en">Student contact information after the visit</span><span lang="de">Kontaktdaten der teilnehmenden Studierenden nach dem Besuch</span></li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="inner">
+      <h2><span lang="en">How a visit comes together</span><span lang="de">So kommt eine Tour zustande</span></h2>
+      <ol class="steps">
+        <li><div class="n">01</div><h3><span lang="en">Reach out</span><span lang="de">Sie melden sich</span></h3><p><span lang="en">Get in touch and tell us your recruiting goals. We confirm a date and rough itinerary together.</span><span lang="de">Schreiben Sie uns und nennen Sie Ihre Recruiting-Ziele. Termin und groben Ablauf legen wir gemeinsam fest.</span></p></li>
+        <li><div class="n">02</div><h3><span lang="en">We fill the room</span><span lang="de">Wir bringen die Studierenden mit</span></h3><p><span lang="en">HTWerk recruits and coordinates the student group, tailored to match who you want to reach.</span><span lang="de">HTWerk stellt die Gruppe zusammen und koordiniert sie, passend zu den Studierenden, die Sie erreichen möchten.</span></p></li>
+        <li><div class="n">03</div><h3><span lang="en">Host the tour</span><span lang="de">Sie zeigen Ihr Unternehmen</span></h3><p><span lang="en">You lead the visit, we handle logistics and follow up with a LinkedIn recap and student contacts.</span><span lang="de">Sie führen durch den Besuch, wir kümmern uns um die Organisation. Danach veröffentlichen wir einen Rückblick auf LinkedIn und schicken Ihnen die Kontakte der Studierenden.</span></p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contact light" id="contact">
+    <div class="inner" style="grid-column:1/-1;display:grid;grid-template-columns:inherit;gap:3rem">
+      <div>
+        <h2><span lang="en">Request a tour</span><span lang="de">Tour anfragen</span></h2>
+        <a class="mail" href="mailto:Linus.Ruesseler@Student.HTW-Berlin.de">Linus.Ruesseler@Student.HTW-Berlin.de</a>
+      </div>
+      <div>
+        <p><span lang="en">Tell us what you'd like to show and who you want to reach. We'll take it from there.</span><span lang="de">Sagen Sie uns, was Sie zeigen und wen Sie erreichen möchten. Um den Rest kümmern wir uns.</span></p>
+        <div class="btns">
+          <a class="btn solid" lang="en" href="mailto:Linus.Ruesseler@Student.HTW-Berlin.de?subject=Tour%20request">Request a tour</a><a class="btn solid" lang="de" href="mailto:Linus.Ruesseler@Student.HTW-Berlin.de?subject=Tour-Anfrage">Tour anfragen</a>
+        </div>
+        <p class="more" style="margin-top:2rem"><span lang="en">Who we are: <a href="index.html#about">about HTWerk and our team</a>.</span><span lang="de">Wer wir sind: <a href="index.html#about">über HTWerk und unser Team</a>.</span></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="inner">
+    <div><!-- TODO: impressum.html und datenschutz.html anlegen --><a href="impressum.html"><span lang="en">Legal notice</span><span lang="de">Impressum</span></a><a href="datenschutz.html"><span lang="en">Privacy policy</span><span lang="de">Datenschutz</span></a></div>
+    <div class="mark"><svg viewBox="0 0 1498 2566" aria-hidden="true" focusable="false"><path d="M1216 1753 c-31 -1 -71 -2 -118 -2 c-48 -1 -99 -1 -155 -2 c-56 -1 -114 -1 -174 -2 c-61 0 -120 -1 -177 -1 c-58 0 -113 0 -165 1 c-52 0 -98 2 -137 3 v352 c0 67 1 126 3 176 c2 51 5 94 7 130 c3 37 7 67 11 91 c4 25 9 45 14 62 v5 h-285 v-5 c5 -17 10 -37 14 -62 c4 -24 8 -54 11 -91 c3 -36 6 -79 7 -130 c2 -50 3 -109 3 -176 v-771 c0 -68 -1 -126 -3 -176 c-1 -51 -4 -94 -7 -131 c-3 -37 -7 -67 -11 -92 c-4 -24 -9 -45 -14 -61 v-5 h285 v5 c-5 16 -10 37 -14 61 c-4 25 -8 55 -11 92 c-2 37 -5 80 -7 131 c-2 50 -3 108 -3 176 v303 c41 2 88 3 140 3 c52 0 107 0 164 0 c57 0 115 -1 174 -2 c58 -1 115 -2 170 -3 c55 -1 107 -2 154 -4 c48 -1 89 -3 124 -5 v-292 c0 -68 -1 -126 -3 -176 c-2 -51 -4 -94 -7 -131 c-3 -37 -6 -67 -10 -92 c-5 -24 -9 -45 -14 -61 v-5 h284 v5 c-4 16 -9 37 -13 61 c-5 25 -8 55 -11 92 c-4 37 -6 80 -8 131 c-1 50 -2 108 -2 176 v771 c0 67 1 126 2 176 c2 51 4 94 8 130 c3 37 6 67 11 91 c4 25 9 45 13 62 v5 h-284 v-5 c5 -17 9 -37 14 -62 c4 -24 7 -54 10 -91 c3 -36 5 -79 7 -130 c2 -50 3 -109 3 -176 Z M1351 562 l-400 42 l-54 -517 l-26 3 l54 517 l-369 39 l-54 -518 l-26 3 l55 518 l-400 42 c-27 -254 129 -487 369 -586 l-7 -66 l368 -39 l7 66 c255 47 456 243 483 496 Z M36 741 l1418 -149 c22 -3 42 13 44 35 c2 22 -14 42 -35 44 l-1419 149 c-22 3 -41 -13 -44 -35 c-2 -22 14 -42 36 -44 Z"/></svg>© 2026 HTWerk</div>
+  </div>
+</footer>
+<script>
+/* Sprachumschalter DE/EN */
+(function(){
+  var d=document.documentElement;
+  function set(l){
+    d.lang=l;
+    try{localStorage.setItem('htwerk-lang',l)}catch(e){}
+    var t=d.getAttribute('data-title-'+l); if(t) document.title=t;
+    document.querySelectorAll('[data-setlang]').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-setlang')===l))});
+    document.querySelectorAll('img[data-alt-de]').forEach(function(i){
+      if(!i.hasAttribute('data-alt-en')) i.setAttribute('data-alt-en',i.alt);
+      i.alt=i.getAttribute('data-alt-'+l);
+    });
+    /* Sprache an die Unterseiten weitergeben */
+    document.querySelectorAll('a[href]').forEach(function(a){
+      var m=a.getAttribute('href').match(/^([\w-]+\.html)(\?lang=\w+)?(#.*)?$/);
+      if(m) a.setAttribute('href',m[1]+'?lang='+l+(m[3]||''));
+    });
+  }
+  document.querySelectorAll('[data-setlang]').forEach(function(b){b.addEventListener('click',function(){set(b.getAttribute('data-setlang'))})});
+  set(d.lang==='de'?'de':'en');
+})();
+</script>
+</body>
+</html>

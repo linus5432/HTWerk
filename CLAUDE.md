@@ -22,7 +22,8 @@ Reines HTML und CSS mit wenig JavaScript, kein Build-Schritt, kein Framework.
 
 | Datei | Inhalt |
 | --- | --- |
-| `index.html` | Startseite: Titel, Past visits, Hosting, Ablauf, About us, Core Team, Anmeldung, Kontakt (Reihenfolge im Oktober 2026 auf Wunsch von Linus geändert, weicht von der Präsentation ab) |
+| `index.html` | Startseite für alle: Titel mit zwei Wegweisern (Studierende → `#signup`, Unternehmen → `unternehmen.html`), Past visits, Kurzfassung „Für Unternehmen“ (`#host`), About us, Core Team, Anmeldung, Kontakt (Reihenfolge im Oktober 2026 auf Wunsch von Linus geändert, weicht von der Präsentation ab) |
+| `unternehmen.html` | Seite für Unternehmen, durchgehend gesiezt: Titel mit „Tour anfragen“, Past visits, Hosting (`#host`), Ablauf, Kontakt. Link für Anfragen an Firmen. Kopfzeile mit Wortmarke wie auf den Tour-Seiten |
 | `1komma5.html`, `siemens-energy.html`, `formlabs.html`, `bmw-motorrad.html` | Je eine Unterseite pro Tour mit einem kurzen Rückblick. Von der Startseite unter `#visits` verlinkt |
 | `images/` | 12 Fotos aus der Partner-Präsentation (JPG, max. 1400 px), die Ordner `bmw-motorrad/`, `formlabs/` und `1komma5/` mit den Galerie-Fotos der Touren, `HTWerk/` mit den hochgeladenen Originalen, `og-image.jpg` (Vorschaubild 1200 x 630 für geteilte Links, mit Logo) und das Logo als Datei: `logo-htwerk.svg` (Wortmarke) und `logo-htwerk-monogramm.svg` (H mit Helm), beide schwarz |
 | `fonts/` | Schriftdateien (woff2), `fonts.css` mit den `@font-face`-Regeln, Lizenztexte (SIL OFL) |
@@ -76,9 +77,12 @@ Die Größe der Wortmarke im Titel regelt `.hero h1 svg` (Breite), in der Kopfze
 
 ## Navigation
 
-- Reihenfolge der Links wie die Abschnitte: Bisherige Besuche, Tour ausrichten, Über uns, Anmelden, Kontakt.
-- Am Handy (unter 34rem) sind „Bisherige Besuche“ und „Über uns“ ausgeblendet, unter 23,5rem auch „Kontakt“,
-  damit die Leiste einzeilig bleibt. Beim Ändern der Reihenfolge die `nth-child`-Regeln anpassen.
+- Startseite: Bisherige Besuche, Für Unternehmen (→ `unternehmen.html`), Über uns, Anmelden, Kontakt.
+  Am Handy (unter 34rem) sind „Bisherige Besuche“ und „Über uns“ ausgeblendet, unter 23,5rem auch „Kontakt“.
+- `unternehmen.html`: Bisherige Besuche, So läuft es ab, Für Studierende (→ `index.html`), Kontakt.
+  Unter 34rem nur „So läuft es ab“ und „Kontakt“, unter 26rem nur „Kontakt“.
+- Tour-Seiten: Bisherige Besuche, Für Unternehmen, Anmelden. Unter 30rem ohne „Bisherige Besuche“ (Logo führt zur Startseite).
+- Die Leisten sollen einzeilig bleiben. Beim Ändern der Links die `nth-child`-Regeln anpassen.
 
 ## Anmeldung
 
@@ -114,7 +118,8 @@ Alle anderen „Join the next tour“-Buttons, auch auf den Tour-Seiten, führen
 - Neue Tour: eine bestehende Tour-Seite kopieren, Name, Texte, Fotos und Alt-Texte anpassen,
   in `index.html` unter `#visits` einen weiteren Block ergänzen
   und die „Next visit“-Kette anpassen (aktuell 1KOMMA5° → Siemens Energy → Formlabs → BMW Motorrad → 1KOMMA5°).
-  Die Zahl in „So far: 4 tours …“ im Abschnitt `#host` mit anpassen.
+  Die Zahl in „So far: 4 tours …“ steht zweimal: in `index.html` (`#host`) und im Titel von `unternehmen.html`. Beide anpassen,
+  den neuen Besuch auch unter `#visits` in `unternehmen.html` ergänzen.
 
 ## Offene Punkte
 

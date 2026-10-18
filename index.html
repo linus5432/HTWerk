@@ -161,6 +161,20 @@ footer a{margin-right:1.25rem}
 @media (max-width:34rem){nav a:nth-child(1),nav a:nth-child(3){display:none}nav a{white-space:nowrap}nav{gap:.75rem}.langsw{padding-left:.75rem}}
 @media (max-width:23.5rem){nav a:nth-child(5){display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* zwei Wege im Titel: Studierende und Unternehmen */
+.paths{display:grid;gap:.75rem;max-width:30rem}
+.path{display:block;border:1.5px solid var(--white);padding:1rem 1.3rem 1.1rem;text-decoration:none}
+.path small{display:block;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.7;margin-bottom:.15rem}
+.path strong{display:block;font-family:"Marcellus",Georgia,serif;font-weight:400;font-size:clamp(1.35rem,2vw,1.65rem);line-height:1.2}
+.path.solid{background:var(--white);color:var(--black)}
+.path:hover{opacity:.82}
+.path:hover strong{text-decoration:underline;text-underline-offset:4px}
+/* Kurzfassung für Unternehmen auf der Startseite */
+.teaser{min-height:70vh}
+.teaser .text p{max-width:30rem;margin:0 0 2rem}
+.teaser .sofar{font-family:"Marcellus",Georgia,serif;font-size:1.4rem;line-height:1.3;color:var(--grey);margin:-1.25rem 0 1.75rem}
+.light .btn.solid,.teaser .btn.solid{background:var(--black);color:var(--white);border-color:var(--black)}
 </style>
 </head>
 <body>
@@ -168,7 +182,7 @@ footer a{margin-right:1.25rem}
 <header>
   <nav aria-label="Main">
     <a href="#visits"><span lang="en">Past visits</span><span lang="de">Bisherige Besuche</span></a>
-    <a href="#host"><span lang="en">Host a tour</span><span lang="de">Tour ausrichten</span></a>
+    <a href="unternehmen.html"><span lang="en">For companies</span><span lang="de">Für Unternehmen</span></a>
     <a href="#about"><span lang="en">About</span><span lang="de">Über uns</span></a>
     <a href="#signup"><span lang="en">Join a tour</span><span lang="de">Anmelden</span></a>
     <a href="#contact"><span lang="en">Contact</span><span lang="de">Kontakt</span></a>
@@ -183,9 +197,9 @@ footer a{margin-right:1.25rem}
     <div class="text dark">
       <h1><span class="vh">HTWerk</span><svg viewBox="0 0 4799 1487" aria-hidden="true" focusable="false"><path d="M678 1027 c-17 -1 -38 -1 -64 -1 c-25 -1 -53 -1 -83 -1 c-31 -1 -62 -1 -95 -1 c-32 -1 -64 -1 -96 -1 c-31 0 -61 0 -89 0 c-28 1 -53 1 -74 2 v191 c0 36 1 68 2 95 c1 27 2 51 4 70 c1 20 3 36 6 50 c2 13 4 24 7 33 v3 h-154 v-3 c3 -9 5 -20 7 -33 c3 -14 5 -30 7 -50 c1 -19 3 -43 3 -70 c1 -27 2 -59 2 -95 v-418 c0 -36 -1 -68 -2 -95 c0 -27 -2 -51 -3 -71 c-2 -20 -4 -36 -7 -49 c-2 -14 -4 -25 -7 -34 v-2 h154 v2 c-3 9 -5 20 -7 34 c-3 13 -5 29 -6 49 c-2 20 -3 44 -4 71 c-1 27 -2 59 -2 95 v164 c23 1 48 2 76 2 c28 0 58 0 89 0 c30 0 62 -1 94 -1 c32 0 62 -1 92 -2 c30 0 58 -1 83 -2 c26 -1 49 -2 67 -2 v-159 c0 -36 0 -68 -1 -95 c-1 -27 -2 -51 -4 -71 c-1 -20 -3 -36 -6 -49 c-2 -14 -5 -25 -7 -34 v-2 h154 v2 c-3 9 -5 20 -8 34 c-2 13 -4 29 -6 49 c-1 20 -3 44 -3 71 c-1 27 -2 59 -2 95 v418 c0 36 1 68 2 95 c0 27 2 51 3 70 c2 20 4 36 6 50 c3 13 5 24 8 33 v3 h-154 v-3 c2 -9 5 -20 7 -33 c3 -14 5 -30 6 -50 c2 -19 3 -43 4 -70 c1 -27 1 -59 1 -95 Z M1226 603 c-50 0 -96 2 -137 7 c-40 4 -75 9 -105 14 c-34 7 -65 14 -92 21 l19 -103 c5 0 13 0 23 1 c10 0 22 1 34 1 c13 1 26 1 40 1 c14 0 27 0 40 1 c12 0 23 0 33 0 c9 1 16 1 21 1 h366 c4 0 11 0 21 -1 c9 0 20 0 33 0 c12 -1 25 -1 39 -1 c14 0 27 0 40 -1 c13 0 24 -1 34 -1 c11 -1 18 -1 23 -1 l19 103 c-27 -7 -58 -14 -92 -21 c-30 -5 -65 -10 -106 -14 c-40 -5 -86 -7 -136 -7 v613 c0 36 0 68 1 95 c2 27 3 51 4 70 c2 20 4 36 6 50 c2 13 5 24 7 33 v3 h-153 v-3 c3 -9 5 -20 7 -33 c2 -14 4 -30 6 -50 c2 -19 3 -43 4 -70 c1 -27 1 -59 1 -95 Z M2356 668 l257 623 l249 -612 c10 -25 17 -46 22 -64 c5 -17 7 -32 7 -45 c0 -3 0 -7 0 -11 c-1 -5 -1 -8 -2 -10 v-2 h127 v2 c-9 10 -18 25 -28 45 c-10 21 -22 46 -35 76 l-343 817 h-49 l-249 -606 l-228 606 h-48 l-314 -785 c-8 -18 -16 -36 -24 -53 c-8 -17 -15 -33 -22 -47 c-7 -13 -14 -25 -19 -34 c-6 -10 -10 -16 -13 -19 v-2 h178 v2 c-1 5 -2 9 -2 11 c0 3 0 6 0 9 c0 15 2 30 5 46 c4 17 10 36 19 59 l241 610 l231 -614 Z M3317 1478 c-48 0 -92 -7 -134 -22 c-41 -15 -77 -37 -108 -66 c-31 -29 -55 -65 -73 -107 c-17 -43 -26 -91 -26 -146 c0 -48 8 -93 24 -135 c16 -41 39 -77 67 -107 c29 -30 63 -54 101 -71 c38 -17 79 -26 124 -26 c44 0 85 8 122 23 c38 15 71 37 98 66 c28 29 50 65 66 107 c16 43 24 91 26 145 c-49 0 -97 -1 -145 -1 c-49 -1 -99 -1 -151 -1 c-37 0 -73 0 -109 1 c-35 0 -67 1 -95 1 c3 45 9 85 21 121 c11 36 27 67 47 92 c20 26 44 45 72 59 c29 14 61 20 97 20 c24 0 48 -3 70 -8 c22 -6 42 -14 60 -24 c18 -11 34 -23 48 -37 c14 -14 26 -29 36 -45 l8 4 l-48 114 c-23 12 -50 22 -83 31 c-32 8 -70 12 -115 12 Z M3232 1087 c42 0 85 0 128 0 c43 -1 82 -1 117 -3 c-4 -37 -11 -70 -21 -100 c-11 -29 -25 -54 -42 -75 c-16 -20 -36 -36 -59 -47 c-22 -11 -47 -17 -75 -17 c-24 0 -47 5 -68 16 c-21 11 -39 27 -54 47 c-16 21 -28 46 -37 76 c-10 30 -15 63 -17 102 c19 0 40 1 61 1 c21 0 44 0 67 0 Z M3729 1061 c0 -37 -1 -69 -2 -96 c-1 -27 -2 -50 -4 -70 c-1 -20 -3 -36 -6 -49 c-2 -14 -5 -25 -7 -34 v-2 h148 v2 c-3 10 -6 22 -9 36 c-2 14 -4 32 -5 55 c16 -14 32 -27 49 -39 c18 -13 35 -25 53 -34 c18 -10 36 -18 55 -24 c18 -6 37 -9 56 -9 c12 0 22 0 30 1 c9 2 16 3 23 5 c7 2 13 4 19 6 c5 3 11 5 16 7 l-32 123 l-10 -3 c-6 -19 -15 -34 -29 -45 c-14 -11 -34 -17 -58 -17 c-13 0 -27 2 -42 7 c-14 5 -29 11 -44 19 c-15 9 -30 18 -45 29 c-15 11 -29 23 -44 35 c0 12 -1 26 -1 40 c0 15 0 30 0 46 v166 c0 36 1 68 1 95 c1 27 3 51 4 70 c2 20 4 36 6 50 c2 13 5 24 7 33 v3 h-148 v-3 c2 -9 5 -20 7 -33 c3 -14 5 -30 6 -50 c2 -19 3 -43 4 -70 c1 -27 2 -59 2 -95 Z M4231 758 c0 -36 -1 -68 -2 -95 c-1 -27 -2 -50 -4 -70 c-1 -20 -3 -36 -6 -50 c-2 -13 -4 -24 -7 -33 v-2 h148 v2 c-2 9 -5 20 -7 33 c-2 14 -4 30 -6 50 c-1 20 -3 43 -4 70 c0 27 -1 59 -1 95 v320 l210 -188 c37 -32 55 -59 55 -80 h149 v2 c-11 4 -22 8 -32 13 c-10 6 -20 12 -30 19 c-10 8 -20 16 -31 25 c-11 9 -23 20 -36 31 l-188 171 l258 305 c8 10 16 19 25 29 c9 9 18 18 27 26 c9 8 18 16 26 22 c9 6 17 9 24 11 v3 h-186 c0 -11 -3 -23 -9 -35 c-6 -12 -16 -27 -31 -46 l-231 -274 v104 c0 36 1 68 1 95 c1 27 3 51 4 70 c2 20 4 36 6 50 c2 13 5 24 7 33 v3 h-148 v-3 c3 -9 5 -20 7 -33 c3 -14 5 -30 6 -50 c2 -19 3 -43 4 -70 c1 -27 2 -59 2 -95 Z M745 323 l-204 21 l-27 -257 l-26 3 l27 257 l-199 21 l-27 -258 l-26 3 l27 258 l-205 21 c-14 -137 70 -264 200 -317 l-6 -54 l200 -21 l5 54 c138 25 247 131 261 269 Z M36 437 l767 -80 c22 -3 42 13 44 35 c3 22 -13 42 -35 44 l-768 81 c-22 2 -41 -14 -44 -36 c-2 -22 14 -41 36 -44 Z"/></svg></h1>
       <p><span lang="en">Student club for factory &amp; office tours</span><span lang="de">Studentische Initiative für Werks- und Unternehmensbesuche</span></p>
-      <div class="btns">
-                <a class="btn solid" href="#signup"><span lang="en">Join the next tour</span><span lang="de">Zur nächsten Tour anmelden</span></a>
-        <a class="btn" href="#host"><span lang="en">Host a tour</span><span lang="de">Tour ausrichten</span></a>
+      <div class="paths">
+        <a class="path solid" href="#signup"><small><span lang="en">I'm a student</span><span lang="de">Ich studiere</span></small><strong><span lang="en">Join the next tour →</span><span lang="de">Zur nächsten Tour →</span></strong></a>
+        <a class="path" href="unternehmen.html"><small><span lang="en">We're a company</span><span lang="de">Wir sind ein Unternehmen</span></small><strong><span lang="en">Host a tour →</span><span lang="de">Tour ausrichten →</span></strong></a>
       </div>
     </div>
     <div class="photo"><img fetchpriority="high" src="images/hero-formlabs.jpg" data-alt-de="Studierende im Gespräch mit einem Formlabs-Mitarbeiter neben 3D-Druckern" alt="Students talking with a Formlabs employee next to 3D-printing equipment"></div>
@@ -220,44 +234,13 @@ footer a{margin-right:1.25rem}
     </a>
   </section>
 
-  <section class="host" id="host">
-    <div class="split">
-      <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-briefing.jpg" data-alt-de="Ein Guide weist Studierende in Besucherwesten bei BMW Motorrad in Berlin ein" alt="Guide briefing students in visitor vests at BMW Motorrad Berlin"></div>
-      <div class="text"><h2><span lang="en">What hosting an HTWerk event involves</span><span lang="de">So richten Sie eine HTWerk-Tour aus</span></h2><p class="sofar"><span lang="en">So far: 4 tours with more than 60 students.</span><span lang="de">Bisher: 4 Touren mit mehr als 60 Studierenden.</span></p><h3><span lang="en">Before the visit</span><span lang="de">Vor dem Besuch</span></h3><ul>
-        <li><span lang="en">Designate a point of contact to coordinate logistics with the HTWerk team</span><span lang="de">Eine Ansprechperson benennen, die die Organisation mit dem HTWerk-Team abstimmt</span></li>
-        <li><span lang="en">Confirm a date and rough itinerary: duration, meeting point, any access restrictions or safety requirements</span><span lang="de">Termin und groben Ablauf festlegen: Dauer, Treffpunkt, Zugangsregeln und Sicherheitsvorgaben</span></li>
-        <li><span lang="en">Provide any necessary safety gear or briefings in advance if required (e.g. safety shoes, vests, glasses for factory floors)</span><span lang="de">Falls nötig, Schutzausrüstung bereitstellen oder vorab eine Sicherheitsunterweisung geben (z. B. Sicherheitsschuhe, Warnwesten oder Schutzbrillen für die Fertigung)</span></li>
-      </ul></div>
-    </div>
-    <div class="split">
-      <div class="photo"><img loading="lazy" decoding="async" src="images/during-visit.jpg" data-alt-de="Studierende und Gastgeber schauen bei einem Unternehmensbesuch auf einen Bildschirm" alt="Students and hosts looking at a screen during a company visit"></div>
-      <div class="text"><h3><span lang="en">During the visit</span><span lang="de">Während des Besuchs</span></h3><ul>
-        <li><span lang="en">Provide a host or guide, ideally someone who knows the space and can speak to the technical and cultural side of the company</span><span lang="de">Eine Person für die Führung stellen, am besten jemanden, der sich vor Ort auskennt und über Technik und Unternehmenskultur sprechen kann</span></li>
-        <li><span lang="en">Give a short company or team introduction (10–15 minutes is often enough)</span><span lang="de">Unternehmen oder Team kurz vorstellen (10 bis 15 Minuten reichen meist)</span></li>
-        <li><span lang="en">Lead the actual tour: factory floor, office space, or showroom</span><span lang="de">Die eigentliche Führung übernehmen: durch Fertigung, Büro oder Showroom</span></li>
-        <li><span lang="en">Optional but highly recommended: a Q&amp;A, informal networking, or coffee at the end. This is where a lot of the real value happens for students, whether it's a deeper look at your products, your culture, or the day-to-day in open roles.</span><span lang="de">Freiwillig, aber sehr zu empfehlen: eine Fragerunde, lockeres Networking oder ein Kaffee zum Abschluss. Davon haben die Studierenden oft am meisten, weil sie hier mehr über Ihre Produkte, Ihre Unternehmenskultur oder den Alltag in Ihren offenen Stellen erfahren.</span></li>
-      </ul></div>
-    </div>
-    <div class="split">
-      <div class="photo"><img loading="lazy" decoding="async" src="images/networking.jpg" data-alt-de="Studierende im Gespräch mit Formlabs-Mitarbeitenden nach der Tour" alt="Students chatting with Formlabs staff after the tour"></div>
-      <div class="text"><h3><span lang="en">What we handle</span><span lang="de">Das übernehmen wir</span></h3><ul>
-        <li><span lang="en">Recruiting and coordinating the student group, tailored to your recruiting goals</span><span lang="de">Zusammenstellung und Koordination der Studierendengruppe, abgestimmt auf Ihre Recruiting-Ziele</span></li>
-        <li><span lang="en">Communication, registration, and confirmations with attendees</span><span lang="de">Kommunikation mit den Teilnehmenden, von der Anmeldung bis zur Bestätigung</span></li>
-        <li><span lang="en">On-site coordination with your team</span><span lang="de">Koordination vor Ort, gemeinsam mit Ihrem Team</span></li>
-        <li><span lang="en">Post-event content (LinkedIn recap, photos if permitted) to show your company to a wider student audience</span><span lang="de">Inhalte nach der Tour (Rückblick auf LinkedIn, Fotos nach Freigabe), mit denen Ihr Unternehmen noch mehr Studierende erreicht</span></li>
-        <li><span lang="en">Student contact information after the visit</span><span lang="de">Kontaktdaten der teilnehmenden Studierenden nach dem Besuch</span></li>
-      </ul></div>
-    </div>
-  </section>
-
-  <section class="process">
-    <div class="inner">
-      <h2><span lang="en">How a visit comes together</span><span lang="de">So kommt eine Tour zustande</span></h2>
-      <ol class="steps">
-        <li><div class="n">01</div><h3><span lang="en">Reach out</span><span lang="de">Sie melden sich</span></h3><p><span lang="en">Get in touch and tell us your recruiting goals. We confirm a date and rough itinerary together.</span><span lang="de">Schreiben Sie uns und nennen Sie Ihre Recruiting-Ziele. Termin und groben Ablauf legen wir gemeinsam fest.</span></p></li>
-        <li><div class="n">02</div><h3><span lang="en">We fill the room</span><span lang="de">Wir bringen die Studierenden mit</span></h3><p><span lang="en">HTWerk recruits and coordinates the student group, tailored to match who you want to reach.</span><span lang="de">HTWerk stellt die Gruppe zusammen und koordiniert sie, passend zu den Studierenden, die Sie erreichen möchten.</span></p></li>
-        <li><div class="n">03</div><h3><span lang="en">Host the tour</span><span lang="de">Sie zeigen Ihr Unternehmen</span></h3><p><span lang="en">You lead the visit, we handle logistics and follow up with a LinkedIn recap and student contacts.</span><span lang="de">Sie führen durch den Besuch, wir kümmern uns um die Organisation. Danach veröffentlichen wir einen Rückblick auf LinkedIn und schicken Ihnen die Kontakte der Studierenden.</span></p></li>
-      </ol>
+  <section class="split teaser" id="host">
+    <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-briefing.jpg" data-alt-de="Ein Guide weist Studierende in Besucherwesten bei BMW Motorrad in Berlin ein" alt="Guide briefing students in visitor vests at BMW Motorrad Berlin"></div>
+    <div class="text">
+      <h2><span lang="en">For companies</span><span lang="de">Für Unternehmen</span></h2>
+      <p class="sofar"><span lang="en">So far: 4 tours with more than 60 students.</span><span lang="de">Bisher: 4 Touren mit mehr als 60 Studierenden.</span></p>
+      <p><span lang="en">Want to show students your factory or office? We put the group together and handle the logistics, you lead the tour.</span><span lang="de">Sie möchten Studierenden Ihr Werk oder Büro zeigen? Wir stellen die Gruppe zusammen und übernehmen die Organisation, Sie übernehmen die Führung.</span></p>
+      <div class="btns"><a class="btn solid" href="unternehmen.html"><span lang="en">How hosting works</span><span lang="de">So richten Sie eine Tour aus</span></a></div>
     </div>
   </section>
 
@@ -308,7 +291,7 @@ footer a{margin-right:1.25rem}
         <a class="mail" href="mailto:Linus.Ruesseler@Student.HTW-Berlin.de">Linus.Ruesseler@Student.HTW-Berlin.de</a>
       </div>
       <div>
-        <p><span lang="en"><strong>Companies:</strong> tell us what you'd like to show and who you want to reach. We'll take it from there.</span><span lang="de"><strong>Unternehmen:</strong> Sagen Sie uns, was Sie zeigen und wen Sie erreichen möchten. Um den Rest kümmern wir uns.</span></p>
+        <p><span lang="en"><strong>Companies:</strong> tell us what you'd like to show and who you want to reach. We'll take it from there. <a href="unternehmen.html">How hosting works</a>.</span><span lang="de"><strong>Unternehmen:</strong> Sagen Sie uns, was Sie zeigen und wen Sie erreichen möchten. Um den Rest kümmern wir uns. <a href="unternehmen.html">So richten Sie eine Tour aus</a>.</span></p>
         <p><span lang="en"><strong>Students:</strong> questions about a tour? Write to us, or <a href="#signup">register for the next tour</a>.</span><span lang="de"><strong>Studierende:</strong> Du hast Fragen zu einer Tour? Schreib uns oder <a href="#signup">melde dich gleich für die nächste Tour an</a>.</span></p>
         <div class="btns">
           <a class="btn solid" href="mailto:Linus.Ruesseler@Student.HTW-Berlin.de"><span lang="en">Email us</span><span lang="de">E-Mail schreiben</span></a>
