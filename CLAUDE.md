@@ -22,7 +22,7 @@ Reines HTML und CSS mit wenig JavaScript, kein Build-Schritt, kein Framework.
 
 | Datei | Inhalt |
 | --- | --- |
-| `index.html` | Startseite, Aufbau nach dem Vorbild von brisa-robotics.de (Oktober 2026, Wunsch von Linus): Titel mit Leitsatz „Raus aus dem Hörsaal, rein ins Werk.“ und den Buttons „Wer wir sind“ / „Mitmachen“; 01 Mission (`#mission`, drei Säulen Sehen, Fragen, Vernetzen); 02 Team (`#team`, nummerierte Karten); 03 Touren (`#touren`, Kasten „Nächste Tour“ mit Luma = `#signup`, darunter „Bisherige Besuche“ als Slider = `#visits`); 04 Partner (`#partner`, Firmennamen als Raster, dunkler Kasten „Offener Aufruf“ = `#host` mit „Tour anfragen“ und Link „Mehr zum Ablauf einer Tour“ auf `unternehmen.html`); Fußzeile mit Schlusssatz, Kontakt, LinkedIn, Luma (`#contact`). Nur Struktur übernommen, Gestaltung bleibt HTWerk |
+| `index.html` | Startseite, Aufbau nach dem Vorbild von brisa-robotics.de (Oktober 2026, Wunsch von Linus): Titel mit Leitsatz „Raus aus dem Hörsaal, rein ins Werk.“ und den Buttons „Wer wir sind“ / „Mitmachen“; 01 Mission (`#mission`, drei Säulen Sehen, Fragen, Vernetzen); 02 Team (`#team`, nummerierte Karten); 03 Touren (`#touren`, Kasten „Nächste Tour“ mit Luma = `#signup`, darunter „Bisherige Besuche“ als Slider = `#visits`); 04 Partner (`#partner`, Überschrift und dunkler Kasten „Offener Aufruf“ = `#host` mit „Tour anfragen“ und Link „Mehr zum Ablauf einer Tour“ auf `unternehmen.html`); Fußzeile mit Schlusssatz, Kontakt, LinkedIn, Luma (`#contact`). Nur Struktur übernommen, Gestaltung bleibt HTWerk |
 | `unternehmen.html` | Seite für Unternehmen, durchgehend gesiezt: Titel mit „Tour anfragen“, Past visits, Hosting (`#host`), Ablauf, Kontakt. Link für Anfragen an Firmen. Kopfzeile mit Wortmarke wie auf den Tour-Seiten |
 | `1komma5.html`, `siemens-energy.html`, `formlabs.html`, `bmw-motorrad.html` | Je eine Unterseite pro Tour mit einem kurzen Rückblick. Von der Startseite unter `#visits` verlinkt |
 | `images/` | 12 Fotos aus der Partner-Präsentation (JPG, max. 1400 px), die Ordner `bmw-motorrad/`, `formlabs/` und `1komma5/` mit den Galerie-Fotos der Touren, `HTWerk/` mit den hochgeladenen Originalen, `og-image.jpg` (Vorschaubild 1200 x 630 für geteilte Links, mit Logo) und das Logo als Datei: `logo-htwerk.svg` (Wortmarke) und `logo-htwerk-monogramm.svg` (H mit Helm), beide schwarz |
@@ -133,7 +133,8 @@ Alle anderen „Join the next tour“-Buttons, auch auf den Tour-Seiten, führen
    (wer geführt hat, was gezeigt wurde). Linus sollte sie prüfen und ergänzen.
 3. Einwilligung der abgebildeten Personen und Freigabe der Unternehmen für die Fotos klären.
 4. Im Kontakt steht eine persönliche Hochschul-Adresse. Eine eigene HTWerk-Adresse wäre besser.
-5. Die deutschen Texte wurden im Oktober 2026 überarbeitet. Linus sollte sie einmal gegenlesen,
+5. Logos oder Firmennamen unter „Partner“ erst nach schriftlicher Zustimmung der Firmen (Namensraster im Oktober 2026 auf Wunsch von Linus entfernt).
+6. Die deutschen Texte wurden im Oktober 2026 überarbeitet. Linus sollte sie einmal gegenlesen,
    vor allem den neuen Claim und die Rollenbezeichnungen im Team.
 6. Der Anmeldelink führt auf ein persönliches Luma-Profil. Ein eigener HTWerk-Kalender auf Luma
    oder der Link zur jeweils nächsten Veranstaltung wäre direkter.
