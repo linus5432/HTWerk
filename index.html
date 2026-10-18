@@ -10,6 +10,10 @@
 </script>
 <meta name="description" content="HTWerk connects Berlin's university students with leading companies in engineering, energy and manufacturing through curated factory and office tours.">
 <link rel="canonical" href="https://htwerk.de/">
+<link rel="alternate" hreflang="de" href="https://htwerk.de/?lang=de">
+<link rel="alternate" hreflang="en" href="https://htwerk.de/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://htwerk.de/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"HTWerk","url":"https://htwerk.de/","logo":"https://htwerk.de/favicon.png","description":"Student initiative at HTW Berlin organising factory and office tours for Berlin university students.","sameAs":["https://www.linkedin.com/company/htwerk/"]}</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.png" sizes="48x48" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -154,7 +158,8 @@ footer a{margin-right:1.25rem}
   .steps,.contact{grid-template-columns:1fr}
   .process,.contact,.signup{padding:4.5rem 0}
 }
-@media (max-width:34rem){nav a:nth-child(2),nav a:nth-child(3){display:none}}
+@media (max-width:34rem){nav a:nth-child(1),nav a:nth-child(3){display:none}nav a{white-space:nowrap}nav{gap:.75rem}.langsw{padding-left:.75rem}}
+@media (max-width:23.5rem){nav a:nth-child(5){display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>

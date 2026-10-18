@@ -74,6 +74,12 @@ Die Größe der Wortmarke im Titel regelt `.hero h1 svg` (Breite), in der Kopfze
   „Studentische Initiative für Werks- und Unternehmensbesuche“.
 - Aufzählungen für Unternehmen unter `#host` stehen im Infinitiv („Eine Ansprechperson benennen …“), nicht im Imperativ.
 
+## Navigation
+
+- Reihenfolge der Links wie die Abschnitte: Bisherige Besuche, Tour ausrichten, Über uns, Anmelden, Kontakt.
+- Am Handy (unter 34rem) sind „Bisherige Besuche“ und „Über uns“ ausgeblendet, unter 23,5rem auch „Kontakt“,
+  damit die Leiste einzeilig bleibt. Beim Ändern der Reihenfolge die `nth-child`-Regeln anpassen.
+
 ## Anmeldung
 
 Der Link zur Anmeldung steht an genau einer Stelle: in `index.html` im Abschnitt `#signup`
