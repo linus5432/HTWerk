@@ -110,7 +110,7 @@ Alle anderen Anmelde-Buttons führen zu `index.html#signup`.
 ## Offene Punkte
 
 1. `impressum.html` und `datenschutz.html` sind live (Kopfzeile mit Wortmarke, `noindex`).
-   Verantwortlich: Linus Rüsseler, Haubachstraße 40, 10585 Berlin, linus@htwerk.de (je Seite an zwei bzw. einer Stelle).
+   Verantwortlich: Linus Rüsseler, Chausseestraße 23, 10115 Berlin, linus@htwerk.de (je Seite an zwei bzw. einer Stelle).
    Die Datenschutzerklärung beschreibt genau das, was die Seite tut: GitHub Pages, Cloudflare-DNS, keine Cookies,
    lokale Schriften, `htwerk-lang` nur nach Klick auf DE/EN, Links zu Luma und LinkedIn. Wenn sich daran etwas ändert
    (Formular, Analyse, eingebettete Inhalte) oder HTWerk ein Verein oder eine UG wird, beide Seiten anpassen.
