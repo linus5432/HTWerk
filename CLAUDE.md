@@ -121,8 +121,7 @@ Alle anderen „Join the next tour“-Buttons, auch auf den Tour-Seiten, führen
 - Neue Tour: eine bestehende Tour-Seite kopieren, Name, Texte, Fotos und Alt-Texte anpassen,
   in `index.html` unter `#visits` einen weiteren `a.visit` in `.track` ergänzen
   und die „Next visit“-Kette anpassen (aktuell 1KOMMA5° → Siemens Energy → Formlabs → BMW Motorrad → 1KOMMA5°).
-  Die Zahl in „So far: 4 tours …“ steht zweimal: in `index.html` (`#host`) und im Titel von `unternehmen.html`. Beide anpassen,
-  den neuen Besuch auch im Slider von `unternehmen.html` ergänzen.
+  Den neuen Besuch auch im Slider von `unternehmen.html` ergänzen. (Die Zeile „So far: 4 tours …“ wurde im Oktober 2026 auf Wunsch von Linus entfernt.)
 
 ## Offene Punkte
 
