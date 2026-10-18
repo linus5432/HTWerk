@@ -126,8 +126,11 @@ Alle anderen „Join the next tour“-Buttons, auch auf den Tour-Seiten, führen
 
 ## Offene Punkte
 
-1. `impressum.html` und `datenschutz.html` existieren nicht, sind aber im Footer verlinkt.
-   Ein Impressum ist Pflicht. Dafür fehlt die Anschrift des Verantwortlichen.
+1. `impressum.html` und `datenschutz.html` sind angelegt (gleiche Kopf- und Fußzeile wie die Tour-Seiten, `noindex`).
+   Die Anschrift von Linus wird mit `legal.py`-Logik als Platzhalter `[STRASSE HAUSNUMMER]` / `[PLZ ORT]` eingesetzt und muss
+   vor dem Livegang ersetzt werden (je zweimal pro Seite). Die Datenschutzerklärung beschreibt genau das, was die Seite tut:
+   GitHub Pages, Cloudflare-DNS, keine Cookies, lokale Schriften, `htwerk-lang` nur nach Klick auf DE/EN, Links zu Luma und LinkedIn.
+   Wenn sich daran etwas ändert (Formular, Analyse, eingebettete Inhalte), die Datenschutzerklärung anpassen.
 2. Die Rückblicke auf den vier Tour-Seiten sind kurz und von Claude aus wenigen Fakten geschrieben.
    Es fehlen das Datum jeder Tour, die Teilnehmerzahl bei 1KOMMA5° und alles, was nur die Teilnehmenden wissen
    (wer geführt hat, was gezeigt wurde). Linus sollte sie prüfen und ergänzen.

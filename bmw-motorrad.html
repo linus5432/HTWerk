@@ -200,9 +200,9 @@ footer a{margin-right:1.25rem}
 /* Sprachumschalter DE/EN */
 (function(){
   var d=document.documentElement;
-  function set(l){
+  function set(l,save){
     d.lang=l;
-    try{localStorage.setItem('htwerk-lang',l)}catch(e){}
+    if(save){try{localStorage.setItem('htwerk-lang',l)}catch(e){}}
     var t=d.getAttribute('data-title-'+l); if(t) document.title=t;
     document.querySelectorAll('[data-setlang]').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-setlang')===l))});
     document.querySelectorAll('img[data-alt-de]').forEach(function(i){
@@ -215,7 +215,7 @@ footer a{margin-right:1.25rem}
       if(m) a.setAttribute('href',m[1]+'?lang='+l+(m[3]||''));
     });
   }
-  document.querySelectorAll('[data-setlang]').forEach(function(b){b.addEventListener('click',function(){set(b.getAttribute('data-setlang'))})});
+  document.querySelectorAll('[data-setlang]').forEach(function(b){b.addEventListener('click',function(){set(b.getAttribute('data-setlang'),true)})});
   set(d.lang==='de'?'de':'en');
 })();
 </script>
