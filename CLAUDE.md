@@ -46,6 +46,13 @@ Vorlage ist die Partner-Präsentation „HTWerk Partner Proposal 2026“:
   der Weiter-Pfeil schwarz gefüllt). Wischen geht über CSS-Scroll-Snap auch ohne JavaScript; das kleine Skript vor dem
   Sprachskript steuert Pfeile und Pfeiltasten und springt nach der letzten Tour wieder zur ersten
 - Alle Fotos außer dem ersten haben `loading="lazy"`
+- Seiten-Animation (Oktober 2026, nur `index.html` und `unternehmen.html`), Block „Seiten-Animation“ an drei Stellen:
+  kleines Skript im `<head>` (setzt `html.anim`, nur mit IntersectionObserver und ohne „reduzierte Bewegung“),
+  CSS am Ende des `<style>`, Skript vor `</body>`. Titel: Navigation gleitet herein, Titelfoto öffnet sich wie ein
+  Rolltor (von unten nach oben), Texte steigen nacheinander nach dem Helm auf. Beim Scrollen: Elemente aus der
+  Selektorliste im Skript (`sel`) steigen auf (`.rv`), Fotos der `.split`-Abschnitte öffnen sich als Rolltor (`.rv-photo`).
+  Buttons füllen sich beim Hover von links, Navigationslinks mit wachsender Unterstreichung.
+  Ohne JavaScript bleibt alles sofort sichtbar. Neue Abschnitte bei Bedarf in `sel` aufnehmen.
 
 ## Logo
 
