@@ -23,8 +23,7 @@ Reines HTML und CSS mit wenig JavaScript, kein Build-Schritt, kein Framework.
 | Datei | Inhalt |
 | --- | --- |
 | `index.html` | Startseite, Aufbau nach dem Vorbild von brisa-robotics.de (Oktober 2026, Wunsch von Linus): Titel mit Leitsatz „Raus aus dem Hörsaal, rein ins Werk.“ und den Buttons „Wer wir sind“ / „Mitmachen“; 01 Mission (`#mission`, drei Säulen Sehen, Fragen, Vernetzen); 02 Team (`#team`, nummerierte Karten); 03 Touren (`#touren`, Kasten „Nächste Tour“ mit Luma = `#signup`, darunter „Bisherige Besuche“ als Slider = `#visits`); 04 Partner (`#partner`, nur der dunkle Kasten = `#host` mit „Tour anfragen“ und Link „Mehr zum Ablauf einer Tour“ auf `unternehmen.html`); Fußzeile mit Schlusssatz, Kontakt, LinkedIn, Luma (`#contact`). Nur Struktur übernommen, Gestaltung bleibt HTWerk |
-| `unternehmen.html` | Seite für Unternehmen, durchgehend gesiezt: Titel mit „Tour anfragen“, Past visits, Hosting (`#host`), Ablauf, Kontakt. Link für Anfragen an Firmen. Kopfzeile mit Wortmarke wie auf den Tour-Seiten |
-| `1komma5.html`, `siemens-energy.html`, `formlabs.html`, `bmw-motorrad.html` | Je eine Unterseite pro Tour mit einem kurzen Rückblick. Von der Startseite unter `#visits` verlinkt |
+| `unternehmen.html` | Seite für Unternehmen, durchgehend gesiezt: Titel mit „Tour anfragen“, Past visits, Hosting (`#host`), Ablauf, Kontakt. Link für Anfragen an Firmen. Kopfzeile mit Wortmarke |
 | `images/` | 12 Fotos aus der Partner-Präsentation (JPG, max. 1400 px), die Ordner `bmw-motorrad/`, `formlabs/` und `1komma5/` mit den Galerie-Fotos der Touren, `HTWerk/` mit den hochgeladenen Originalen, `og-image.jpg` (Vorschaubild 1200 x 630 für geteilte Links, mit Logo) und das Logo als Datei: `logo-htwerk.svg` (Wortmarke) und `logo-htwerk-monogramm.svg` (H mit Helm), beide schwarz |
 | `fonts/` | Schriftdateien (woff2), `fonts.css` mit den `@font-face`-Regeln, Lizenztexte (SIL OFL) |
 | `favicon.svg`, `favicon.png`, `apple-touch-icon.png` | Icon: weißes Monogramm (H mit Helm) auf Schwarz |
@@ -54,7 +53,7 @@ Entwurf „Helm“ aus der Canva-Datei „HTWerk – Logo-Entwürfe“: Das H de
 Es gibt zwei Fassungen, beide als ein einziger Vektorpfad aus den Marcellus-Umrissen:
 
 - **Wortmarke** „HTWerk“ mit Helm: steht als Inline-SVG im `<h1>` der Startseite und in `.brand`
-  in der Kopfzeile der vier Tour-Seiten. Farbe über `fill:currentColor`, also weiß auf Schwarz.
+  in der Kopfzeile von `unternehmen.html`, `impressum.html` und `datenschutz.html`. Farbe über `fill:currentColor`, also weiß auf Schwarz.
   Im `<h1>` steht zusätzlich unsichtbar der Text „HTWerk“ (`.vh`) für Screenreader und Suchmaschinen.
 - **Monogramm** (H mit Helm): Favicon, Touch-Icon und klein in der Fußzeile aller Seiten (`.mark`).
 
@@ -65,8 +64,7 @@ Die Größe der Wortmarke im Titel regelt `.hero h1 svg` (Breite), in der Kopfze
 ## Zweisprachigkeit (DE/EN)
 
 - Jeder sichtbare Text steht doppelt: `<span lang="en">…</span><span lang="de">…</span>`
-  im selben Element. Auf den Tour-Seiten gibt es für den Blog-Text zwei Blöcke
-  `<div lang="en">` und `<div lang="de">`.
+  im selben Element.
 - CSS blendet die jeweils andere Sprache aus: `html[lang="de"] [lang="en"]{display:none}` und umgekehrt.
 - Die Sprache wird im `<head>` gesetzt: erst `?lang=de|en` aus der Adresse, dann
   `localStorage` (`htwerk-lang`), sonst Browsersprache (Deutsch bei `de`, sonst Englisch).
@@ -84,55 +82,31 @@ Die Größe der Wortmarke im Titel regelt `.hero h1 svg` (Breite), in der Kopfze
 - Startseite: Mission, Team, Touren, Partner. Unter 23,5rem ohne „Team“.
 - `unternehmen.html`: Bisherige Touren, So läuft es ab, Für Studierende (→ `index.html`), Kontakt.
   Unter 34rem nur „So läuft es ab“ und „Kontakt“, unter 26rem nur „Kontakt“.
-- Tour-Seiten: Bisherige Touren, Für Unternehmen, Anmelden. Unter 30rem ohne „Bisherige Touren“ (Logo führt zur Startseite).
 - Die Leisten sollen einzeilig bleiben. Beim Ändern der Links die `nth-child`-Regeln anpassen.
 
 ## Anmeldung
 
 Der Link zur Anmeldung steht an genau einer Stelle: in `index.html` im Abschnitt `#signup`
 (Button „Register on Luma“). Er zeigt auf `https://luma.com/user/LinusRuesseler`.
-Alle anderen „Join the next tour“-Buttons, auch auf den Tour-Seiten, führen zu `index.html#signup`.
+Alle anderen Anmelde-Buttons führen zu `index.html#signup`.
 
-## Tour-Unterseiten
+## Bisherige Touren
 
-- Jede Tour ist in `index.html` unter `#visits` ein `<a class="visit" href="….html">` mit der Zeile
-  „Read the recap / Zum Rückblick“ unter dem `<h3>`.
-- Auf den Tour-Seiten stehen kurze Rückblicke (Einleitung und zwei bis vier Absätze je Sprache). Sie enthalten nur,
-  was belegt ist: Reihenfolge der Touren, Teilnehmerzahlen (BMW Motorrad 14, Formlabs 20, Siemens Energy 20),
-  beteiligte Hochschulen und was auf den Fotos zu sehen ist. Nichts dazuerfinden; neue Details kommen von Linus.
-- Unter dem Namen steht eine Zeile `.meta` (Art des Besuchs, Teilnehmerzahl). Das Datum fehlt bei allen vier Touren.
-- Der editierbare Bereich liegt zwischen den Kommentaren `AB HIER SCHREIBST DU DEINEN BLOG-TEXT`
-  und `ENDE DEINES TEXTES`. Dort stehen auch Bausteine zum Kopieren.
-- Galerie: `<div class="gallery">` zeigt Fotos zu je drei nebeneinander (am Handy zwei), ohne Bildunterschrift,
-  für beide Sprachen gemeinsam (Alt-Text englisch in `alt`, deutsch in `data-alt-de`). Jedes Bild ist ein Link
-  auf die große Datei. Hochformate haben die Klasse `p`, damit der Ausschnitt weiter oben sitzt.
-  - BMW Motorrad: 30 Fotos in `images/bmw-motorrad/`
-  - Formlabs: 39 Fotos in `images/formlabs/`
-  - 1KOMMA5°: 6 Fotos in `images/1komma5/`
-  - Siemens Energy: keine Galerie, es gibt nur das Gruppenfoto (Titelfoto)
-  Je Foto zwei Dateien: `01.jpg` (längste Seite 1400 px) und `01-s.jpg` (640 px, fürs Raster), ohne EXIF-Daten.
-- `images/HTWerk/` enthält die Originale, die Linus hochgeladen hat (WhatsApp-Dateinamen). Die Seiten verlinken
-  sie nicht. Der Unterordner `SiemensEnergy` enthält ein Foto von Siemens Energy und sechs von 1KOMMA5°.
-  Nicht verwendet: ein Hundefoto und zwei Gruppenfotos im Formlabs-Ordner (dasselbe Motiv wie das Titelfoto)
-  sowie das Gruppenfoto von Siemens Energy (ist schon das Titelfoto).
-- Einzelne Fotos mit Bildunterschrift im Text: `<div class="shots">` mit zwei `<figure>` nebeneinander (derzeit ungenutzt).
-- Die vier Seiten sind bis auf Name, Texte, Fotos und „Next visit“-Link identisch.
-  Änderungen am Gerüst in allen vier Dateien nachziehen.
-- Neue Tour: eine bestehende Tour-Seite kopieren, Name, Texte, Fotos und Alt-Texte anpassen,
-  in `index.html` unter `#visits` einen weiteren `a.visit` in `.track` ergänzen
-  und die „Next visit“-Kette anpassen (aktuell 1KOMMA5° → Siemens Energy → Formlabs → BMW Motorrad → 1KOMMA5°).
-  Den neuen Besuch auch im Slider von `unternehmen.html` ergänzen. (Die Zeile „So far: 4 tours …“ wurde im Oktober 2026 auf Wunsch von Linus entfernt.)
+- Die vier Rückblick-Seiten (`1komma5.html`, `siemens-energy.html`, `formlabs.html`, `bmw-motorrad.html`) wurden im
+  Oktober 2026 auf Wunsch von Linus gelöscht (im Git-Verlauf noch vorhanden). Die Touren erscheinen nur noch im Slider.
+- Jede Tour ist im Slider ein `<div class="visit">` mit Foto (`.photo`) und Firmenname (`.name h3`), ohne Link.
+- Neue Tour: in `index.html` und `unternehmen.html` je einen weiteren `div.visit` in `.track` ergänzen.
+- Die Galerie-Fotos der gelöschten Seiten liegen weiter in `images/bmw-motorrad/`, `images/formlabs/` und `images/1komma5/`,
+  die Originale in `images/HTWerk/`. Sie werden nirgends verlinkt, sind aber öffentlich abrufbar.
 
 ## Offene Punkte
 
-1. `impressum.html` und `datenschutz.html` sind live (gleiche Kopf- und Fußzeile wie die Tour-Seiten, `noindex`).
+1. `impressum.html` und `datenschutz.html` sind live (Kopfzeile mit Wortmarke, `noindex`).
    Verantwortlich: Linus Rüsseler, Haubachstraße 40, 10585 Berlin, linus@htwerk.de (je Seite an zwei bzw. einer Stelle).
    Die Datenschutzerklärung beschreibt genau das, was die Seite tut: GitHub Pages, Cloudflare-DNS, keine Cookies,
    lokale Schriften, `htwerk-lang` nur nach Klick auf DE/EN, Links zu Luma und LinkedIn. Wenn sich daran etwas ändert
    (Formular, Analyse, eingebettete Inhalte) oder HTWerk ein Verein oder eine UG wird, beide Seiten anpassen.
-2. Die Rückblicke auf den vier Tour-Seiten sind kurz und von Claude aus wenigen Fakten geschrieben.
-   Es fehlen das Datum jeder Tour, die Teilnehmerzahl bei 1KOMMA5° und alles, was nur die Teilnehmenden wissen
-   (wer geführt hat, was gezeigt wurde). Linus sollte sie prüfen und ergänzen.
+2. (entfällt, Rückblick-Seiten gelöscht)
 3. Einwilligung der abgebildeten Personen und Freigabe der Unternehmen für die Fotos klären.
 4. Kontaktadresse auf allen Seiten: linus@htwerk.de (Oktober 2026, ersetzt die Hochschul-Adresse).
 5. Logos oder Firmennamen unter „Partner“ erst nach schriftlicher Zustimmung der Firmen (Namensraster im Oktober 2026 auf Wunsch von Linus entfernt).
