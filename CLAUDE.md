@@ -135,7 +135,7 @@ Alle anderen „Join the next tour“-Buttons, auch auf den Tour-Seiten, führen
    Es fehlen das Datum jeder Tour, die Teilnehmerzahl bei 1KOMMA5° und alles, was nur die Teilnehmenden wissen
    (wer geführt hat, was gezeigt wurde). Linus sollte sie prüfen und ergänzen.
 3. Einwilligung der abgebildeten Personen und Freigabe der Unternehmen für die Fotos klären.
-4. Im Kontakt der übrigen Seiten steht noch die Hochschul-Adresse; Impressum und Datenschutz nennen bereits linus@htwerk.de.
+4. Kontaktadresse auf allen Seiten: linus@htwerk.de (Oktober 2026, ersetzt die Hochschul-Adresse).
 5. Logos oder Firmennamen unter „Partner“ erst nach schriftlicher Zustimmung der Firmen (Namensraster im Oktober 2026 auf Wunsch von Linus entfernt).
 6. Die deutschen Texte wurden im Oktober 2026 überarbeitet. Linus sollte sie einmal gegenlesen,
    vor allem den neuen Claim und die Rollenbezeichnungen im Team.
