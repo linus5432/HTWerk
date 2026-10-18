@@ -22,7 +22,7 @@ Reines HTML und CSS mit wenig JavaScript, kein Build-Schritt, kein Framework.
 
 | Datei | Inhalt |
 | --- | --- |
-| `index.html` | Startseite: Titel, About us, Core Team, Hosting, Past visits, Ablauf, Anmeldung, Kontakt |
+| `index.html` | Startseite: Titel, Past visits, Hosting, Ablauf, About us, Core Team, Anmeldung, Kontakt (Reihenfolge im Oktober 2026 auf Wunsch von Linus geändert, weicht von der Präsentation ab) |
 | `1komma5.html`, `siemens-energy.html`, `formlabs.html`, `bmw-motorrad.html` | Je eine Unterseite pro Tour mit einem kurzen Rückblick. Von der Startseite unter `#visits` verlinkt |
 | `images/` | 12 Fotos aus der Partner-Präsentation (JPG, max. 1400 px), die Ordner `bmw-motorrad/`, `formlabs/` und `1komma5/` mit den Galerie-Fotos der Touren, `HTWerk/` mit den hochgeladenen Originalen, `og-image.jpg` (Vorschaubild 1200 x 630 für geteilte Links, mit Logo) und das Logo als Datei: `logo-htwerk.svg` (Wortmarke) und `logo-htwerk-monogramm.svg` (H mit Helm), beide schwarz |
 | `fonts/` | Schriftdateien (woff2), `fonts.css` mit den `@font-face`-Regeln, Lizenztexte (SIL OFL) |
