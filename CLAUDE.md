@@ -42,10 +42,10 @@ Vorlage ist die Partner-Präsentation „HTWerk Partner Proposal 2026“:
 - Firmennamen unter „Past visits“ stehen hochkant neben dem Foto, in Großbuchstaben
 - Reihenfolge der Abschnitte und der Fotos folgt der Präsentation. Nicht umsortieren, ohne zu fragen
 - Unter „Past visits“ stehen nur die Firmennamen, keine weiteren Angaben
-- „Past visits“ ist auf `index.html` und `unternehmen.html` ein Slider (`.slider` > `.track` mit den `a.visit`,
-  darunter `.slider-nav` mit Zähler, Punkten und Pfeilen). Wischen geht über CSS-Scroll-Snap auch ohne JavaScript;
-  das kleine Skript vor dem Sprachskript steuert Pfeile, Punkte, Zähler und Pfeiltasten und springt nach dem letzten
-  Besuch wieder zum ersten
+- „Bisherige Touren“ (früher „Past visits / Bisherige Besuche“) ist auf `index.html` und `unternehmen.html` ein Slider
+  (`.slider` > `.track` mit den `a.visit`). Zwei Pfeile liegen mittig über dem Slider (`.sarrow.prev`, `.sarrow.next`,
+  der Weiter-Pfeil schwarz gefüllt). Wischen geht über CSS-Scroll-Snap auch ohne JavaScript; das kleine Skript vor dem
+  Sprachskript steuert Pfeile und Pfeiltasten und springt nach der letzten Tour wieder zur ersten
 - Alle Fotos außer dem ersten haben `loading="lazy"`
 
 ## Logo
@@ -82,9 +82,9 @@ Die Größe der Wortmarke im Titel regelt `.hero h1 svg` (Breite), in der Kopfze
 ## Navigation
 
 - Startseite: Mission, Team, Touren, Partner. Unter 23,5rem ohne „Team“.
-- `unternehmen.html`: Bisherige Besuche, So läuft es ab, Für Studierende (→ `index.html`), Kontakt.
+- `unternehmen.html`: Bisherige Touren, So läuft es ab, Für Studierende (→ `index.html`), Kontakt.
   Unter 34rem nur „So läuft es ab“ und „Kontakt“, unter 26rem nur „Kontakt“.
-- Tour-Seiten: Bisherige Besuche, Für Unternehmen, Anmelden. Unter 30rem ohne „Bisherige Besuche“ (Logo führt zur Startseite).
+- Tour-Seiten: Bisherige Touren, Für Unternehmen, Anmelden. Unter 30rem ohne „Bisherige Touren“ (Logo führt zur Startseite).
 - Die Leisten sollen einzeilig bleiben. Beim Ändern der Links die `nth-child`-Regeln anpassen.
 
 ## Anmeldung
@@ -119,10 +119,10 @@ Alle anderen „Join the next tour“-Buttons, auch auf den Tour-Seiten, führen
 - Die vier Seiten sind bis auf Name, Texte, Fotos und „Next visit“-Link identisch.
   Änderungen am Gerüst in allen vier Dateien nachziehen.
 - Neue Tour: eine bestehende Tour-Seite kopieren, Name, Texte, Fotos und Alt-Texte anpassen,
-  in `index.html` unter `#visits` einen weiteren `a.visit` in `.track` und einen Punkt in `.dots` ergänzen
+  in `index.html` unter `#visits` einen weiteren `a.visit` in `.track` ergänzen
   und die „Next visit“-Kette anpassen (aktuell 1KOMMA5° → Siemens Energy → Formlabs → BMW Motorrad → 1KOMMA5°).
   Die Zahl in „So far: 4 tours …“ steht zweimal: in `index.html` (`#host`) und im Titel von `unternehmen.html`. Beide anpassen,
-  den neuen Besuch auch im Slider von `unternehmen.html` ergänzen (ebenfalls mit Punkt).
+  den neuen Besuch auch im Slider von `unternehmen.html` ergänzen.
 
 ## Offene Punkte
 

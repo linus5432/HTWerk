@@ -174,6 +174,13 @@ footer{padding-top:5rem;padding-bottom:2.5rem}
 @media (max-width:23.5rem){nav a:nth-child(2){display:none}}
 @media (prefers-reduced-motion:no-preference){.track{scroll-behavior:smooth}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Pfeile mittig über dem Slider: weiter zur nächsten Tour */
+.sarrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:3.8rem;height:3.8rem;font-size:1.5rem}
+.sarrow.prev{left:1rem}
+.sarrow.next{right:1rem;background:var(--black);color:var(--white)}
+.sarrow.next:hover{background:var(--white);color:var(--black)}
+@media (max-width:52rem){.sarrow{top:35vw;width:3.2rem;height:3.2rem;font-size:1.3rem}.sarrow.prev{left:.6rem}.sarrow.next{right:.6rem}}
 </style>
 </head>
 <body>
@@ -257,11 +264,11 @@ footer{padding-top:5rem;padding-bottom:2.5rem}
       </div>
     </div>
     <div class="season inner" id="visits">
-      <h3><span lang="en">Past visits</span><span lang="de">Bisherige Besuche</span></h3>
+      <h3><span lang="en">Past tours</span><span lang="de">Bisherige Touren</span></h3>
       <p><span lang="en">So far: 4 tours with more than 60 students.</span><span lang="de">Bisher: 4 Touren mit mehr als 60 Studierenden.</span></p>
     </div>
-    <!-- Bisherige Besuche als Slider. Neue Tour: weiteren <a class="visit"> in .track einfügen und in .dots einen Punkt ergänzen, Zähler und Pfeile laufen von selbst. -->
-    <div class="slider" role="region" aria-roledescription="carousel" aria-label="Past visits / Bisherige Besuche">
+    <!-- Bisherige Besuche als Slider. Neue Tour: weiteren <a class="visit"> in .track einfügen, die Pfeile laufen von selbst. -->
+    <div class="slider" role="region" aria-roledescription="carousel" aria-label="Past tours / Bisherige Touren">
     <div class="track" tabindex="0">
       <a class="visit" href="1komma5.html">
       <div class="photo"><img loading="lazy" decoding="async" src="images/1komma5.jpg" data-alt-de="Gruppenfoto der Studierenden bei 1KOMMA5°" alt="Group photo of students at 1KOMMA5°"></div>
@@ -280,14 +287,8 @@ footer{padding-top:5rem;padding-bottom:2.5rem}
       <div class="name"><div><h3>BMW Motorrad</h3><p><span lang="en">Read the recap</span><span lang="de">Zum Rückblick</span></p></div></div>
     </a>
     </div>
-    <div class="slider-nav inner">
-      <span class="count" aria-live="polite">1 / 4</span>
-      <div class="dots"><button type="button"><span class="vh">1KOMMA5°</span></button><button type="button"><span class="vh">Siemens Energy</span></button><button type="button"><span class="vh">Formlabs</span></button><button type="button"><span class="vh">BMW Motorrad</span></button></div>
-      <div class="arrows">
-        <button type="button" class="sbtn" data-dir="-1"><span aria-hidden="true">←</span><span class="vh"><span lang="en">Previous visit</span><span lang="de">Vorheriger Besuch</span></span></button>
-        <button type="button" class="sbtn" data-dir="1"><span aria-hidden="true">→</span><span class="vh"><span lang="en">Next visit</span><span lang="de">Nächster Besuch</span></span></button>
-      </div>
-    </div>
+    <button type="button" class="sbtn sarrow prev" data-dir="-1"><span aria-hidden="true">←</span><span class="vh"><span lang="en">Previous tour</span><span lang="de">Vorherige Tour</span></span></button>
+    <button type="button" class="sbtn sarrow next" data-dir="1"><span aria-hidden="true">→</span><span class="vh"><span lang="en">Next tour</span><span lang="de">Nächste Tour</span></span></button>
     </div>
   </section>
 
@@ -326,7 +327,7 @@ footer{padding-top:5rem;padding-bottom:2.5rem}
 document.querySelectorAll('.slider').forEach(function(s){
   var t=s.querySelector('.track'),n=t.children.length,c=s.querySelector('.count'),d=s.querySelectorAll('.dots button');
   var idx=0,busy=0;
-  function show(i){idx=i;c.textContent=(i+1)+' / '+n;d.forEach(function(b,k){b.setAttribute('aria-current',String(k===i))})}
+  function show(i){idx=i;if(c)c.textContent=(i+1)+' / '+n;d.forEach(function(b,k){b.setAttribute('aria-current',String(k===i))})}
   function go(i){i=(i+n)%n;busy=Date.now();show(i);t.scrollTo({left:i*t.clientWidth})}
   s.querySelectorAll('.sbtn').forEach(function(b){b.addEventListener('click',function(){go(idx+Number(b.getAttribute('data-dir')))})});
   d.forEach(function(b,k){b.addEventListener('click',function(){go(k)})});
