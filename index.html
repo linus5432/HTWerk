@@ -108,6 +108,7 @@ h2{font-size:clamp(2.6rem,5.5vw,4.5rem);line-height:1;margin:0 0 2.5rem}
 
 /* past visits */
 .visits-intro{grid-template-columns:40% 1fr;min-height:70vh}
+.bridge{font-family:"Marcellus",Georgia,serif;font-size:1.4rem;color:var(--grey);margin:1rem 0 0}
 .arrow{display:block;width:min(19rem,80%);height:2px;background:currentColor;position:relative;margin-top:1.5rem}
 .arrow::after{content:"";position:absolute;right:-1px;top:-5px;border:6px solid transparent;border-left:10px solid currentColor;border-right:0}
 .visit{display:grid;grid-template-columns:1fr 23rem;min-height:85vh;border-top:1px solid var(--line)}
@@ -158,7 +159,7 @@ footer a{margin-right:1.25rem}
   .steps,.contact{grid-template-columns:1fr}
   .process,.contact,.signup{padding:4.5rem 0}
 }
-@media (max-width:34rem){nav a:nth-child(1),nav a:nth-child(3){display:none}nav a{white-space:nowrap}nav{gap:.75rem}.langsw{padding-left:.75rem}}
+@media (max-width:34rem){nav a:nth-child(1),nav a:nth-child(2){display:none}nav a{white-space:nowrap}nav{gap:.75rem}.langsw{padding-left:.75rem}}
 @media (max-width:23.5rem){nav a:nth-child(5){display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
@@ -181,10 +182,10 @@ footer a{margin-right:1.25rem}
 
 <header>
   <nav aria-label="Main">
-    <a href="#visits"><span lang="en">Past visits</span><span lang="de">Bisherige Besuche</span></a>
-    <a href="unternehmen.html"><span lang="en">For companies</span><span lang="de">Für Unternehmen</span></a>
     <a href="#about"><span lang="en">About</span><span lang="de">Über uns</span></a>
+    <a href="#visits"><span lang="en">Past visits</span><span lang="de">Bisherige Besuche</span></a>
     <a href="#signup"><span lang="en">Join a tour</span><span lang="de">Anmelden</span></a>
+    <a href="unternehmen.html"><span lang="en">For companies</span><span lang="de">Für Unternehmen</span></a>
     <a href="#contact"><span lang="en">Contact</span><span lang="de">Kontakt</span></a>
     <span class="langsw" role="group" aria-label="Language / Sprache">
       <button type="button" data-setlang="de">DE</button><button type="button" data-setlang="en">EN</button>
@@ -206,10 +207,28 @@ footer a{margin-right:1.25rem}
     <div class="side" aria-hidden="true"><span>HTWERK BERLIN</span></div>
   </section>
 
+  <section class="split about" id="about">
+    <div class="text">
+      <h2><span lang="en">Why HTWerk exists</span><span lang="de">Warum es HTWerk gibt</span></h2>
+      <p><span lang="en">It started with a simple frustration: engineering students spend years learning theory but rarely get to see inside the factories and companies they're studying to join.</span><span lang="de">Am Anfang stand ein einfacher Frust: Im Ingenieurstudium lernt man jahrelang Theorie, sieht die Werke und Unternehmen, in denen man später arbeiten will, aber kaum von innen.</span></p>
+      <p><span lang="en">HTWerk was founded to close that gap. What began as an idea at HTW Berlin has grown into a student initiative connecting Berlin's university students with leading companies across engineering, energy, and manufacturing, through curated factory tours that go beyond the standard campus recruiting pitch.</span><span lang="de">HTWerk schließt diese Lücke. Aus einer Idee an der HTW Berlin ist eine studentische Initiative geworden, die Studierende der Berliner Hochschulen mit führenden Unternehmen aus Technik, Energie und Produktion zusammenbringt. Unsere Werksbesichtigungen sind sorgfältig vorbereitet und zeigen mehr als der übliche Recruiting-Vortrag auf dem Campus.</span></p>
+      <p><span lang="en">Each tour shows not just what a company makes, but how it thinks, builds, and recruits. Over 60 students have joined us so far, and we're just getting started.</span><span lang="de">Jede Tour zeigt nicht nur, was ein Unternehmen herstellt, sondern auch, wie es denkt, entwickelt und Nachwuchs gewinnt. Mehr als 60 Studierende waren bisher dabei, und das ist erst der Anfang.</span></p>
+      <p><strong><span lang="en">Founded by students, for students.</span><span lang="de">Von Studierenden für Studierende.</span></strong></p>
+    </div>
+    <div class="stack">
+      <div class="founder">
+        <img loading="lazy" decoding="async" src="images/founder.jpg" data-alt-de="Porträt von Linus Rüsseler" alt="Portrait of Linus Rüsseler">
+        <div class="cap"><span lang="en">Linus Rüsseler – Founder, Partnership management</span><span lang="de">Linus Rüsseler – Gründer, Partnermanagement</span></div>
+      </div>
+      <div class="wide"><img loading="lazy" decoding="async" src="images/about-team.jpg" data-alt-de="Studierende stehen bei einem Unternehmensbesuch um einen Laptop" alt="Students gathered around a laptop during a company visit"></div>
+    </div>
+  </section>
+
   <section id="visits">
     <div class="split visits-intro">
       <div class="text">
         <h2 style="margin:0"><span lang="en">Past visits</span><span lang="de">Bisherige Besuche</span></h2>
+        <p class="bridge"><span lang="en">Here's what that looks like.</span><span lang="de">So sieht das aus.</span></p>
         <span class="arrow" aria-hidden="true"></span>
       </div>
       <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-make-life-a-ride.jpg" data-alt-de="Studierende in Besucherwesten hören vor dem BMW Motorrad Werk Berlin einem Guide zu" alt="Students in visitor vests listening to a guide outside BMW Motorrad Berlin"></div>
@@ -234,6 +253,18 @@ footer a{margin-right:1.25rem}
     </a>
   </section>
 
+  <section class="signup dark" id="signup">
+    <div class="inner">
+      <h2><span lang="en">Join the next tour</span><span lang="de">Sei bei der nächsten Tour dabei</span></h2>
+      <p><span lang="en">Our upcoming tours are listed on Luma. Register there for the next visit. HTWerk tours are open to students from all Berlin universities.</span><span lang="de">Unsere kommenden Touren findest du auf Luma. Dort meldest du dich auch an. Mitmachen können Studierende aller Berliner Hochschulen.</span></p>
+      <div class="btns">
+        <!-- Link zur Anmeldung (Luma). Das ist die einzige Stelle: alle anderen "Join the next tour"-Buttons fuehren hierher. -->
+        <a class="btn solid" href="https://luma.com/user/LinusRuesseler"><span lang="en">Register on Luma</span><span lang="de">Auf Luma anmelden</span></a>
+        <a class="btn" href="https://www.linkedin.com/company/htwerk/"><span lang="en">Follow HTWerk on LinkedIn</span><span lang="de">HTWerk auf LinkedIn folgen</span></a>
+      </div>
+    </div>
+  </section>
+
   <section class="split teaser" id="host">
     <div class="photo"><img loading="lazy" decoding="async" src="images/bmw-briefing.jpg" data-alt-de="Ein Guide weist Studierende in Besucherwesten bei BMW Motorrad in Berlin ein" alt="Guide briefing students in visitor vests at BMW Motorrad Berlin"></div>
     <div class="text">
@@ -241,23 +272,6 @@ footer a{margin-right:1.25rem}
       <p class="sofar"><span lang="en">So far: 4 tours with more than 60 students.</span><span lang="de">Bisher: 4 Touren mit mehr als 60 Studierenden.</span></p>
       <p><span lang="en">Want to show students your factory or office? We put the group together and handle the logistics, you lead the tour.</span><span lang="de">Sie möchten Studierenden Ihr Werk oder Büro zeigen? Wir stellen die Gruppe zusammen und übernehmen die Organisation, Sie übernehmen die Führung.</span></p>
       <div class="btns"><a class="btn solid" href="unternehmen.html"><span lang="en">How hosting works</span><span lang="de">So richten Sie eine Tour aus</span></a></div>
-    </div>
-  </section>
-
-  <section class="split about" id="about">
-    <div class="text">
-      <h2><span lang="en">About us</span><span lang="de">Über uns</span></h2>
-      <p><span lang="en">It started with a simple frustration: engineering students spend years learning theory but rarely get to see inside the factories and companies they're studying to join.</span><span lang="de">Am Anfang stand ein einfacher Frust: Im Ingenieurstudium lernt man jahrelang Theorie, sieht die Werke und Unternehmen, in denen man später arbeiten will, aber kaum von innen.</span></p>
-      <p><span lang="en">HTWerk was founded to close that gap. What began as an idea at HTW Berlin has grown into a student initiative connecting Berlin's university students with leading companies across engineering, energy, and manufacturing, through curated factory tours that go beyond the standard campus recruiting pitch.</span><span lang="de">HTWerk schließt diese Lücke. Aus einer Idee an der HTW Berlin ist eine studentische Initiative geworden, die Studierende der Berliner Hochschulen mit führenden Unternehmen aus Technik, Energie und Produktion zusammenbringt. Unsere Werksbesichtigungen sind sorgfältig vorbereitet und zeigen mehr als der übliche Recruiting-Vortrag auf dem Campus.</span></p>
-      <p><span lang="en">Each tour shows not just what a company makes, but how it thinks, builds, and recruits. Over 60 students have joined us so far, and we're just getting started.</span><span lang="de">Jede Tour zeigt nicht nur, was ein Unternehmen herstellt, sondern auch, wie es denkt, entwickelt und Nachwuchs gewinnt. Mehr als 60 Studierende waren bisher dabei, und das ist erst der Anfang.</span></p>
-      <p><strong><span lang="en">Founded by students, for students.</span><span lang="de">Von Studierenden für Studierende.</span></strong></p>
-    </div>
-    <div class="stack">
-      <div class="founder">
-        <img loading="lazy" decoding="async" src="images/founder.jpg" data-alt-de="Porträt von Linus Rüsseler" alt="Portrait of Linus Rüsseler">
-        <div class="cap"><span lang="en">Linus Rüsseler – Founder, Partnership management</span><span lang="de">Linus Rüsseler – Gründer, Partnermanagement</span></div>
-      </div>
-      <div class="wide"><img loading="lazy" decoding="async" src="images/about-team.jpg" data-alt-de="Studierende stehen bei einem Unternehmensbesuch um einen Laptop" alt="Students gathered around a laptop during a company visit"></div>
     </div>
   </section>
 
@@ -270,18 +284,6 @@ footer a{margin-right:1.25rem}
       <div class="member"><span class="serif">Ren Nakamura</span><span><span lang="en">Photography and Graphic Design</span><span lang="de">Fotografie und Grafikdesign</span></span></div>
     </div>
     <div class="photo"><img loading="lazy" decoding="async" src="images/core-team.jpg" data-alt-de="Studierende und Gastgeber im Gespräch in einem Pausenraum" alt="Students and hosts talking in a dimly lit company break room"></div>
-  </section>
-
-  <section class="signup dark" id="signup">
-    <div class="inner">
-      <h2><span lang="en">Join the next tour</span><span lang="de">Sei bei der nächsten Tour dabei</span></h2>
-      <p><span lang="en">Our upcoming tours are listed on Luma. Register there for the next visit. HTWerk tours are open to students from all Berlin universities.</span><span lang="de">Unsere kommenden Touren findest du auf Luma. Dort meldest du dich auch an. Mitmachen können Studierende aller Berliner Hochschulen.</span></p>
-      <div class="btns">
-        <!-- Link zur Anmeldung (Luma). Das ist die einzige Stelle: alle anderen "Join the next tour"-Buttons fuehren hierher. -->
-        <a class="btn solid" href="https://luma.com/user/LinusRuesseler"><span lang="en">Register on Luma</span><span lang="de">Auf Luma anmelden</span></a>
-        <a class="btn" href="https://www.linkedin.com/company/htwerk/"><span lang="en">Follow HTWerk on LinkedIn</span><span lang="de">HTWerk auf LinkedIn folgen</span></a>
-      </div>
-    </div>
   </section>
 
   <section class="contact light" id="contact">

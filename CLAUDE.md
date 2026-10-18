@@ -22,7 +22,7 @@ Reines HTML und CSS mit wenig JavaScript, kein Build-Schritt, kein Framework.
 
 | Datei | Inhalt |
 | --- | --- |
-| `index.html` | Startseite für alle: Titel mit zwei Wegweisern (Studierende → `#signup`, Unternehmen → `unternehmen.html`), Past visits, Kurzfassung „Für Unternehmen“ (`#host`), About us, Core Team, Anmeldung, Kontakt (Reihenfolge im Oktober 2026 auf Wunsch von Linus geändert, weicht von der Präsentation ab) |
+| `index.html` | Startseite für alle: Titel mit zwei Wegweisern (Studierende → `#signup`, Unternehmen → `unternehmen.html`), „Warum es HTWerk gibt“ (`#about`), Past visits, Anmeldung, Kurzfassung „Für Unternehmen“ (`#host`), Core Team, Kontakt. Roter Faden: Problem, Lösung, Beweis, Mitmachen. Reihenfolge im Oktober 2026 mit Linus festgelegt, weicht von der Präsentation ab |
 | `unternehmen.html` | Seite für Unternehmen, durchgehend gesiezt: Titel mit „Tour anfragen“, Past visits, Hosting (`#host`), Ablauf, Kontakt. Link für Anfragen an Firmen. Kopfzeile mit Wortmarke wie auf den Tour-Seiten |
 | `1komma5.html`, `siemens-energy.html`, `formlabs.html`, `bmw-motorrad.html` | Je eine Unterseite pro Tour mit einem kurzen Rückblick. Von der Startseite unter `#visits` verlinkt |
 | `images/` | 12 Fotos aus der Partner-Präsentation (JPG, max. 1400 px), die Ordner `bmw-motorrad/`, `formlabs/` und `1komma5/` mit den Galerie-Fotos der Touren, `HTWerk/` mit den hochgeladenen Originalen, `og-image.jpg` (Vorschaubild 1200 x 630 für geteilte Links, mit Logo) und das Logo als Datei: `logo-htwerk.svg` (Wortmarke) und `logo-htwerk-monogramm.svg` (H mit Helm), beide schwarz |
@@ -77,8 +77,8 @@ Die Größe der Wortmarke im Titel regelt `.hero h1 svg` (Breite), in der Kopfze
 
 ## Navigation
 
-- Startseite: Bisherige Besuche, Für Unternehmen (→ `unternehmen.html`), Über uns, Anmelden, Kontakt.
-  Am Handy (unter 34rem) sind „Bisherige Besuche“ und „Über uns“ ausgeblendet, unter 23,5rem auch „Kontakt“.
+- Startseite: Über uns, Bisherige Besuche, Anmelden, Für Unternehmen (→ `unternehmen.html`), Kontakt.
+  Am Handy (unter 34rem) sind „Über uns“ und „Bisherige Besuche“ ausgeblendet, unter 23,5rem auch „Kontakt“.
 - `unternehmen.html`: Bisherige Besuche, So läuft es ab, Für Studierende (→ `index.html`), Kontakt.
   Unter 34rem nur „So läuft es ab“ und „Kontakt“, unter 26rem nur „Kontakt“.
 - Tour-Seiten: Bisherige Besuche, Für Unternehmen, Anmelden. Unter 30rem ohne „Bisherige Besuche“ (Logo führt zur Startseite).
