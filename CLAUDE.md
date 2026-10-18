@@ -57,6 +57,14 @@ Es gibt zwei Fassungen, beide als ein einziger Vektorpfad aus den Marcellus-Umri
   Im `<h1>` steht zusätzlich unsichtbar der Text „HTWerk“ (`.vh`) für Screenreader und Suchmaschinen.
 - **Monogramm** (H mit Helm): Favicon, Touch-Icon und klein in der Fußzeile aller Seiten (`.mark`).
 
+Animation (Oktober 2026): Die Inline-SVGs (`svg.logo`) sind in Teilpfade zerlegt, damit sich der Helm bewegen kann.
+Wortmarke: sechs Buchstaben `path.l.l1`–`.l6` (H, T, W, e, r, k) und `path.helm` (Kuppel + Krempe);
+Monogramm: H und `path.helm`. CSS-Block „Logo-Animation (Helm)“ am Ende des `<style>` jeder Seite:
+Startseite `.hero h1` – Buchstaben steigen auf, Helm landet auf dem H (einmal beim Laden);
+Kopfzeile `.brand` – Helm lüpfen bei Hover/Fokus; Fußzeile `.mark` – Helm wippt einmal, sobald sie sichtbar wird
+(kleines Skript vor `</body>` setzt `.is-in`). Bei „reduzierter Bewegung“ im System keine Animation.
+Bei einem neuen Logo die Aufteilung in Teilpfade beibehalten (Drehpunkte stehen als `transform-origin` im CSS).
+
 Der Pfad steht in allen fünf HTML-Dateien identisch. Bei einer Änderung am Logo überall ersetzen,
 dazu `favicon.svg`, die beiden PNG-Icons, `images/og-image.jpg` und die zwei SVG-Dateien in `images/`.
 Die Größe der Wortmarke im Titel regelt `.hero h1 svg` (Breite), in der Kopfzeile `.brand svg` (Höhe).
