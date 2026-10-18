@@ -126,16 +126,16 @@ Alle anderen „Join the next tour“-Buttons, auch auf den Tour-Seiten, führen
 
 ## Offene Punkte
 
-1. `impressum.html` und `datenschutz.html` sind angelegt (gleiche Kopf- und Fußzeile wie die Tour-Seiten, `noindex`).
-   Die Anschrift von Linus wird mit `legal.py`-Logik als Platzhalter `[STRASSE HAUSNUMMER]` / `[PLZ ORT]` eingesetzt und muss
-   vor dem Livegang ersetzt werden (je zweimal pro Seite). Die Datenschutzerklärung beschreibt genau das, was die Seite tut:
-   GitHub Pages, Cloudflare-DNS, keine Cookies, lokale Schriften, `htwerk-lang` nur nach Klick auf DE/EN, Links zu Luma und LinkedIn.
-   Wenn sich daran etwas ändert (Formular, Analyse, eingebettete Inhalte), die Datenschutzerklärung anpassen.
+1. `impressum.html` und `datenschutz.html` sind live (gleiche Kopf- und Fußzeile wie die Tour-Seiten, `noindex`).
+   Verantwortlich: Linus Rüsseler, Haubachstraße 40, 10585 Berlin, linus@htwerk.de (je Seite an zwei bzw. einer Stelle).
+   Die Datenschutzerklärung beschreibt genau das, was die Seite tut: GitHub Pages, Cloudflare-DNS, keine Cookies,
+   lokale Schriften, `htwerk-lang` nur nach Klick auf DE/EN, Links zu Luma und LinkedIn. Wenn sich daran etwas ändert
+   (Formular, Analyse, eingebettete Inhalte) oder HTWerk ein Verein oder eine UG wird, beide Seiten anpassen.
 2. Die Rückblicke auf den vier Tour-Seiten sind kurz und von Claude aus wenigen Fakten geschrieben.
    Es fehlen das Datum jeder Tour, die Teilnehmerzahl bei 1KOMMA5° und alles, was nur die Teilnehmenden wissen
    (wer geführt hat, was gezeigt wurde). Linus sollte sie prüfen und ergänzen.
 3. Einwilligung der abgebildeten Personen und Freigabe der Unternehmen für die Fotos klären.
-4. Im Kontakt steht eine persönliche Hochschul-Adresse. Eine eigene HTWerk-Adresse wäre besser.
+4. Im Kontakt der übrigen Seiten steht noch die Hochschul-Adresse; Impressum und Datenschutz nennen bereits linus@htwerk.de.
 5. Logos oder Firmennamen unter „Partner“ erst nach schriftlicher Zustimmung der Firmen (Namensraster im Oktober 2026 auf Wunsch von Linus entfernt).
 6. Die deutschen Texte wurden im Oktober 2026 überarbeitet. Linus sollte sie einmal gegenlesen,
    vor allem den neuen Claim und die Rollenbezeichnungen im Team.
