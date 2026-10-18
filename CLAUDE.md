@@ -42,6 +42,10 @@ Vorlage ist die Partner-Präsentation „HTWerk Partner Proposal 2026“:
 - Firmennamen unter „Past visits“ stehen hochkant neben dem Foto, in Großbuchstaben
 - Reihenfolge der Abschnitte und der Fotos folgt der Präsentation. Nicht umsortieren, ohne zu fragen
 - Unter „Past visits“ stehen nur die Firmennamen, keine weiteren Angaben
+- „Past visits“ ist auf `index.html` und `unternehmen.html` ein Slider (`.slider` > `.track` mit den `a.visit`,
+  darunter `.slider-nav` mit Zähler, Punkten und Pfeilen). Wischen geht über CSS-Scroll-Snap auch ohne JavaScript;
+  das kleine Skript vor dem Sprachskript steuert Pfeile, Punkte, Zähler und Pfeiltasten und springt nach dem letzten
+  Besuch wieder zum ersten
 - Alle Fotos außer dem ersten haben `loading="lazy"`
 
 ## Logo
@@ -116,10 +120,10 @@ Alle anderen „Join the next tour“-Buttons, auch auf den Tour-Seiten, führen
 - Die vier Seiten sind bis auf Name, Texte, Fotos und „Next visit“-Link identisch.
   Änderungen am Gerüst in allen vier Dateien nachziehen.
 - Neue Tour: eine bestehende Tour-Seite kopieren, Name, Texte, Fotos und Alt-Texte anpassen,
-  in `index.html` unter `#visits` einen weiteren Block ergänzen
+  in `index.html` unter `#visits` einen weiteren `a.visit` in `.track` und einen Punkt in `.dots` ergänzen
   und die „Next visit“-Kette anpassen (aktuell 1KOMMA5° → Siemens Energy → Formlabs → BMW Motorrad → 1KOMMA5°).
   Die Zahl in „So far: 4 tours …“ steht zweimal: in `index.html` (`#host`) und im Titel von `unternehmen.html`. Beide anpassen,
-  den neuen Besuch auch unter `#visits` in `unternehmen.html` ergänzen.
+  den neuen Besuch auch im Slider von `unternehmen.html` ergänzen (ebenfalls mit Punkt).
 
 ## Offene Punkte
 
