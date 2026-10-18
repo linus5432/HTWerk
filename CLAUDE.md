@@ -112,6 +112,7 @@ Alle anderen Anmelde-Buttons führen zu `index.html#signup`.
 - Die vier Rückblick-Seiten (`1komma5.html`, `siemens-energy.html`, `formlabs.html`, `bmw-motorrad.html`) wurden im
   Oktober 2026 auf Wunsch von Linus gelöscht (im Git-Verlauf noch vorhanden). Die Touren erscheinen nur noch im Slider.
 - Jede Tour ist im Slider ein `<div class="visit">` mit Foto (`.photo`) und Firmenname (`.name h3`), ohne Link.
+- Reihenfolge im Slider nach Fotoqualität (Oktober 2026 auf Wunsch von Linus): Siemens Energy, Formlabs, BMW Motorrad, 1KOMMA5°.
 - Neue Tour: in `index.html` einen weiteren `div.visit` in `.track` ergänzen.
 - Die Galerie-Fotos der gelöschten Seiten liegen weiter in `images/bmw-motorrad/`, `images/formlabs/` und `images/1komma5/`,
   die Originale in `images/HTWerk/`. Sie werden nirgends verlinkt, sind aber öffentlich abrufbar.
