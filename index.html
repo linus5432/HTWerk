@@ -91,7 +91,7 @@ nav a:hover{text-decoration:underline}
 
 /* 02 team: numbered cards */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#333;border:1px solid #333;max-width:40rem}
-.card{background:var(--black);padding:1.4rem 1.3rem;min-height:9rem;display:flex;flex-direction:column;justify-content:space-between;gap:1rem}
+.card{background:var(--black);padding:1.4rem 1.3rem;min-height:9rem;display:flex;flex-direction:column;justify-content:flex-end;gap:1rem}
 .card .n{font:600 .78rem/1 "IBM Plex Sans",Arial,sans-serif;letter-spacing:.14em;color:#A8A8A8}
 .card .who{font-family:"Marcellus",Georgia,serif;font-size:1.55rem;line-height:1.15;display:block}
 .card .role{font-size:.92rem;color:#C8C8C8}
@@ -172,7 +172,7 @@ footer{padding-top:5rem;padding-bottom:2.5rem}
   .visit .name{justify-content:flex-start;padding:1.5rem 1.25rem 2.5rem}
   .visit .name div{writing-mode:horizontal-tb;transform:none}
 }
-@media (max-width:34rem){.cards{grid-template-columns:1fr}nav{gap:.85rem}.langsw{padding-left:.75rem}}
+@media (max-width:34rem){.cards{grid-template-columns:1fr}.card{min-height:auto}nav{gap:.85rem}.langsw{padding-left:.75rem}}
 @media (max-width:23.5rem){nav a:nth-child(2){display:none}}
 @media (prefers-reduced-motion:no-preference){.track{scroll-behavior:smooth}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -304,10 +304,10 @@ nav a:hover{text-decoration:none;background-size:100% 2px}
       <p class="label" data-n="02"><span lang="en">Team</span><span lang="de">Team</span></p>
       <h2><span lang="en">Founded by students, for students.</span><span lang="de">Von Studierenden für Studierende.</span></h2>
       <div class="cards">
-        <div class="card lead-card"><img loading="lazy" decoding="async" src="images/founder.jpg" data-alt-de="Porträt von Linus Rüsseler" alt="Portrait of Linus Rüsseler"><div><span class="n">01</span><span class="who">Linus Rüsseler</span><span class="role"><span lang="en">Founder, partnership management</span><span lang="de">Gründer, Partnermanagement</span></span></div></div>
-        <div class="card"><span class="n">02</span><div><span class="who">Timo Bange</span><span class="role"><span lang="en">Events &amp; outreach</span><span lang="de">Events &amp; Outreach</span></span></div></div>
-        <div class="card"><span class="n">03</span><div><span class="who">Stefanie Delarmente</span><span class="role"><span lang="en">Community management</span><span lang="de">Community-Management</span></span></div></div>
-        <div class="card"><span class="n">04</span><div><span class="who">Ren Nakamura</span><span class="role"><span lang="en">Photography and graphic design</span><span lang="de">Fotografie und Grafikdesign</span></span></div></div>
+        <div class="card lead-card"><img loading="lazy" decoding="async" src="images/founder.jpg" data-alt-de="Porträt von Linus Rüsseler" alt="Portrait of Linus Rüsseler"><div><span class="who">Linus Rüsseler</span><span class="role"><span lang="en">Founder, partnership management</span><span lang="de">Gründer, Partnermanagement</span></span></div></div>
+        <div class="card"><div><span class="who">Timo Bange</span><span class="role"><span lang="en">Events &amp; outreach</span><span lang="de">Events &amp; Outreach</span></span></div></div>
+        <div class="card"><div><span class="who">Stefanie Delarmente</span><span class="role"><span lang="en">Community management</span><span lang="de">Community-Management</span></span></div></div>
+        <div class="card"><div><span class="who">Ren Nakamura</span><span class="role"><span lang="en">Photography and graphic design</span><span lang="de">Fotografie und Grafikdesign</span></span></div></div>
       </div>
     </div>
   </section>
