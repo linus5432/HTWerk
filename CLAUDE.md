@@ -64,6 +64,8 @@ Es gibt zwei Fassungen, beide als ein einziger Vektorpfad aus den Marcellus-Umri
 - **Wortmarke** „HTWerk“ mit Helm: steht als Inline-SVG im `<h1>` der Startseite und in `.brand`
   in der Kopfzeile von `unternehmen.html`, `impressum.html` und `datenschutz.html`. Farbe über `fill:currentColor`, also weiß auf Schwarz.
   Im `<h1>` steht zusätzlich unsichtbar der Text „HTWerk“ (`.vh`) für Screenreader und Suchmaschinen.
+  Außerdem steht die Wortmarke in `unternehmen.html` in der Überschrift unter `#host` an Stelle des Wortes „HTWerk“
+  (`svg.logo.inlogo`, Größe 1.08em, mit `.vh`-Text davor; Oktober 2026 auf Wunsch von Linus).
 - **Monogramm** (H mit Helm): Favicon, Touch-Icon und klein in der Fußzeile aller Seiten (`.mark`).
 
 Animation (Oktober 2026): Die Inline-SVGs (`svg.logo`) sind in Teilpfade zerlegt, damit sich der Helm bewegen kann.
