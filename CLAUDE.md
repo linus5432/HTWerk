@@ -100,7 +100,7 @@ Die Größe der Wortmarke im Titel regelt `.hero h1 svg` (Breite), in der Kopfze
 
 - Startseite: Mission, Team, Touren, Partner. Unter 23,5rem ohne „Team“.
 - `unternehmen.html`: So läuft es ab, Für Studierende (→ `index.html`), Kontakt.
-  Unter 34rem nur „So läuft es ab“ und „Kontakt“, unter 23,5rem nur „Kontakt“.
+  Unter 34rem nur „So läuft es ab“ und „Kontakt“, unter 26rem nur „Kontakt“ (sonst stößt die Leiste an die Wortmarke).
 - Die Leisten sollen einzeilig bleiben. Beim Ändern der Links die `nth-child`-Regeln anpassen.
 
 ## Anmeldung
